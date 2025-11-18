@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   Brain, 
@@ -39,28 +39,64 @@ const stagger = {
 
 const demoScreens = [
   {
-    title: "Portfolio Dashboard View",
+    title: "Portfolio Dashboard Overview",
     description: "Chase internal teams see real-time portfolio intelligence across all business customers.",
     caption: "Live portfolio views by approval tier, product fit, and credit score cohorts.",
-    image: "placeholder"
+    image: "/dashboard/dashboard.png"
   },
   {
-    title: "Business Banking Interface with Credit Journey",
-    description: "Chase users immediately see their business + personal credit signals — no manual pull required.",
-    caption: "Seamlessly integrated into Chase Business app with zero learning curve.",
-    image: "placeholder"
+    title: "Analytics Dashboard",
+    description: "Comprehensive analytics and insights for portfolio performance tracking.",
+    caption: "Real-time metrics and visualizations for data-driven decision making.",
+    image: "/dashboard/analytics.png"
   },
   {
-    title: "Instant Card Eligibility Routing",
-    description: "AI-powered pre-qualification aligned to your risk appetite and policy layers.",
-    caption: "This drives lift and trust while reducing manual review load by 20%.",
-    image: "placeholder"
+    title: "Credit Score Analysis",
+    description: "Detailed credit score breakdown and analysis for business customers.",
+    caption: "Visual representation of credit metrics and trends.",
+    image: "/dashboard/Screenshot 2025-11-18 at 03.04.01.png"
   },
   {
-    title: "Compliance Log & Model Snapshot",
-    description: "Every decision logged with full audit trail. Built for ECOA, OCC, and MRM workflows.",
+    title: "Customer Portfolio View",
+    description: "Individual customer portfolio insights and credit journey tracking.",
+    caption: "Track customer credit health and eligibility in real-time.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.20.40.png"
+  },
+  {
+    title: "Risk Assessment Dashboard",
+    description: "Comprehensive risk assessment and scoring interface.",
+    caption: "AI-powered risk analysis with policy-aligned decisioning.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.20.47.png"
+  },
+  {
+    title: "Approval Workflow",
+    description: "Streamlined approval process with automated decision routing.",
+    caption: "Reduce manual review load by 20% with intelligent automation.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.20.53.png"
+  },
+  {
+    title: "Product Eligibility Matrix",
+    description: "Real-time product eligibility and recommendation engine.",
+    caption: "Match customers to the right products based on credit profile.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.21.01.png"
+  },
+  {
+    title: "Performance Metrics",
+    description: "Key performance indicators and conversion tracking.",
+    caption: "Measure lift, approval rates, and portfolio performance.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.21.07.png"
+  },
+  {
+    title: "Audit Trail & Compliance",
+    description: "Complete audit trail for all credit decisions and model governance.",
     caption: "100% transparency for risk teams and regulators.",
-    image: "placeholder"
+    image: "/dashboard/Screenshot 2025-11-18 at 18.21.16.png"
+  },
+  {
+    title: "Advanced Analytics View",
+    description: "Deep dive into portfolio analytics and trend analysis.",
+    caption: "Advanced reporting and insights for strategic decision making.",
+    image: "/dashboard/Screenshot 2025-11-18 at 18.21.31.png"
   }
 ];
 
@@ -115,14 +151,14 @@ const faqs = [
 ];
 
 const walkthrough = [
-  { step: 1, title: "Login", description: "Secure authentication via Chase SSO" },
-  { step: 2, title: "Credit Journey Activation", description: "One-tap access to business credit insights" },
-  { step: 3, title: "Score Display", description: "Personal FICO + Business FSR & Intelliscore" },
-  { step: 4, title: "Eligible Card Match", description: "AI-recommended products based on policy" },
-  { step: 5, title: "Credit Tips Overlay", description: "Actionable insights to improve eligibility" },
-  { step: 6, title: "Apply Button", description: "Seamless application flow" },
-  { step: 7, title: "Backend Dashboard", description: "Portfolio-level analytics for Chase teams" },
-  { step: 8, title: "Model Audit View", description: "Full transparency and compliance logging" }
+  { step: 1, title: "Login", description: "Secure authentication via Chase SSO", image: "/dashboard/login1.png" },
+  { step: 2, title: "Signup", description: "Quick registration and account setup", image: "/dashboard/signup1.png" },
+  { step: 3, title: "Credit Journey Activation", description: "One-tap access to business credit insights", image: "/dashboard/dashboard.png" },
+  { step: 4, title: "Score Display", description: "Personal FICO + Business FSR & Intelliscore", image: "/dashboard/Screenshot 2025-11-18 at 03.04.01.png" },
+  { step: 5, title: "Eligible Card Match", description: "AI-recommended products based on policy", image: "/dashboard/Screenshot 2025-11-18 at 18.21.01.png" },
+  { step: 6, title: "Credit Tips Overlay", description: "Actionable insights to improve eligibility", image: "/dashboard/Screenshot 2025-11-18 at 18.20.47.png" },
+  { step: 7, title: "Backend Dashboard", description: "Portfolio-level analytics for Chase teams", image: "/dashboard/analytics.png" },
+  { step: 8, title: "Model Audit View", description: "Full transparency and compliance logging", image: "/dashboard/Screenshot 2025-11-18 at 18.21.16.png" }
 ];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
@@ -130,20 +166,20 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
   return (
     <motion.div
-      className="border-b border-border/50 last:border-0"
+      className="border-b border-[#070707]/10 dark:border-white/10 last:border-0"
       initial={false}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <span className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">
+        <span className="text-lg font-medium text-[#070707] dark:text-white group-hover:text-primary transition-colors">
           {question}
         </span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+          <ChevronUp className="h-5 w-5 text-[#070707]/70 dark:text-white/70 group-hover:text-primary transition-colors flex-shrink-0" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+          <ChevronDown className="h-5 w-5 text-[#070707]/70 dark:text-white/70 group-hover:text-primary transition-colors flex-shrink-0" />
         )}
       </button>
       <motion.div
@@ -152,7 +188,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="pb-6 text-muted-foreground leading-relaxed">
+        <p className="pb-6 text-[#070707]/70 dark:text-white/70 leading-relaxed">
           {answer}
         </p>
       </motion.div>
@@ -163,6 +199,25 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export default function Demo() {
   const [email, setEmail] = useState("");
   const [activeWalkthrough, setActiveWalkthrough] = useState(0);
+  const [activePreview, setActivePreview] = useState(0);
+
+  // Dashboard images for hero preview
+  const previewImages = [
+    "/dashboard/login1.png",
+    "/dashboard/signup1.png",
+    "/dashboard/dashboard.png",
+    "/dashboard/analytics.png",
+    "/dashboard/Screenshot 2025-11-18 at 03.04.01.png",
+    "/dashboard/Screenshot 2025-11-18 at 18.20.40.png"
+  ];
+
+  // Auto-rotate preview images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActivePreview((prev) => (prev + 1) % previewImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [previewImages.length]);
 
   const handleScheduleDemo = () => {
     console.log("Scheduling demo for:", email);
@@ -172,27 +227,26 @@ export default function Demo() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
-        
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white dark:bg-[#070707]">
+        <div className="relative z-10 mx-auto w-full px-5 md:px-[5vw] py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <motion.div {...fadeInUp}>
-              <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+              <h1 className="text-[40px] md:text-[56px] font-bold mb-6 leading-tight text-[#070707] dark:text-white">
                 See the LUMIQ AI Business Credit Journey{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                <span className="text-primary">
                   in Action
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-8 leading-relaxed">
                 The missing link in your business banking experience. Pre-qualify SMBs for the right product using real-time Experian Intelliscore + FSR signals — directly inside your app.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="group shadow-premium hover:shadow-glow transition-all duration-300"
+                  variant="solver"
+                  className="group"
                   onClick={() => document.getElementById('interactive-gallery')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Launch Interactive Demo
@@ -201,7 +255,7 @@ export default function Demo() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="group"
+                  className="group border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
                   onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Book a Credit Strategy Session
@@ -217,26 +271,46 @@ export default function Demo() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 shadow-premium p-8 backdrop-blur-sm">
-                <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-2xl" />
-                <div className="relative z-10 h-full flex items-center justify-center">
-                  <motion.div
-                    animate={{ 
-                      y: [0, -10, 0],
-                    }}
-                    transition={{ 
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    className="text-center"
-                  >
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-primary/20 flex items-center justify-center">
-                      <BarChart3 className="h-12 w-12 text-primary" />
-                    </div>
-                    <p className="text-sm text-muted-foreground">Interactive Demo Preview</p>
-                  </motion.div>
+              <div className="relative aspect-square rounded-[32px] bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] shadow-[0_40px_120px_rgba(0,0,0,0.15)] p-6 overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.img
+                    key={activePreview}
+                    src={previewImages[activePreview]}
+                    alt="Dashboard preview"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full h-full object-contain rounded-[24px]"
+                  />
                 </div>
+                {/* Image indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                  {previewImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActivePreview(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        activePreview === index
+                          ? 'bg-primary w-6'
+                          : 'bg-white/40 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
+                {/* Navigation arrows */}
+                <button
+                  onClick={() => setActivePreview((prev) => (prev - 1 + previewImages.length) % previewImages.length)}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-[#1D1D1D]/90 backdrop-blur-sm flex items-center justify-center hover:bg-white dark:hover:bg-[#1D1D1D] transition-colors z-10 shadow-lg"
+                >
+                  <ArrowRight className="w-5 h-5 text-[#070707] dark:text-white rotate-180" />
+                </button>
+                <button
+                  onClick={() => setActivePreview((prev) => (prev + 1) % previewImages.length)}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-[#1D1D1D]/90 backdrop-blur-sm flex items-center justify-center hover:bg-white dark:hover:bg-[#1D1D1D] transition-colors z-10 shadow-lg"
+                >
+                  <ArrowRight className="w-5 h-5 text-[#070707] dark:text-white" />
+                </button>
               </div>
             </motion.div>
           </div>
@@ -244,8 +318,8 @@ export default function Demo() {
       </section>
 
       {/* Interactive Gallery Section */}
-      <section id="interactive-gallery" className="py-24 bg-gradient-to-b from-background to-card/20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="interactive-gallery" className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -253,10 +327,10 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
               Experience the Platform
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               Explore key screens and see how LUMIQ AI powers business credit decisions at scale.
             </p>
           </motion.div>
@@ -265,17 +339,16 @@ export default function Demo() {
             <CarouselContent>
               {demoScreens.map((screen, index) => (
                 <CarouselItem key={index}>
-                  <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-                    <div className="aspect-video bg-muted/20 rounded-lg mb-6 flex items-center justify-center border border-border/30 group hover:border-primary/50 transition-colors cursor-pointer">
-                      <div className="text-center">
-                        <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <BarChart3 className="h-8 w-8 text-primary" />
-                        </div>
-                        <p className="text-sm text-muted-foreground">Hover to enlarge</p>
-                      </div>
+                  <Card className="p-8 bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[24px]">
+                    <div className="aspect-video bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#EEE] dark:border-[#1C1C1C] group hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                      <img
+                        src={screen.image}
+                        alt={screen.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">{screen.title}</h3>
-                    <p className="text-muted-foreground mb-2">{screen.description}</p>
+                    <h3 className="text-2xl font-bold mb-3 text-[#070707] dark:text-white">{screen.title}</h3>
+                    <p className="text-[#070707]/70 dark:text-white/70 mb-2">{screen.description}</p>
                     <p className="text-sm text-primary italic">{screen.caption}</p>
                   </Card>
                 </CarouselItem>
@@ -288,8 +361,8 @@ export default function Demo() {
       </section>
 
       {/* Breakdown Grid - What You'll See */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -297,10 +370,10 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
               What You'll See in the Demo
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               Four core capabilities that power business credit intelligence.
             </p>
           </motion.div>
@@ -314,12 +387,12 @@ export default function Demo() {
           >
             {features.map((feature, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="p-8 h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-card group">
+                <Card className="p-8 h-full bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] hover:border-primary/30 transition-all duration-300 rounded-[24px] group">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <feature.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-[#070707] dark:text-white">{feature.title}</h3>
+                  <p className="text-[#070707]/70 dark:text-white/70 leading-relaxed">
                     {feature.description}
                   </p>
                 </Card>
@@ -330,8 +403,8 @@ export default function Demo() {
       </section>
 
       {/* Mini Playthrough Carousel */}
-      <section className="py-24 bg-gradient-to-b from-card/20 to-background">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -339,11 +412,11 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">
-              8-Step Guided Preview
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
+              Complete User Journey Preview
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Follow the complete journey from customer login to backend analytics.
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+              Follow the complete journey from login and signup to backend analytics.
             </p>
           </motion.div>
 
@@ -353,41 +426,60 @@ export default function Demo() {
                 <button
                   key={index}
                   onClick={() => setActiveWalkthrough(index)}
-                  className={`p-4 rounded-lg border transition-all duration-300 text-left ${
+                  className={`p-4 rounded-[20px] border transition-all duration-300 text-left ${
                     activeWalkthrough === index
                       ? 'border-primary bg-primary/10'
-                      : 'border-border/50 bg-card/30 hover:border-primary/50'
+                      : 'border-[#EEE] dark:border-[#1C1C1C] bg-[#EEE] dark:bg-[#1D1D1D] hover:border-primary/50'
                   }`}
                 >
                   <div className="text-2xl font-bold text-primary mb-2">{item.step}</div>
-                  <div className="text-sm font-medium">{item.title}</div>
+                  <div className="text-sm font-medium text-[#070707] dark:text-white">{item.title}</div>
                 </button>
               ))}
             </div>
 
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-              <div className="aspect-video bg-muted/20 rounded-lg mb-6 flex items-center justify-center border border-border/30">
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-primary mb-4">
-                    {walkthrough[activeWalkthrough].step}
+            <Card className="p-8 bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[28px]">
+              <div className="aspect-video bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#EEE] dark:border-[#1C1C1C] relative group">
+                {walkthrough[activeWalkthrough].image ? (
+                  <img
+                    src={walkthrough[activeWalkthrough].image}
+                    alt={walkthrough[activeWalkthrough].title}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-6xl font-bold text-primary mb-4">
+                        {walkthrough[activeWalkthrough].step}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 text-[#070707] dark:text-white">
+                        {walkthrough[activeWalkthrough].title}
+                      </h3>
+                      <p className="text-[#070707]/70 dark:text-white/70">
+                        {walkthrough[activeWalkthrough].description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">
-                    {walkthrough[activeWalkthrough].title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {walkthrough[activeWalkthrough].description}
-                  </p>
-                </div>
+                )}
+              </div>
+              <div className="mb-4 text-center">
+                <h3 className="text-xl font-bold mb-2 text-[#070707] dark:text-white">
+                  {walkthrough[activeWalkthrough].title}
+                </h3>
+                <p className="text-sm text-[#070707]/70 dark:text-white/70">
+                  {walkthrough[activeWalkthrough].description}
+                </p>
               </div>
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   disabled={activeWalkthrough === 0}
                   onClick={() => setActiveWalkthrough(Math.max(0, activeWalkthrough - 1))}
+                  className="border-[#070707] dark:border-white text-[#070707] dark:text-white"
                 >
                   Previous
                 </Button>
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-[#070707]/70 dark:text-white/70">
                   Step {activeWalkthrough + 1} of {walkthrough.length}
                 </span>
                 <Button
@@ -403,8 +495,8 @@ export default function Demo() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw] max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -412,15 +504,15 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70">
               Everything you need to know about the LUMIQ AI platform.
             </p>
           </motion.div>
 
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
+          <Card className="p-8 bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[28px]">
             {faqs.map((faq, index) => (
               <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
@@ -429,8 +521,8 @@ export default function Demo() {
       </section>
 
       {/* Impact Block */}
-      <section className="py-24 bg-gradient-to-b from-background to-card/20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -438,33 +530,33 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
               Why LUMIQ AI Wins
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               Proven results from pilot implementations with enterprise banking partners.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50">
+            <Card className="p-8 text-center bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[24px]">
               <div className="text-5xl font-bold text-primary mb-4">8-15%</div>
-              <div className="text-lg font-medium mb-2">Application Lift</div>
-              <p className="text-sm text-muted-foreground">
+              <div className="text-lg font-medium mb-2 text-[#070707] dark:text-white">Application Lift</div>
+              <p className="text-sm text-[#070707]/70 dark:text-white/70">
                 Increase in qualified applications during A/B testing
               </p>
             </Card>
-            <Card className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50">
+            <Card className="p-8 text-center bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[24px]">
               <div className="text-5xl font-bold text-primary mb-4">20-35%</div>
-              <div className="text-lg font-medium mb-2">Faster Decisions</div>
-              <p className="text-sm text-muted-foreground">
+              <div className="text-lg font-medium mb-2 text-[#070707] dark:text-white">Faster Decisions</div>
+              <p className="text-sm text-[#070707]/70 dark:text-white/70">
                 Reduction in manual review load and processing time
               </p>
             </Card>
-            <Card className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50">
+            <Card className="p-8 text-center bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[24px]">
               <div className="text-5xl font-bold text-primary mb-4">100%</div>
-              <div className="text-lg font-medium mb-2">Audit Logged</div>
-              <p className="text-sm text-muted-foreground">
+              <div className="text-lg font-medium mb-2 text-[#070707] dark:text-white">Audit Logged</div>
+              <p className="text-sm text-[#070707]/70 dark:text-white/70">
                 Complete transparency with FSR + Intelliscore input signals
               </p>
             </Card>
@@ -473,7 +565,7 @@ export default function Demo() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="shadow-premium hover:shadow-glow transition-all duration-300"
+              variant="solver"
               onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Start Your Pilot in 6 Weeks
@@ -482,6 +574,7 @@ export default function Demo() {
             <Button 
               size="lg"
               variant="outline"
+              className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
             >
               Download Model Governance Framework
             </Button>
@@ -490,53 +583,54 @@ export default function Demo() {
       </section>
 
       {/* Booking Module */}
-      <section id="booking" className="py-24">
-        <div className="mx-auto max-w-2xl px-6">
+      <section id="booking" className="py-20 bg-white dark:bg-[#070707]">
+        <div className="mx-auto w-full px-5 md:px-[5vw] max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-12 bg-card/50 backdrop-blur-sm border-border/50 shadow-premium">
+            <Card className="p-12 bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] rounded-[32px] shadow-[0_40px_120px_rgba(0,0,0,0.15)]">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-display font-bold mb-4">
+                <h2 className="text-3xl font-bold mb-4 text-[#070707] dark:text-white">
                   Schedule Your Demo
                 </h2>
-                <p className="text-muted-foreground mb-2">
+                <p className="text-[#070707]/70 dark:text-white/70 mb-2">
                   Speak with our Credit Intelligence Team
                 </p>
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-[#070707]/60 dark:text-white/60 italic">
                   NDA available upon request
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <Input placeholder="Full name" className="bg-background/50" />
+                  <label className="block text-sm font-medium mb-2 text-[#070707] dark:text-white">Name</label>
+                  <Input placeholder="Full name" className="bg-white dark:bg-[#0F0F0F] border-[#EEE] dark:border-[#1C1C1C]" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Company</label>
-                  <Input placeholder="Company name" className="bg-background/50" />
+                  <label className="block text-sm font-medium mb-2 text-[#070707] dark:text-white">Company</label>
+                  <Input placeholder="Company name" className="bg-white dark:bg-[#0F0F0F] border-[#EEE] dark:border-[#1C1C1C]" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Role</label>
-                  <Input placeholder="Your role" className="bg-background/50" />
+                  <label className="block text-sm font-medium mb-2 text-[#070707] dark:text-white">Role</label>
+                  <Input placeholder="Your role" className="bg-white dark:bg-[#0F0F0F] border-[#EEE] dark:border-[#1C1C1C]" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Work Email</label>
+                  <label className="block text-sm font-medium mb-2 text-[#070707] dark:text-white">Work Email</label>
                   <Input 
                     type="email" 
                     placeholder="you@company.com" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-background/50"
+                    className="bg-white dark:bg-[#0F0F0F] border-[#EEE] dark:border-[#1C1C1C]"
                   />
                 </div>
                 <Button 
                   size="lg" 
-                  className="w-full shadow-premium hover:shadow-glow transition-all duration-300"
+                  variant="solver"
+                  className="w-full"
                   onClick={handleScheduleDemo}
                 >
                   Schedule a Demo
@@ -544,8 +638,8 @@ export default function Demo() {
                 </Button>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-border/50">
-                <div className="flex items-start gap-3 text-sm text-muted-foreground">
+              <div className="mt-8 pt-8 border-t border-[#070707]/10 dark:border-white/10">
+                <div className="flex items-start gap-3 text-sm text-[#070707]/70 dark:text-white/70">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <p>
                     Includes integration spec, dashboard preview, and model governance overview tailored for your internal teams.

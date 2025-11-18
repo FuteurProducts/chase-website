@@ -262,24 +262,44 @@ export default function HowItWorks() {
 
               <div className="space-y-10">
                 <div className="grid lg:grid-cols-2 gap-10">
-                  <div className="relative">
-                    <div className="absolute inset-0 blur-[140px] bg-primary/20 rounded-[40px]" />
-                    <div className="relative rounded-[40px] bg-white border border-white shadow-[0_40px_90px_rgba(0,0,0,0.15)] p-6">
+                  <motion.div 
+                    {...fadeInUp}
+                    className="relative group"
+                  >
+                    <div className="absolute inset-0 blur-[140px] bg-primary/30 rounded-[40px] opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    <div className="relative rounded-[40px] bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 shadow-[0_40px_120px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,255,255,0.5)] p-8 group-hover:shadow-[0_50px_150px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500">
+                      <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
+                        <div className="w-3 h-3 rounded-full bg-red-400 shadow-sm" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400 shadow-sm" />
+                        <div className="w-3 h-3 rounded-full bg-green-400 shadow-sm" />
+                      </div>
                       <img
                         src="/mockups/dashboard.png"
                         alt="Portfolio dashboard mockup"
-                        className="rounded-[28px] w-full h-auto drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+                        className="rounded-[28px] w-full h-auto drop-shadow-[0_30px_80px_rgba(0,0,0,0.35)] group-hover:scale-[1.02] transition-transform duration-500"
                       />
-                      <div className="mt-4 h-3 w-1/2 mx-auto rounded-full bg-[#070707]/10" />
+                      <div className="mt-6 h-2 w-1/3 mx-auto rounded-full bg-gradient-to-r from-transparent via-[#070707]/10 to-transparent" />
                     </div>
-                  </div>
-                  <div className="relative rounded-[32px] bg-[#EEE] dark:bg-[#0F0F0F] border border-[#EEE] dark:border-[#1C1C1C] p-10 text-center text-[#070707]/60 dark:text-white/60 shadow-[0_25px_70px_rgba(0,0,0,0.15)]">
-                    <img
-                      src="/mockups/analytics.png"
-                      alt="Analytics view mockup"
-                      className="w-full h-auto rounded-[20px] drop-shadow-[0_20px_60px_rgba(0,0,0,0.3)]"
-                    />
-                  </div>
+                  </motion.div>
+                  <motion.div 
+                    {...fadeInUp}
+                    transition={{ delay: 0.2 }}
+                    className="relative group"
+                  >
+                    <div className="absolute inset-0 blur-[120px] bg-primary/25 rounded-[32px] opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+                    <div className="relative rounded-[32px] bg-gradient-to-br from-[#EEE] to-gray-100 dark:from-[#0F0F0F] dark:to-[#1a1a1a] border border-gray-200/50 dark:border-[#1C1C1C] p-10 shadow-[0_30px_100px_rgba(0,0,0,0.2)] group-hover:shadow-[0_40px_130px_rgba(0,0,0,0.25)] transition-all duration-500">
+                      <div className="absolute top-6 left-6 right-6 flex gap-2 z-10">
+                        <div className="w-3 h-3 rounded-full bg-red-400/80 shadow-sm" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400/80 shadow-sm" />
+                        <div className="w-3 h-3 rounded-full bg-green-400/80 shadow-sm" />
+                      </div>
+                      <img
+                        src="/mockups/analytics.png"
+                        alt="Analytics view mockup"
+                        className="w-full h-auto rounded-[24px] drop-shadow-[0_30px_90px_rgba(0,0,0,0.4)] group-hover:scale-[1.02] transition-transform duration-500"
+                      />
+                    </div>
+                  </motion.div>
                 </div>
 
                 <div className="bg-[#EEE] dark:bg-[#0F0F0F] border border-[#EEE] dark:border-[#1C1C1C] rounded-[28px] p-8 space-y-6 shadow-[0_30px_90px_rgba(0,0,0,0.12)]">

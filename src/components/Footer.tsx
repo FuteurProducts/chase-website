@@ -61,7 +61,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h4 className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4">Solutions</h4>
               <ul className="space-y-3 text-white/70 text-sm">
@@ -85,24 +85,6 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4">Support</h4>
-              <ul className="space-y-3 text-white/70 text-sm">
-                {policyLinks.map((item) => (
-                  <li key={item.label}>
-                    <Link to={item.href} className="hover:text-white transition">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-                <li className="pt-2">
-                  <a href="mailto:enterprise@lumiq.ai" className="hover:text-white transition">
-                    enterprise@lumiq.ai
-                  </a>
-                </li>
               </ul>
             </div>
           </div>

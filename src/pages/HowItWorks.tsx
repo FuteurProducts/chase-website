@@ -197,13 +197,13 @@ export default function HowItWorks() {
                     title: "Today — consumer journey",
                     gradient: "from-[#0B1F4B] to-[#050910]",
                     label: "Mobile mockup placeholder (consumer)",
-                    image: "/mockups/consumermockup.png"
+                    image: "/mockups/chaseconsumer.png"
                   },
                   {
                     title: "Business journey",
                     gradient: "from-[#1146F2] via-[#7D4DFF] to-[#0B1F4B]",
                     label: "Mobile mockup placeholder (business)",
-                    image: "/mockups/businessmockup.png"
+                    image: "/mockups/businessmockup1.png"
                   }
                 ].map((device) => (
                   <div key={device.title} className="space-y-4">

@@ -151,7 +151,7 @@ function Index() {
             >
               <div className="mb-6">
                 <img 
-                  src="/mockups/mockup1.png" 
+                  src="/mockups/consumermockup.png" 
                   alt="Consumer Credit Journey Mobile App" 
                   className="w-full max-w-[280px] md:max-w-[340px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
                 />

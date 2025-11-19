@@ -5,6 +5,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import HeroBackground from "@/components/HeroBackground";
 
 function MetricCard({ value, label, icon: Icon, delay = 0 }: { value: string; label: string; icon: any; delay?: number }) {
   const ref = useRef(null);
@@ -16,11 +17,11 @@ function MetricCard({ value, label, icon: Icon, delay = 0 }: { value: string; la
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
-      className="flex flex-col items-center p-8 rounded-2xl bg-card/50 backdrop-blur border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(51,204,255,0.15)]"
+      className="flex flex-col items-center p-6 rounded-2xl bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] hover:border-primary/30 transition-all duration-300"
     >
-      <Icon className="w-12 h-12 text-primary mb-4" />
-      <div className="text-4xl font-bold text-primary mb-2">{value}</div>
-      <div className="text-sm text-muted-foreground text-center">{label}</div>
+      <Icon className="w-10 h-10 text-primary mb-4" />
+      <div className="text-3xl font-bold text-primary mb-2">{value}</div>
+      <div className="text-sm text-[#070707]/70 dark:text-white/70 text-center">{label}</div>
     </motion.div>
   );
 }
@@ -37,16 +38,16 @@ function ComparisonRow({ consumer, business, delay = 0 }: { consumer: string; bu
       transition={{ duration: 0.6, delay }}
       className="grid md:grid-cols-2 gap-6 mb-6"
     >
-      <div className="p-6 rounded-xl bg-card/30 border border-border/30">
+      <div className="p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D]">
         <div className="flex items-start gap-3">
           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-          <p className="text-foreground">{consumer}</p>
+          <p className="text-[#070707] dark:text-white">{consumer}</p>
         </div>
       </div>
-      <div className="p-6 rounded-xl bg-primary/5 border border-primary/30">
+      <div className="p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-primary/30">
         <div className="flex items-start gap-3">
           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-          <p className="text-foreground font-medium">{business}</p>
+          <p className="text-[#070707] dark:text-white font-medium">{business}</p>
         </div>
       </div>
     </motion.div>
@@ -54,61 +55,76 @@ function ComparisonRow({ consumer, business, delay = 0 }: { consumer: string; bu
 }
 
 function USS() {
+  const containerClass = "mx-auto w-full px-5 md:px-[5vw]";
+  const neutralCard = "bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-[24px]";
+
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto text-center"
-          >
+      <HeroBackground>
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="flex flex-col items-start gap-12">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full"
             >
-              <Shield className="w-4 h-4" />
-              Unique Salient Similarities (USS)
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1146F2] text-white text-sm font-medium mb-6">
+                <Shield className="w-4 h-4" />
+                Unique Salient Similarities (USS)
+              </div>
+
+              <h1 className="text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-6 leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-1.2px] md:tracking-[-2.16px] text-white">
+                The proven playbook applied to business credit
+              </h1>
+
+              <p className="text-lg text-white/90 mb-4 max-w-3xl leading-relaxed font-normal">
+                Chase Credit Journey® revolutionized consumer credit engagement. Now the same proven science powers business credit intelligence.
+              </p>
+
+              <p className="text-base text-white/70 mb-8 max-w-2xl">
+                Same science. Same proven engagement model. Same compliance rigor. Now applied to the $2.3T business credit market.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-10">
+                <Link to="/pilot">
+                  <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
+                    Start Your Pilot
+                    <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
+                      <ArrowRight className="w-5 h-5 text-[#070707]" />
+                    </div>
+                  </Button>
+                </Link>
+                <Link to="/demo">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                    See the Platform
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="flex flex-wrap gap-4 text-sm text-white/80">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <Users className="w-4 h-4 text-white" />
+                  <span>22M+ consumer users</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <TrendingUp className="w-4 h-4 text-white" />
+                  <span>+25% conversion lift</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <Shield className="w-4 h-4 text-white" />
+                  <span>100% audit trail</span>
+                </div>
+              </div>
             </motion.div>
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              The{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                proven playbook
-              </span>
-              {" "}applied to business credit
-            </h1>
-
-            <p className="text-xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Chase Credit Journey® revolutionized consumer credit engagement. Now the same proven science powers business credit intelligence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/pilot">
-                <Button size="lg" className="group">
-                  Start Your Pilot
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link to="/demo">
-                <Button size="lg" variant="outline">
-                  See the Platform
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+      </HeroBackground>
 
       {/* Chase Credit Journey Historical Impact */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,13 +132,10 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Chase Credit Journey®: The{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Proof Point
-              </span>
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+              Chase Credit Journey®: The Proof Point
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
               Since implementation, Chase Credit Journey has transformed consumer credit engagement and generated massive ROI
             </p>
           </motion.div>
@@ -160,20 +173,20 @@ function USS() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Card className="bg-card/50 backdrop-blur border-primary/20">
+            <Card className={`${neutralCard}`}>
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div>
                     <div className="text-3xl font-bold text-primary mb-2">85%</div>
-                    <div className="text-sm text-muted-foreground">Customer Satisfaction Increase</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">Customer Satisfaction Increase</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
-                    <div className="text-sm text-muted-foreground">Increase in Digital Banking Usage</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">Increase in Digital Banking Usage</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-primary mb-2">150M+</div>
-                    <div className="text-sm text-muted-foreground">Americans Using Credit Visibility Tools</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">Americans Using Credit Visibility Tools</div>
                   </div>
                 </div>
               </CardContent>
@@ -183,8 +196,8 @@ function USS() {
       </section>
 
       {/* The Opportunity Gap */}
-      <section className="py-24 relative bg-gradient-to-b from-background to-primary/5">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -192,71 +205,68 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              But 32 Million SMBs?{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Still Flying Blind
-              </span>
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+              But 32 Million SMBs? Still Flying Blind
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
               The same engagement revolution that transformed consumer credit hasn't reached business credit — until now
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-card/50 backdrop-blur border-border/50">
+            <Card className={`${neutralCard}`}>
               <CardHeader>
-                <CardTitle className="text-2xl">SMB Reality</CardTitle>
+                <CardTitle className="text-2xl text-[#070707] dark:text-white">SMB Reality</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">78% of SMBs</p>
-                    <p className="text-sm text-muted-foreground">Have never seen their business credit score</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">78% of SMBs</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">Have never seen their business credit score</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">85% of rejections</p>
-                    <p className="text-sm text-muted-foreground">Come with no actionable feedback</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">85% of rejections</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">Come with no actionable feedback</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">60% considering switching</p>
-                    <p className="text-sm text-muted-foreground">To fintech alternatives for transparency</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">60% considering switching</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">To fintech alternatives for transparency</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary/5 backdrop-blur border-primary/30">
+            <Card className={`${neutralCard} border-primary/30`}>
               <CardHeader>
-                <CardTitle className="text-2xl">The $2.3T Opportunity</CardTitle>
+                <CardTitle className="text-2xl text-[#070707] dark:text-white">The $2.3T Opportunity</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">32 million SMBs</p>
-                    <p className="text-sm text-muted-foreground">Generate $2.3T in annual credit demand</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">32 million SMBs</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">Generate $2.3T in annual credit demand</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">$47M avg. annual loss</p>
-                    <p className="text-sm text-muted-foreground">Per major bank to fintech competitors</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">$47M avg. annual loss</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">Per major bank to fintech competitors</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">23% annual growth</p>
-                    <p className="text-sm text-muted-foreground">Fintech SMB market share acceleration</p>
+                    <p className="font-semibold text-[#070707] dark:text-white">23% annual growth</p>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">Fintech SMB market share acceleration</p>
                   </div>
                 </div>
               </CardContent>
@@ -266,8 +276,8 @@ function USS() {
       </section>
 
       {/* Side-by-Side Comparison */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -275,28 +285,25 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Same{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Proven Formula
-              </span>
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+              Same Proven Formula
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto mb-12">
               The consumer playbook that generated hundreds of millions in revenue — now engineered for business credit
             </p>
           </motion.div>
 
           <div className="max-w-6xl mx-auto mb-8">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="text-center p-6 rounded-xl bg-card/30 border border-border/30">
+              <div className="text-center p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D]">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Chase Credit Journey®</h3>
-                <p className="text-muted-foreground">Consumer Credit Intelligence</p>
+                <h3 className="text-2xl font-bold mb-2 text-[#070707] dark:text-white">Chase Credit Journey®</h3>
+                <p className="text-[#070707]/70 dark:text-white/70">Consumer Credit Intelligence</p>
               </div>
-              <div className="text-center p-6 rounded-xl bg-primary/5 border border-primary/30">
+              <div className="text-center p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-primary/30">
                 <Briefcase className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">LUMIQ AI Business Credit Journey</h3>
-                <p className="text-muted-foreground">Business Credit Intelligence</p>
+                <h3 className="text-2xl font-bold mb-2 text-[#070707] dark:text-white">LUMIQ AI Business Credit Journey</h3>
+                <p className="text-[#070707]/70 dark:text-white/70">Business Credit Intelligence</p>
               </div>
             </div>
 
@@ -335,8 +342,8 @@ function USS() {
       </section>
 
       {/* Projected Business Impact */}
-      <section className="py-24 relative bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -344,48 +351,45 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Your Business Credit{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Opportunity
-              </span>
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+              Your Business Credit Opportunity
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
               Conservative projections based on Chase Credit Journey's proven results, applied to business credit portfolio
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-card/50 backdrop-blur border-primary/20 hover:shadow-[0_0_40px_rgba(51,204,255,0.15)] transition-all">
+            <Card className={`${neutralCard} hover:border-primary/30 transition-all`}>
               <CardHeader>
                 <Target className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-3xl font-bold text-primary">+25%</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground font-semibold mb-2">Pre-Qualified SMB Conversions</p>
-                <p className="text-sm text-muted-foreground">Same conversion lift Chase achieved with consumers</p>
+                <p className="text-[#070707] dark:text-white font-semibold mb-2">Pre-Qualified SMB Conversions</p>
+                <p className="text-sm text-[#070707]/70 dark:text-white/70">Same conversion lift Chase achieved with consumers</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/50 backdrop-blur border-primary/20 hover:shadow-[0_0_40px_rgba(51,204,255,0.15)] transition-all">
+            <Card className={`${neutralCard} hover:border-primary/30 transition-all`}>
               <CardHeader>
                 <DollarSign className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-3xl font-bold text-primary">$100M+</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground font-semibold mb-2">Stage 1: Business Card Uplift</p>
-                <p className="text-sm text-muted-foreground">Incremental interchange and fee revenue</p>
+                <p className="text-[#070707] dark:text-white font-semibold mb-2">Stage 1: Business Card Uplift</p>
+                <p className="text-sm text-[#070707]/70 dark:text-white/70">Incremental interchange and fee revenue</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/50 backdrop-blur border-primary/20 hover:shadow-[0_0_40px_rgba(51,204,255,0.15)] transition-all">
+            <Card className={`${neutralCard} hover:border-primary/30 transition-all`}>
               <CardHeader>
                 <TrendingUp className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-3xl font-bold text-primary">$210-320M</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground font-semibold mb-2">Stage 2: Lending Expansion Potential</p>
-                <p className="text-sm text-muted-foreground">LOC and term loan revenue opportunity</p>
+                <p className="text-[#070707] dark:text-white font-semibold mb-2">Stage 2: Lending Expansion Potential</p>
+                <p className="text-sm text-[#070707]/70 dark:text-white/70">LOC and term loan revenue opportunity</p>
               </CardContent>
             </Card>
           </div>
@@ -397,29 +401,29 @@ function USS() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-4xl mx-auto"
           >
-            <Card className="bg-primary/5 backdrop-blur border-primary/30">
+            <Card className={`${neutralCard} border-primary/30`}>
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <Shield className="w-8 h-8 text-primary flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Inside Your Risk Guardrails</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-xl font-bold mb-2 text-[#070707] dark:text-white">Inside Your Risk Guardrails</h3>
+                    <p className="text-[#070707]/70 dark:text-white/70">
                       Same science. Same proven engagement model. Same compliance rigor. Now applied to the $2.3T business credit market where your SMB customers are already looking for transparency.
                     </p>
                   </div>
                 </div>
-                <div className="grid md:grid-cols-3 gap-6 text-center pt-6 border-t border-border/30">
+                <div className="grid md:grid-cols-3 gap-6 text-center pt-6 border-t border-[#E4E7EC] dark:border-[#1D1D1D]">
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                    <div className="text-sm text-muted-foreground">Audit-Trail Coverage</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">Audit-Trail Coverage</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">5x</div>
-                    <div className="text-sm text-muted-foreground">More Accurate Scoring</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">More Accurate Scoring</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">2 weeks</div>
-                    <div className="text-sm text-muted-foreground">Integration Timeline</div>
+                    <div className="text-sm text-[#070707]/70 dark:text-white/70">Integration Timeline</div>
                   </div>
                 </div>
               </CardContent>
@@ -429,8 +433,8 @@ function USS() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -438,26 +442,25 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Card className="bg-gradient-to-br from-primary/10 via-secondary/5 to-background border-primary/30 overflow-hidden">
-              <CardContent className="p-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  You've proven this works.{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                    Now capture the business side.
-                  </span>
+            <Card className={`${neutralCard} rounded-[32px]`}>
+              <CardContent className="p-8 md:p-12">
+                <h2 className="text-[32px] md:text-[48px] font-bold mb-6 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+                  You've proven this works. Now capture the business side.
                 </h2>
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-8 max-w-2xl mx-auto">
                   Start a 6-week pilot with pre-agreed success criteria and see the same conversion lift you achieved with consumer credit.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/pilot">
-                    <Button size="lg" className="group text-lg px-8 py-6">
+                    <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
                       Book a 20-Minute Pilot Review
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <div className="w-10 h-10 p-2.5 rounded-full bg-[#070707] dark:bg-white flex items-center justify-center">
+                        <ArrowRight className="w-5 h-5 text-white dark:text-[#070707]" />
+                      </div>
                     </Button>
                   </Link>
                   <Link to="/demo">
-                    <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                    <Button size="lg" variant="outline" className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50">
                       See Platform Demo
                     </Button>
                   </Link>

@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
+import HeroBackground from "@/components/HeroBackground";
 import { 
   TrendingUp, 
   DollarSign, 
@@ -91,127 +92,125 @@ function Pilot() {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const containerClass = "mx-auto w-full px-5 md:px-[5vw]";
+  const neutralCard = "bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-[24px]";
+
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/5" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <HeroBackground>
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="flex flex-col items-start gap-12">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1146F2] text-white text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
                 Designed for Institutional Finance & Model-Risk Governance
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Launch a 90-Day Pilot of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  LUMIQ AI Business Credit Journey™
-                </span>
+              <h1 className="text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-6 leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-1.2px] md:tracking-[-2.16px] text-white">
+                Launch a 90-Day Pilot of LUMIQ AI Business Credit Journey™
               </h1>
 
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg text-white/90 mb-4 max-w-3xl leading-relaxed font-normal">
                 Embed our API inside your Chase Business app, run live conversion lift tests, and generate measurable impact—within your risk framework.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <p className="text-base text-white/70 mb-8 max-w-2xl">
+                Non-disruptive integration. Measurable results. Built on proven principles.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-10">
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+                  variant="solver"
+                  className="text-base md:text-lg gap-6"
                   onClick={() => document.getElementById('pilot-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Book Pilot Review
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
+                    <ArrowRight className="w-5 h-5 text-[#070707]" />
+                  </div>
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="text-lg px-8 py-6"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10"
                 >
                   <Download className="mr-2 w-5 h-5" />
                   Download Pilot Brief
                 </Button>
               </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div className="relative aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl" />
-                <div className="relative bg-card/80 backdrop-blur border border-border rounded-3xl p-8 shadow-2xl">
-                  <div className="space-y-4">
-                    <div className="h-4 bg-gradient-to-r from-primary to-transparent rounded" />
-                    <div className="h-4 bg-gradient-to-r from-secondary to-transparent rounded w-3/4" />
-                    <div className="h-32 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg border border-primary/20" />
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="h-16 bg-card rounded border border-border" />
-                      <div className="h-16 bg-card rounded border border-border" />
-                      <div className="h-16 bg-card rounded border border-border" />
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-4 text-sm text-white/80">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <TrendingUp className="w-4 h-4 text-white" />
+                  <span>+15–25% app-to-booked lift</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <Shield className="w-4 h-4 text-white" />
+                  <span>100% audit trail coverage</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                  <Lock className="w-4 h-4 text-white" />
+                  <span>ECOA/FCRA/GLBA compliant</span>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>
+      </HeroBackground>
 
       {/* Benefits Snapshots */}
-      <section className="py-24 px-6 bg-muted/30">
-        <div className="container mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Proven Pilot Results</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Proven Pilot Results</h2>
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               Measurable impact from day one, with full alignment to your risk and governance requirements.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
-              <Card className="text-center h-full border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
-                <CardContent className="pt-12 pb-10 px-6">
-                  <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="h-8 w-8 text-primary" />
+              <Card className={`${neutralCard} text-center h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-6">
+                  <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="h-7 w-7 text-primary" />
                   </div>
-                  <div className="text-5xl font-bold text-primary mb-3">+15-25%</div>
-                  <p className="text-lg font-medium mb-2">App-to-Booked Lift</p>
-                  <p className="text-sm text-muted-foreground">Owned channel conversion increase</p>
+                  <div className="text-4xl font-bold text-primary mb-3">+15–25%</div>
+                  <p className="text-lg font-semibold mb-2 text-[#070707] dark:text-white">App-to-Booked Lift</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70">Owned channel conversion increase</p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-              <Card className="text-center h-full border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
-                <CardContent className="pt-12 pb-10 px-6">
-                  <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <DollarSign className="h-8 w-8 text-primary" />
+              <Card className={`${neutralCard} text-center h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-6">
+                  <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                    <DollarSign className="h-7 w-7 text-primary" />
                   </div>
-                  <div className="text-5xl font-bold text-primary mb-3">-20%</div>
-                  <p className="text-lg font-medium mb-2">CAC Reduction</p>
-                  <p className="text-sm text-muted-foreground">vs. paid media acquisition</p>
+                  <div className="text-4xl font-bold text-primary mb-3">-20%</div>
+                  <p className="text-lg font-semibold mb-2 text-[#070707] dark:text-white">CAC Reduction</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70">vs. paid media acquisition</p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
-              <Card className="text-center h-full border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
-                <CardContent className="pt-12 pb-10 px-6">
-                  <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <Shield className="h-8 w-8 text-primary" />
+              <Card className={`${neutralCard} text-center h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-6">
+                  <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                    <Shield className="h-7 w-7 text-primary" />
                   </div>
-                  <div className="text-5xl font-bold text-primary mb-3">100%</div>
-                  <p className="text-lg font-medium mb-2">Audit Trail</p>
-                  <p className="text-sm text-muted-foreground">Explainable models = Risk alignment</p>
+                  <div className="text-4xl font-bold text-primary mb-3">100%</div>
+                  <p className="text-lg font-semibold mb-2 text-[#070707] dark:text-white">Audit Trail</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70">Explainable models = Risk alignment</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -220,30 +219,30 @@ function Pilot() {
       </section>
 
       {/* 90-Day Timeline */}
-      <section className="py-24 px-6">
-        <div className="container mx-auto">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Your 90-Day Pilot Journey</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Your 90-Day Pilot Journey</h2>
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               A structured, measurable approach to validating Business Credit Journey inside your stack.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
-              <Card className="relative h-full border-primary/30 bg-gradient-to-br from-primary/5 to-background">
-                <div className="absolute -top-4 left-6">
-                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    1
-                  </div>
-                </div>
-                <CardContent className="pt-10 pb-8 px-6">
+              <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <Plug className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-bold">Week 0–2</h3>
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Plug className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
                   </div>
-                  <p className="text-lg font-semibold mb-3">Onboarding & Sandbox Integration</p>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 text-[#070707] dark:text-white">Week 0–2</h3>
+                  <p className="text-base font-semibold mb-3 text-[#070707] dark:text-white">Onboarding & Sandbox Integration</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70 leading-relaxed">
                     Connect credit signals (FICO, Intelliscore, FSR) in a secure sandbox environment. 
                     Validate data flows and configure risk parameters to match your underwriting standards.
                   </p>
@@ -252,19 +251,19 @@ function Pilot() {
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-              <Card className="relative h-full border-primary/30 bg-gradient-to-br from-primary/5 to-background">
-                <div className="absolute -top-4 left-6">
-                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    2
-                  </div>
-                </div>
-                <CardContent className="pt-10 pb-8 px-6">
+              <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <BarChart3 className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-bold">Week 3–8</h3>
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <BarChart3 className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
                   </div>
-                  <p className="text-lg font-semibold mb-3">Live A/B Test</p>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 text-[#070707] dark:text-white">Week 3–8</h3>
+                  <p className="text-base font-semibold mb-3 text-[#070707] dark:text-white">Live A/B Test</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70 leading-relaxed">
                     Deploy to 50% of target cohort vs. control group. Track conversion lift, approval rate delta, 
                     loss rate, and time-to-decision across your SMB portfolio.
                   </p>
@@ -273,19 +272,19 @@ function Pilot() {
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
-              <Card className="relative h-full border-primary/30 bg-gradient-to-br from-primary/5 to-background">
-                <div className="absolute -top-4 left-6">
-                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    3
-                  </div>
-                </div>
-                <CardContent className="pt-10 pb-8 px-6">
+              <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all`}>
+                <CardContent className="pt-8 pb-8 px-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <Layers className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-bold">Week 9–12</h3>
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Layers className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                      3
+                    </div>
                   </div>
-                  <p className="text-lg font-semibold mb-3">Scale & Roll-out Decision</p>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 text-[#070707] dark:text-white">Week 9–12</h3>
+                  <p className="text-base font-semibold mb-3 text-[#070707] dark:text-white">Scale & Roll-out Decision</p>
+                  <p className="text-sm text-[#070707]/70 dark:text-white/70 leading-relaxed">
                     Review results with your team. If KPIs are met, scale to broader SMB segments. 
                     Full documentation and model governance artifacts provided.
                   </p>
@@ -297,33 +296,33 @@ function Pilot() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 px-6 bg-muted/30">
-        <div className="container mx-auto">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">How It Works</h2>
+            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
               Four simple steps to embed Business Credit Journey into your digital banking experience.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <TooltipProvider>
               <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Card className="h-full hover:shadow-lg transition-all cursor-help border-primary/20 hover:border-primary/40">
+                    <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all cursor-help`}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <span className="text-primary font-bold text-lg">1</span>
                           </div>
-                          <div>
-                            <h3 className="font-bold mb-2">Connect Signals</h3>
-                            <p className="text-sm text-muted-foreground">
+                          <div className="flex-1">
+                            <h3 className="font-bold mb-2 text-[#070707] dark:text-white">Connect Signals</h3>
+                            <p className="text-sm text-[#070707]/70 dark:text-white/70">
                               Securely connect business + owner credit signals (FICO, Intelliscore, FSR)
                             </p>
                           </div>
-                          <Info className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                          <Info className="h-4 w-4 text-[#070707]/50 dark:text-white/50 flex-shrink-0" />
                         </div>
                       </CardContent>
                     </Card>
@@ -337,19 +336,19 @@ function Pilot() {
               <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Card className="h-full hover:shadow-lg transition-all cursor-help border-primary/20 hover:border-primary/40">
+                    <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all cursor-help`}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <span className="text-primary font-bold text-lg">2</span>
                           </div>
-                          <div>
-                            <h3 className="font-bold mb-2">Run Model</h3>
-                            <p className="text-sm text-muted-foreground">
+                          <div className="flex-1">
+                            <h3 className="font-bold mb-2 text-[#070707] dark:text-white">Run Model</h3>
+                            <p className="text-sm text-[#070707]/70 dark:text-white/70">
                               Run our model in your stack—aligned to your risk appetite
                             </p>
                           </div>
-                          <Info className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                          <Info className="h-4 w-4 text-[#070707]/50 dark:text-white/50 flex-shrink-0" />
                         </div>
                       </CardContent>
                     </Card>
@@ -363,19 +362,19 @@ function Pilot() {
               <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Card className="h-full hover:shadow-lg transition-all cursor-help border-primary/20 hover:border-primary/40">
+                    <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all cursor-help`}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <span className="text-primary font-bold text-lg">3</span>
                           </div>
-                          <div>
-                            <h3 className="font-bold mb-2">Route Offers</h3>
-                            <p className="text-sm text-muted-foreground">
+                          <div className="flex-1">
+                            <h3 className="font-bold mb-2 text-[#070707] dark:text-white">Route Offers</h3>
+                            <p className="text-sm text-[#070707]/70 dark:text-white/70">
                               Route eligible SMBs to right products (Ink Business cards first)
                             </p>
                           </div>
-                          <Info className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                          <Info className="h-4 w-4 text-[#070707]/50 dark:text-white/50 flex-shrink-0" />
                         </div>
                       </CardContent>
                     </Card>
@@ -389,19 +388,19 @@ function Pilot() {
               <motion.div {...fadeInUp} transition={{ delay: 0.4 }}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Card className="h-full hover:shadow-lg transition-all cursor-help border-primary/20 hover:border-primary/40">
+                    <Card className={`${neutralCard} h-full hover:border-primary/30 transition-all cursor-help`}>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <span className="text-primary font-bold text-lg">4</span>
                           </div>
-                          <div>
-                            <h3 className="font-bold mb-2">Measure & Scale</h3>
-                            <p className="text-sm text-muted-foreground">
+                          <div className="flex-1">
+                            <h3 className="font-bold mb-2 text-[#070707] dark:text-white">Measure & Scale</h3>
+                            <p className="text-sm text-[#070707]/70 dark:text-white/70">
                               Measure lift, track metrics, and scale based on results
                             </p>
                           </div>
-                          <Info className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                          <Info className="h-4 w-4 text-[#070707]/50 dark:text-white/50 flex-shrink-0" />
                         </div>
                       </CardContent>
                     </Card>
@@ -417,17 +416,17 @@ function Pilot() {
       </section>
 
       {/* Governance Callout */}
-      <section className="py-24 px-6 bg-background">
-        <div className="container mx-auto">
+      <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
+        <div className={containerClass}>
           <motion.div {...fadeInUp}>
-            <Card className="max-w-5xl mx-auto bg-gradient-to-br from-background via-primary/5 to-secondary/5 border-primary/30">
-              <CardContent className="p-12">
+            <Card className={`${neutralCard} rounded-[32px]`}>
+              <CardContent className="p-8 md:p-12">
                 <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-4">
-                    <Lock className="h-8 w-8 text-primary" />
+                  <div className="inline-flex items-center justify-center h-14 w-14 rounded-xl bg-primary/10 mb-4">
+                    <Lock className="h-7 w-7 text-primary" />
                   </div>
-                  <h2 className="text-3xl font-bold mb-4">Built with Model-Risk Governance in Mind</h2>
-                  <p className="text-muted-foreground max-w-2xl mx-auto">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#070707] dark:text-white">Built with Model-Risk Governance in Mind</h2>
+                  <p className="text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
                     Built with model-risk governance, audit-ready logs, and SBC compliance in mind.
                   </p>
                 </div>
@@ -436,24 +435,24 @@ function Pilot() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">ECOA/FCRA/GLBA Compliant</p>
-                      <p className="text-sm text-muted-foreground">Full regulatory compliance built into every decision path</p>
+                      <p className="font-semibold mb-1 text-[#070707] dark:text-white">ECOA/FCRA/GLBA Compliant</p>
+                      <p className="text-sm text-[#070707]/70 dark:text-white/70">Full regulatory compliance built into every decision path</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">100% Data Lineage & Decision Logging</p>
-                      <p className="text-sm text-muted-foreground">Complete audit trail for model risk and compliance teams</p>
+                      <p className="font-semibold mb-1 text-[#070707] dark:text-white">100% Data Lineage & Decision Logging</p>
+                      <p className="text-sm text-[#070707]/70 dark:text-white/70">Complete audit trail for model risk and compliance teams</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">Parallel A/B Pilot—Non-Disruptive</p>
-                      <p className="text-sm text-muted-foreground">Test safely alongside existing systems with zero downtime</p>
+                      <p className="font-semibold mb-1 text-[#070707] dark:text-white">Parallel A/B Pilot—Non-Disruptive</p>
+                      <p className="text-sm text-[#070707]/70 dark:text-white/70">Test safely alongside existing systems with zero downtime</p>
                     </div>
                   </div>
                 </div>
@@ -464,19 +463,20 @@ function Pilot() {
       </section>
 
       {/* CTA Repeat */}
-      <section className="py-16 px-6 bg-muted/30 sticky top-20 z-10 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto">
+      <section className="py-12 md:py-16 bg-white dark:bg-[#070707] sticky top-20 z-10 backdrop-blur-sm border-b border-[#E4E7EC] dark:border-[#1D1D1D]">
+        <div className={containerClass}>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm text-primary font-medium mb-3">Limited slots available for Q1 integration</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg"
+                variant="solver"
                 onClick={() => document.getElementById('pilot-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book Pilot Review
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50">
                 <Download className="mr-2 w-5 h-5" />
                 Download Pilot Brief (PDF)
               </Button>
@@ -486,87 +486,92 @@ function Pilot() {
       </section>
 
       {/* Sign-Up Form */}
-      <section id="pilot-form" className="py-24 px-6 scroll-mt-32">
-        <div className="container mx-auto">
+      <section id="pilot-form" className="py-12 md:py-24 bg-white dark:bg-[#070707] scroll-mt-32">
+        <div className={containerClass}>
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Apply for the 90-Day Pilot Program</h2>
-              <p className="text-muted-foreground">
+              <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Apply for the 90-Day Pilot Program</h2>
+              <p className="text-lg text-[#070707]/70 dark:text-white/70">
                 Join leading financial institutions in transforming SMB credit experiences
               </p>
             </div>
 
             {!isSubmitted ? (
-              <Card className="border-primary/20">
-                <CardContent className="p-8">
+              <Card className={`${neutralCard}`}>
+                <CardContent className="p-8 md:p-12">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name" className="text-[#070707] dark:text-white">Full Name *</Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           placeholder="John Smith"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
                           required
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="title">Title *</Label>
+                        <Label htmlFor="title" className="text-[#070707] dark:text-white">Title *</Label>
                         <Input
                           id="title"
                           value={formData.title}
                           onChange={(e) => handleInputChange('title', e.target.value)}
                           placeholder="VP of Digital Banking"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company *</Label>
+                      <Label htmlFor="company" className="text-[#070707] dark:text-white">Company *</Label>
                       <Input
                         id="company"
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
                         placeholder="Your Financial Institution"
+                        className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
                         required
                       />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="email">Work Email *</Label>
+                        <Label htmlFor="email" className="text-[#070707] dark:text-white">Work Email *</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
                           placeholder="john@bank.com"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
                           required
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone (Optional)</Label>
+                        <Label htmlFor="phone" className="text-[#070707] dark:text-white">Phone (Optional)</Label>
                         <Input
                           id="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
                           placeholder="+1 (555) 000-0000"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="smbCount">How many SMBs do you serve?</Label>
+                      <Label htmlFor="smbCount" className="text-[#070707] dark:text-white">How many SMBs do you serve?</Label>
                       <Select 
                         value={formData.smbCount} 
                         onValueChange={(value) => handleInputChange('smbCount', value)}
                       >
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]">
                           <SelectValue placeholder="Select range" />
                         </SelectTrigger>
                         <SelectContent>
@@ -585,16 +590,16 @@ function Pilot() {
                         checked={formData.consent}
                         onCheckedChange={(checked) => handleInputChange('consent', checked)}
                       />
-                      <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer">
+                      <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer text-[#070707] dark:text-white">
                         I understand this is a pilot program for evaluation purposes and agree to provide feedback on the integration experience.
                       </Label>
                     </div>
 
-                    <div className="bg-muted/50 p-4 rounded-lg border border-border">
+                    <div className="bg-white dark:bg-[#0F0F0F] p-4 rounded-lg border border-[#E4E7EC] dark:border-[#1C1C1C]">
                       <div className="flex items-start gap-2">
-                        <FileCheck className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">
-                          <strong>Privacy & Security:</strong> Data will be handled per SOC 2 / ISO 27001 controls. 
+                        <FileCheck className="h-5 w-5 text-[#070707]/50 dark:text-white/50 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#070707]/70 dark:text-white/70">
+                          <strong className="text-[#070707] dark:text-white">Privacy & Security:</strong> Data will be handled per SOC 2 / ISO 27001 controls. 
                           We never share your information with third parties.
                         </p>
                       </div>
@@ -603,6 +608,7 @@ function Pilot() {
                     <Button 
                       type="submit" 
                       size="lg" 
+                      variant="solver"
                       className="w-full text-lg py-6"
                       disabled={isSubmitting}
                     >
@@ -613,35 +619,35 @@ function Pilot() {
                 </CardContent>
               </Card>
             ) : (
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-background">
+              <Card className={`${neutralCard} rounded-[32px]`}>
                 <CardContent className="p-12 text-center">
-                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
-                    <CheckCircle2 className="h-8 w-8 text-primary" />
+                  <div className="inline-flex items-center justify-center h-14 w-14 rounded-xl bg-primary/10 mb-6">
+                    <CheckCircle2 className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Application Received!</h3>
-                  <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+                  <h3 className="text-2xl font-bold mb-4 text-[#070707] dark:text-white">Application Received!</h3>
+                  <p className="text-[#070707]/70 dark:text-white/70 mb-8 max-w-md mx-auto">
                     Thank you for your interest. Our team will review your application and contact you within 24 hours to schedule your pilot review session.
                   </p>
                   <div className="space-y-4">
-                    <p className="text-sm font-medium">Next Steps:</p>
+                    <p className="text-sm font-medium text-[#070707] dark:text-white">Next Steps:</p>
                     <div className="grid gap-3 text-left max-w-md mx-auto">
                       <div className="flex items-start gap-3 text-sm">
                         <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <span className="text-xs font-bold text-primary">1</span>
                         </div>
-                        <p className="text-muted-foreground">Pilot kickoff call within 3 business days</p>
+                        <p className="text-[#070707]/70 dark:text-white/70">Pilot kickoff call within 3 business days</p>
                       </div>
                       <div className="flex items-start gap-3 text-sm">
                         <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <span className="text-xs font-bold text-primary">2</span>
                         </div>
-                        <p className="text-muted-foreground">Technical integration review & sandbox setup</p>
+                        <p className="text-[#070707]/70 dark:text-white/70">Technical integration review & sandbox setup</p>
                       </div>
                       <div className="flex items-start gap-3 text-sm">
                         <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <span className="text-xs font-bold text-primary">3</span>
                         </div>
-                        <p className="text-muted-foreground">90-day pilot launch with dedicated support</p>
+                        <p className="text-[#070707]/70 dark:text-white/70">90-day pilot launch with dedicated support</p>
                       </div>
                     </div>
                   </div>
@@ -653,26 +659,26 @@ function Pilot() {
       </section>
 
       {/* Trust Bar */}
-      <section className="py-16 px-6 bg-muted/50 border-t border-border">
-        <div className="container mx-auto">
+      <section className="py-12 md:py-16 bg-white dark:bg-[#070707] border-t border-[#E4E7EC] dark:border-[#1D1D1D]">
+        <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center">
-            <p className="text-sm text-muted-foreground mb-8">Trusted by forward-thinking financial institutions</p>
-            <div className="flex flex-wrap justify-center items-center gap-12 opacity-50">
+            <p className="text-sm text-[#070707]/70 dark:text-white/70 mb-8">Trusted by forward-thinking financial institutions</p>
+            <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
               <div className="flex items-center gap-2">
-                <Shield className="h-8 w-8" />
-                <span className="font-semibold">SOC 2 Type II</span>
+                <Shield className="h-8 w-8 text-[#070707] dark:text-white" />
+                <span className="font-semibold text-[#070707] dark:text-white">SOC 2 Type II</span>
               </div>
               <div className="flex items-center gap-2">
-                <Lock className="h-8 w-8" />
-                <span className="font-semibold">ISO 27001</span>
+                <Lock className="h-8 w-8 text-[#070707] dark:text-white" />
+                <span className="font-semibold text-[#070707] dark:text-white">ISO 27001</span>
               </div>
               <div className="flex items-center gap-2">
-                <FileCheck className="h-8 w-8" />
-                <span className="font-semibold">ECOA Compliant</span>
+                <FileCheck className="h-8 w-8 text-[#070707] dark:text-white" />
+                <span className="font-semibold text-[#070707] dark:text-white">ECOA Compliant</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-8 w-8" />
-                <span className="font-semibold">Model Risk Ready</span>
+                <CheckCircle2 className="h-8 w-8 text-[#070707] dark:text-white" />
+                <span className="font-semibold text-[#070707] dark:text-white">Model Risk Ready</span>
               </div>
             </div>
           </motion.div>

@@ -241,10 +241,10 @@ export default function CaseStudy() {
               ))}
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <motion.div {...fadeInUp} className="w-full">
+            <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+              <motion.div {...fadeInUp} className="w-full h-full">
                 <Card className={`${neutralCard} hover:border-primary/30`}>
-                  <CardContent className="p-8 space-y-10">
+                  <CardContent className="p-8 space-y-10 h-full flex flex-col">
                     <div className="space-y-4">
                       <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
                         <div>
@@ -307,7 +307,7 @@ export default function CaseStudy() {
                     </div>
 
                     <div className="pt-6 border-t border-border">
-                      <div className="rounded-3xl bg-primary/5 dark:bg-white/5 p-6">
+                      <div className="rounded-3xl bg-primary/5 dark:bg-white/5 p-6 flex flex-col h-full">
                         <h3 className="font-display text-xl font-bold mb-4 text-primary">Experience gap</h3>
                         <p className="text-sm text-muted-foreground mb-4">
                           <span className="font-medium text-foreground">McKinsey 2024/2025:</span> “Good online and mobile banking is the #1 reason SMEs choose a primary bank.”<sup className="text-primary">9</sup>

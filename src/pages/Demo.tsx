@@ -48,7 +48,7 @@ const demoScreens = [
     title: "Analytics Dashboard",
     description: "Comprehensive analytics and insights for portfolio performance tracking.",
     caption: "Real-time metrics and visualizations for data-driven decision making.",
-    image: "/dashboard/analytics.png"
+    image: "/mockups/analytics.png"
   },
   {
     title: "Credit Score Analysis",
@@ -60,7 +60,7 @@ const demoScreens = [
     title: "Customer Portfolio View",
     description: "Individual customer portfolio insights and credit journey tracking.",
     caption: "Track customer credit health and eligibility in real-time.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.20.40.png"
+    image: "/dashboard/users.png"
   },
   {
     title: "Risk Assessment Dashboard",
@@ -156,9 +156,8 @@ const walkthrough = [
   { step: 3, title: "Credit Journey Activation", description: "One-tap access to business credit insights", image: "/dashboard/Mockups%20Laptop/dashboard%20hero_.png" },
   { step: 4, title: "Score Display", description: "Personal FICO + Business FSR & Intelliscore", image: "/dashboard/Mockups%20Laptop/Analytics.png" },
   { step: 5, title: "Eligible Card Match", description: "AI-recommended products based on policy", image: "/dashboard/Mockups%20Laptop/Products.png" },
-  { step: 6, title: "Credit Tips Overlay", description: "Actionable insights to improve eligibility", image: "/dashboard/Mockups%20Laptop/API.png" },
-  { step: 7, title: "Backend Dashboard", description: "Portfolio-level analytics for Chase teams", image: "/dashboard/Mockups%20Laptop/Users.png" },
-  { step: 8, title: "Model Audit View", description: "Full transparency and compliance logging", image: "/dashboard/Mockups%20Laptop/Reports.png" }
+  { step: 6, title: "Backend Dashboard", description: "Portfolio-level analytics for Chase teams", image: "/dashboard/Mockups%20Laptop/Users.png" },
+  { step: 7, title: "Model Audit View", description: "Full transparency and compliance logging", image: "/dashboard/Mockups%20Laptop/Reports.png" }
 ];
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {

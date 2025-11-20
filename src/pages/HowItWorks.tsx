@@ -221,27 +221,6 @@ export default function HowItWorks() {
                 </div>
                 ))}
               </div>
-
-              <div className="mt-6">
-                <h3 className="text-xl font-bold text-center text-[#070707] dark:text-white mb-6">Simple 3-step journey</h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {[
-                    { step: "1", title: "Sign in to Chase Business", desc: "No new credentials or portal required" },
-                    { step: "2", title: "Open Lumiq AI Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)" },
-                    { step: "3", title: "View eligible business card offers", desc: "Based on AI-assisted, policy-aligned decisioning" }
-                  ].map((item) => (
-                    <Card key={item.step} className="bg-[#EEE] dark:bg-[#0F0F0F] border-[#EEE] dark:border-[#1C1C1C] rounded-[24px]">
-                      <CardContent className="p-6 text-center space-y-3">
-                        <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto">
-                          <span className="text-xl font-bold text-primary">{item.step}</span>
-                        </div>
-                        <h4 className="font-semibold text-[#070707] dark:text-white">{item.title}</h4>
-                        <p className="text-sm text-[#070707]/70 dark:text-white/70">{item.desc}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -264,39 +243,36 @@ export default function HowItWorks() {
                 <div className="grid lg:grid-cols-2 gap-10">
                   <motion.div 
                     {...fadeInUp}
-                    className="relative group"
+                    className="relative"
                   >
-                    <div className="absolute inset-0 blur-[140px] bg-primary/30 rounded-[40px] opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                    <div className="relative rounded-[40px] bg-gradient-to-br from-white to-gray-50 border border-gray-200/50 shadow-[0_40px_120px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,255,255,0.5)] p-8 group-hover:shadow-[0_50px_150px_rgba(0,0,0,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500">
+                    <div className="relative rounded-[32px] bg-white dark:bg-[#0F0F0F] border border-[#E4E7EC] dark:border-[#1C1C1C] p-8 shadow-sm">
                       <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
-                        <div className="w-3 h-3 rounded-full bg-red-400 shadow-sm" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-400 shadow-sm" />
-                        <div className="w-3 h-3 rounded-full bg-green-400 shadow-sm" />
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                        <div className="w-3 h-3 rounded-full bg-green-400" />
                       </div>
                       <img
                         src="/mockups/dashboard.png"
                         alt="Portfolio dashboard mockup"
-                        className="rounded-[28px] w-full h-auto drop-shadow-[0_30px_80px_rgba(0,0,0,0.35)] group-hover:scale-[1.02] transition-transform duration-500"
+                        className="rounded-[24px] w-full h-auto"
                       />
-                      <div className="mt-6 h-2 w-1/3 mx-auto rounded-full bg-gradient-to-r from-transparent via-[#070707]/10 to-transparent" />
                     </div>
                   </motion.div>
                   <motion.div 
                     {...fadeInUp}
                     transition={{ delay: 0.2 }}
-                    className="relative group"
+                    className="relative"
                   >
-                    <div className="absolute inset-0 blur-[120px] bg-primary/25 rounded-[32px] opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
-                    <div className="relative rounded-[32px] bg-gradient-to-br from-[#EEE] to-gray-100 dark:from-[#0F0F0F] dark:to-[#1a1a1a] border border-gray-200/50 dark:border-[#1C1C1C] p-10 shadow-[0_30px_100px_rgba(0,0,0,0.2)] group-hover:shadow-[0_40px_130px_rgba(0,0,0,0.25)] transition-all duration-500">
-                      <div className="absolute top-6 left-6 right-6 flex gap-2 z-10">
-                        <div className="w-3 h-3 rounded-full bg-red-400/80 shadow-sm" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-400/80 shadow-sm" />
-                        <div className="w-3 h-3 rounded-full bg-green-400/80 shadow-sm" />
+                    <div className="relative rounded-[32px] bg-white dark:bg-[#0F0F0F] border border-[#E4E7EC] dark:border-[#1C1C1C] p-8 shadow-sm">
+                      <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
+                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                        <div className="w-3 h-3 rounded-full bg-green-400" />
                       </div>
                       <img
                         src="/mockups/analytics.png"
                         alt="Analytics view mockup"
-                        className="w-full h-auto rounded-[24px] drop-shadow-[0_30px_90px_rgba(0,0,0,0.4)] group-hover:scale-[1.02] transition-transform duration-500"
+                        className="w-full h-auto rounded-[24px]"
                       />
                     </div>
                   </motion.div>
@@ -333,6 +309,79 @@ export default function HowItWorks() {
                     ))}
                   </div>
                 </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Simple 3-Step Journey Section */}
+        <section className="py-20 bg-white dark:bg-[#070707]">
+          <div className="mx-auto w-full px-5 md:px-[5vw]">
+            <motion.div {...fadeInUp} className="w-full space-y-12">
+              <div className="text-center max-w-4xl mx-auto space-y-4">
+                <Badge className="bg-primary/10 text-primary border-primary/20">Customer Journey</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
+                  Simple 3-step journey
+                </h2>
+                <p className="text-[#070707]/70 dark:text-white/70">
+                  A seamless experience from login to credit offers—all within the Chase Business app.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
+                {[
+                  { step: "1", title: "Sign in to Chase Business", desc: "No new credentials or portal required", image: "/seehowitworks/ChaseLogin.png" },
+                  { step: "2", title: "Open Lumiq AI Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)", image: "/seehowitworks/see scores.png" },
+                  { step: "3", title: "View eligible business card offers", desc: "Based on AI-assisted, policy-aligned decisioning", image: "/seehowitworks/creditoffers.png" }
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.step}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                    className="relative"
+                  >
+                    {/* Arrow between cards (hidden on mobile) */}
+                    {index < 2 && (
+                      <div className="hidden md:flex absolute top-1/2 -right-3 lg:-right-4 z-10 items-center justify-center w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1C1C1C] shadow-sm">
+                        <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 text-primary" />
+                      </div>
+                    )}
+                    
+                    <Card className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1C1C1C] rounded-[24px] h-full flex flex-col overflow-hidden hover:border-primary/30 transition-all duration-300">
+                      <CardContent className="p-6 flex flex-col flex-grow">
+                        {/* Step Number Badge */}
+                        <div className="flex items-center mb-4">
+                          <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                            <span className="text-xl font-bold text-primary">{item.step}</span>
+                          </div>
+                        </div>
+
+                        {/* Phone Mockup */}
+                        <div className="relative flex items-center justify-center mb-6 -mx-2">
+                          <div className="w-full max-w-[200px] md:max-w-[240px]">
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="w-full h-auto object-contain"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-grow space-y-3">
+                          <h4 className="text-lg md:text-xl font-bold text-[#070707] dark:text-white leading-tight">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-[#070707]/70 dark:text-white/70 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>

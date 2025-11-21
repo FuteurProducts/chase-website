@@ -595,8 +595,8 @@ export default function CaseStudy() {
         <section className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16 text-center">
-              <h2 className="font-display text-4xl font-bold mb-4">Governance & Fit</h2>
-              <p className="text-xl text-muted-foreground">Bank-friendly by design</p>
+              <h2 className="font-display text-4xl font-bold mb-4 text-[#070707] dark:text-white">Governance & Fit</h2>
+              <p className="text-xl text-[#070707]/70 dark:text-white/70">Bank-friendly by design</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -606,8 +606,8 @@ export default function CaseStudy() {
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <TrendingUp className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-3">Revenue Lift</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-display text-lg font-bold mb-3 text-[#070707] dark:text-white">Revenue Lift</h3>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">
                       More qualified SMBs converted to the right product—within existing risk appetite.
                     </p>
                   </CardContent>
@@ -620,11 +620,11 @@ export default function CaseStudy() {
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-3">Risk & Compliance</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
+                    <h3 className="font-display text-lg font-bold mb-3 text-[#070707] dark:text-white">Risk & Compliance</h3>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70 mb-2">
                       Uses named underwriting inputs (FICO, Experian Intelliscore, FSR, internal attributes).
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">
                       Supports ECOA/FCRA/GLBA obligations, model-risk governance, and adverse-action reasons.
                     </p>
                   </CardContent>
@@ -637,11 +637,11 @@ export default function CaseStudy() {
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Zap className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-3">Operational Efficiency</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
+                    <h3 className="font-display text-lg font-bold mb-3 text-[#070707] dark:text-white">Operational Efficiency</h3>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70 mb-2">
                       Reduces manual reviews for straightforward cases.
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">
                       Shortens time-to-decision, which SMEs consistently rank as critical.
                     </p>
                   </CardContent>
@@ -654,11 +654,11 @@ export default function CaseStudy() {
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Lock className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-3">Integration</h3>
-                    <p className="text-sm text-muted-foreground mb-2">
+                    <h3 className="font-display text-lg font-bold mb-3 text-[#070707] dark:text-white">Integration</h3>
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70 mb-2">
                       API-first with sandbox, batch or real-time modes.
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-[#070707]/70 dark:text-white/70">
                       Non-disruptive A/B pilots; clear SLAs, RTO/RPO, and security posture.
                     </p>
                   </CardContent>

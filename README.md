@@ -1,22 +1,18 @@
-# Welcome to your Lovable project
+# Futeur × Chase — Business Credit Journey
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/7a5133fe-aba0-4fdc-ae43-f2e7a8016938
+This is the Futeur Business Credit Journey website for Chase.
+
+**Live Website**: [wells-fargo.futeur.futeurcredx.com](https://wells-fargo.futeur.futeurcredx.com)
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/7a5133fe-aba0-4fdc-ae43-f2e7a8016938) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +58,8 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/7a5133fe-aba0-4fdc-ae43-f2e7a8016938) and click on Share -> Publish.
+Deploy using your preferred hosting service (Vercel, Netlify, etc.) or your own infrastructure.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to this project?
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Yes, you can! Configure your custom domain through your hosting provider's settings.

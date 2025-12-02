@@ -169,12 +169,12 @@ export default function Impact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4 sm:px-0">
               The <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">$100M+</span> Impact
               <br />
-              <span className="text-2xl md:text-3xl text-muted-foreground">Year One. Proven. Scalable.</span>
+              <span className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">Year One. Proven. Scalable.</span>
             </h1>
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
+            <p className="text-base sm:text-xl text-foreground/80 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
               Not a projection. A replication of Chase's own Credit Journey success—now weaponized for SMB.
             </p>
           </motion.div>
@@ -200,9 +200,9 @@ export default function Impact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <DollarSign className="h-6 w-6" style={{ color: brand.accent }} />
-              <h2 className="text-4xl font-extrabold">Year-1 Financial Impact</h2>
+              <h2 className="text-2xl sm:text-4xl font-extrabold">Year-1 Financial Impact</h2>
             </div>
-            <p className="text-xl text-slate-400">Optimistic but Grounded — Mirrors Chase Credit Journey Trajectory</p>
+            <p className="text-base sm:text-xl text-slate-400 px-4 sm:px-0">Optimistic but Grounded — Mirrors Chase Credit Journey Trajectory</p>
           </motion.div>
 
           {/* Revenue Breakdown Visualization */}
@@ -357,9 +357,9 @@ export default function Impact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Zap className="h-6 w-6" style={{ color: brand.warning }} />
-              <h2 className="text-4xl font-extrabold">Strategic Leverage</h2>
+              <h2 className="text-2xl sm:text-4xl font-extrabold">Strategic Leverage</h2>
             </div>
-            <p className="text-xl text-slate-400">The Transformation — Legacy State vs. Post-LUMIQ Reality</p>
+            <p className="text-base sm:text-xl text-slate-400 px-4 sm:px-0">The Transformation — Legacy State vs. Post-LUMIQ Reality</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -457,9 +457,9 @@ export default function Impact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Target className="h-6 w-6" style={{ color: brand.success }} />
-              <h2 className="text-4xl font-extrabold">Stage 2 Preview — Lending Expansion</h2>
+              <h2 className="text-2xl sm:text-4xl font-extrabold">Stage 2 Preview — Lending Expansion</h2>
             </div>
-            <p className="text-xl text-slate-400">The Next Wave: <span style={{ color: brand.success }}>$210–320M</span> Additional Uplift Potential</p>
+            <p className="text-base sm:text-xl text-slate-400 px-4 sm:px-0">The Next Wave: <span style={{ color: brand.success }}>$210–320M</span> Additional Uplift Potential</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -524,7 +524,7 @@ export default function Impact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Shield className="h-6 w-6" style={{ color: brand.accent }} />
-              <h2 className="text-4xl font-extrabold">Compliance & Governance</h2>
+              <h2 className="text-2xl sm:text-4xl font-extrabold">Compliance & Governance</h2>
             </div>
           </motion.div>
 
@@ -596,12 +596,12 @@ export default function Impact() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-extrabold mb-6">Ready to Deploy?</h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 sm:mb-6 px-4 sm:px-0">Ready to Deploy?</h2>
+            <p className="text-base sm:text-xl text-slate-300 mb-6 sm:mb-8 px-4 sm:px-0">
               90-day pilot. 250K digitally-active SMBs. $100M+ uplift trajectory.
             </p>
             <Link
-              to="/#demo"
+              to="/demo"
               className="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-semibold text-lg"
               style={{ background: brand.accent, color: "#06121a" }}
             >

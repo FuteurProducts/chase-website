@@ -75,20 +75,20 @@ function USS() {
                 Unique Salient Similarities (USS)
               </div>
 
-              <h1 className="text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-6 leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-1.2px] md:tracking-[-2.16px] text-white">
+              <h1 className="text-[28px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-4 sm:mb-6 leading-[36px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
                 The proven playbook applied to business credit
               </h1>
 
-              <p className="text-lg text-white/90 mb-4 max-w-3xl leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">
                 Chase Credit Journey® revolutionized consumer credit engagement. Now the same proven science powers business credit intelligence.
               </p>
 
-              <p className="text-base text-white/70 mb-8 max-w-2xl">
+              <p className="text-sm sm:text-base text-white/70 mb-6 sm:mb-8 max-w-2xl">
                 Same science. Same proven engagement model. Same compliance rigor. Now applied to the $2.3T business credit market.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
-                <Link to="/pilot">
+                <Link to="/pilot#pilot-form">
                   <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
                     Start Your Pilot
                     <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
@@ -132,10 +132,10 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               Chase Credit Journey®: The Proof Point
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto px-4 sm:px-0">
               Since implementation, Chase Credit Journey has transformed consumer credit engagement and generated massive ROI
             </p>
           </motion.div>
@@ -205,10 +205,10 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               But 32 Million SMBs? Still Flying Blind
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto px-4 sm:px-0">
               The same engagement revolution that transformed consumer credit hasn't reached business credit — until now
             </p>
           </motion.div>
@@ -285,10 +285,10 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               Same Proven Formula
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
               The consumer playbook that generated hundreds of millions in revenue — now engineered for business credit
             </p>
           </motion.div>
@@ -351,10 +351,10 @@ function USS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               Your Business Credit Opportunity
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-3xl mx-auto px-4 sm:px-0">
               Conservative projections based on Chase Credit Journey's proven results, applied to business credit portfolio
             </p>
           </motion.div>
@@ -444,14 +444,14 @@ function USS() {
           >
             <Card className={`${neutralCard} rounded-[32px]`}>
               <CardContent className="p-8 md:p-12">
-                <h2 className="text-[32px] md:text-[48px] font-bold mb-6 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+                <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-4 sm:mb-6 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
                   You've proven this works. Now capture the business side.
                 </h2>
-                <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-8 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
                   Start a 6-week pilot with pre-agreed success criteria and see the same conversion lift you achieved with consumer credit.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/pilot">
+                  <Link to="/pilot#pilot-form">
                     <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
                       Book a 20-Minute Pilot Review
                       <div className="w-10 h-10 p-2.5 rounded-full bg-[#070707] dark:bg-white flex items-center justify-center">

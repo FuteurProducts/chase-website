@@ -24,11 +24,11 @@ export default function Revolution() {
               <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-primary uppercase tracking-wider">The Business Credit Journey Revolution</span>
             </div>
-            <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4 sm:px-0">
               Explained for{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Advanced Systems Intelligence</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Unified credit visibility that transforms how 7 million SMBs understand their financial health—powered by the tri-score spectrum Chase already uses.
             </p>
           </motion.div>
@@ -48,7 +48,7 @@ export default function Revolution() {
           >
             <div className="flex items-center gap-3 mb-6">
               <Target className="h-6 w-6 text-primary" />
-              <h2 className="font-display text-3xl font-bold">I. Revolution — Purpose & Problem</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold">I. Revolution — Purpose & Problem</h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -116,7 +116,7 @@ export default function Revolution() {
           >
             <div className="flex items-center gap-3 mb-6">
               <Shield className="h-6 w-6 text-success" />
-              <h2 className="font-display text-3xl font-bold">II. Why Now — Market Moment</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold">II. Why Now — Market Moment</h2>
             </div>
 
             <div className="space-y-6">

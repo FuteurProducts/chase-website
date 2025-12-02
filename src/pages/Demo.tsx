@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
   Brain, 
@@ -125,28 +126,28 @@ const features = [
 
 const faqs = [
   {
-    question: "How does LUMIQ AI integrate with existing Chase systems?",
-    answer: "LUMIQ AI uses REST APIs and SDKs that plug directly into your existing Chase Business mobile and web applications. No changes to your current underwriting workflow are required. The integration typically takes 2-4 weeks for initial setup, with full deployment achievable in a 90-day pilot."
+    question: "How does Futeur integrate with existing Chase systems?",
+    answer: "Futeur uses REST APIs and SDKs that plug directly into your existing Chase Business mobile and web applications. No changes to your current underwriting workflow are required. The integration typically takes 2-4 weeks for initial setup, with full deployment achievable in a 90-day pilot."
   },
   {
-    question: "What credit data sources does LUMIQ AI use?",
-    answer: "LUMIQ AI pulls Experian Intelliscore, FSR (Financial Stability Risk), and owner FICO/VantageScore data. We apply your existing policy layers, scorecard rules, and risk overlays to ensure all decisions align with Chase's risk appetite and compliance requirements."
+    question: "What credit data sources does Futeur use?",
+    answer: "Futeur pulls Experian Intelliscore, FSR (Financial Stability Risk), and owner FICO/VantageScore data. We apply your existing policy layers, scorecard rules, and risk overlays to ensure all decisions align with Chase's risk appetite and compliance requirements."
   },
   {
     question: "How is customer data secured and governed?",
-    answer: "All data is encrypted in transit and at rest. LUMIQ AI is SOC 2-aligned with ISO 27001-compatible controls. We support configurable data residency, retention policies, and provide full audit trails for compliance teams. Risk ownership remains entirely with Chase — we never override your approval authority."
+    answer: "All data is encrypted in transit and at rest. Futeur is SOC 2-aligned with ISO 27001-compatible controls. We support configurable data residency, retention policies, and provide full audit trails for compliance teams. Risk ownership remains entirely with Chase — we never override your approval authority."
   },
   {
     question: "What results can we expect from a pilot?",
     answer: "Typical pilot outcomes include 8-15% lift in qualified SMB applications, 20-35% reduction in manual review load, and measurable incremental interchange revenue per booked card. The pilot runs A/B testing to measure lift, approval-rate delta, and loss-rate delta against your control group."
   },
   {
-    question: "Can LUMIQ AI extend beyond credit cards to lending products?",
+    question: "Can Futeur extend beyond credit cards to lending products?",
     answer: "Yes. The same decision infrastructure can be extended to Business Lines of Credit, Term Loans, and Commercial Real Estate lending in Stage 2. The scoring and governance rails are product-agnostic and designed for multi-product expansion."
   },
   {
     question: "What level of customization is available?",
-    answer: "LUMIQ AI is fully customizable to your policy rules, risk thresholds, adverse action logic, and brand guidelines. You maintain complete control over decision rules, score cutoffs, and product eligibility criteria."
+    answer: "Futeur is fully customizable to your policy rules, risk thresholds, adverse action logic, and brand guidelines. You maintain complete control over decision rules, score cutoffs, and product eligibility criteria."
   }
 ];
 
@@ -212,13 +213,13 @@ export default function Demo() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <motion.div {...fadeInUp}>
-              <h1 className="text-[40px] md:text-[56px] font-bold mb-6 leading-tight text-[#070707] dark:text-white">
-                See the LUMIQ AI Business Credit Journey{" "}
+              <h1 className="text-[28px] sm:text-[40px] md:text-[56px] font-bold mb-4 sm:mb-6 leading-tight text-[#070707] dark:text-white">
+                See the Futeur Business Credit Journey{" "}
                 <span className="text-primary">
                   in Action
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-6 sm:mb-8 leading-relaxed">
                 The missing link in your business banking experience. Pre-qualify SMBs for the right product using real-time Experian Intelliscore + FSR signals — directly inside your app.
               </p>
               
@@ -232,15 +233,16 @@ export default function Demo() {
                   Launch Interactive Demo
                   <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="group border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
-                  onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Book a Credit Strategy Session
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/pilot#pilot-form">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="group border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
+                  >
+                    Book a Credit Strategy Session
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 
@@ -272,11 +274,11 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
               Experience the Platform
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
-              Explore key screens and see how LUMIQ AI powers business credit decisions at scale.
+            <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
+              Explore key screens and see how Futeur powers business credit decisions at scale.
             </p>
           </motion.div>
 
@@ -315,10 +317,10 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
               What You'll See in the Demo
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Four core capabilities that power business credit intelligence.
             </p>
           </motion.div>
@@ -357,10 +359,10 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
               Complete User Journey Preview
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Follow the complete journey from login and signup to backend analytics.
             </p>
           </motion.div>
@@ -449,11 +451,11 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70">
-              Everything you need to know about the LUMIQ AI platform.
+            <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
+              Everything you need to know about the Futeur platform.
             </p>
           </motion.div>
 
@@ -475,10 +477,10 @@ export default function Demo() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#070707] dark:text-white">
-              Why LUMIQ AI Wins
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
+              Why Futeur Wins
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Proven results from pilot implementations with enterprise banking partners.
             </p>
           </motion.div>
@@ -508,18 +510,28 @@ export default function Demo() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              variant="solver"
-              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Start Your Pilot in 6 Weeks
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/pilot#pilot-form">
+              <Button 
+                size="lg"
+                variant="solver"
+              >
+                Start Your Pilot in 6 Weeks
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button 
               size="lg"
               variant="outline"
               className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
+              onClick={() => {
+                // Create a temporary link to download
+                const link = document.createElement('a');
+                link.href = '#';
+                link.download = 'Model-Governance-Framework.pdf';
+                link.click();
+                // In production, this would link to an actual PDF file
+                console.log('Download Model Governance Framework');
+              }}
             >
               Download Model Governance Framework
             </Button>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import { PageLayout } from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,11 +65,38 @@ function Pilot() {
     e.preventDefault();
     
     try {
+      // Validate form data
       pilotFormSchema.parse(formData);
       setIsSubmitting(true);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Prepare template parameters with all form data
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        title: formData.title,
+        company: formData.company,
+        phone: formData.phone || "Not provided",
+        smb_count: formData.smbCount || "Not provided",
+        consent: formData.consent ? "Yes" : "No",
+        // Additional fields for better email formatting
+        message: `New Pilot Application Request:
+        
+Name: ${formData.name}
+Title: ${formData.title}
+Company: ${formData.company}
+Email: ${formData.email}
+Phone: ${formData.phone || "Not provided"}
+SMB Count: ${formData.smbCount || "Not provided"}
+Consent Given: ${formData.consent ? "Yes" : "No"}`,
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_cd0rzso",  // Service ID
+        "template_bv3e1to",  // Template ID
+        templateParams,
+        "87TCMetRwFj4WAaCQ"  // Public Key
+      );
       
       setIsSubmitted(true);
       toast({
@@ -80,6 +108,14 @@ function Pilot() {
         toast({
           title: "Validation Error",
           description: error.errors[0].message,
+          variant: "destructive",
+        });
+      } else {
+        // Handle EmailJS errors
+        console.error("EmailJS Error:", error);
+        toast({
+          title: "Submission Error",
+          description: "There was an error submitting your application. Please try again or contact us directly.",
           variant: "destructive",
         });
       }
@@ -112,15 +148,15 @@ function Pilot() {
                 Designed for Institutional Finance & Model-Risk Governance
               </div>
 
-              <h1 className="text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-6 leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-1.2px] md:tracking-[-2.16px] text-white">
-                Launch a 90-Day Pilot of LUMIQ AI Business Credit Journey™
+              <h1 className="text-[28px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-4 sm:mb-6 leading-[36px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
+                Launch a 90-Day Pilot of Futeur Business Credit Journey™
               </h1>
 
-              <p className="text-lg text-white/90 mb-4 max-w-3xl leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">
                 Embed our API inside your Chase Business app, run live conversion lift tests, and generate measurable impact—within your risk framework.
               </p>
 
-              <p className="text-base text-white/70 mb-8 max-w-2xl">
+              <p className="text-sm sm:text-base text-white/70 mb-6 sm:mb-8 max-w-2xl">
                 Non-disruptive integration. Measurable results. Built on proven principles.
               </p>
 
@@ -140,6 +176,15 @@ function Pilot() {
                   size="lg" 
                   variant="outline"
                   className="border-white text-white hover:bg-white/10"
+                  onClick={() => {
+                // Create a temporary link to download
+                const link = document.createElement('a');
+                link.href = '#';
+                link.download = 'Pilot-Brief.pdf';
+                link.click();
+                // In production, this would link to an actual PDF file
+                console.log('Download Pilot Brief');
+              }}
                 >
                   <Download className="mr-2 w-5 h-5" />
                   Download Pilot Brief
@@ -169,8 +214,8 @@ function Pilot() {
       <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Proven Pilot Results</h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Proven Pilot Results</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Measurable impact from day one, with full alignment to your risk and governance requirements.
             </p>
           </motion.div>
@@ -222,8 +267,8 @@ function Pilot() {
       <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Your 90-Day Pilot Journey</h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Your 90-Day Pilot Journey</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               A structured, measurable approach to validating Business Credit Journey inside your stack.
             </p>
           </motion.div>
@@ -299,8 +344,8 @@ function Pilot() {
       <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">How It Works</h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">How It Works</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Four simple steps to embed Business Credit Journey into your digital banking experience.
             </p>
           </motion.div>
@@ -462,36 +507,13 @@ function Pilot() {
         </div>
       </section>
 
-      {/* CTA Repeat */}
-      <section className="py-12 md:py-16 bg-white dark:bg-[#070707] sticky top-20 z-10 backdrop-blur-sm border-b border-[#E4E7EC] dark:border-[#1D1D1D]">
-        <div className={containerClass}>
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm text-primary font-medium mb-3">Limited slots available for Q1 integration</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg"
-                variant="solver"
-                onClick={() => document.getElementById('pilot-form')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Book Pilot Review
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50">
-                <Download className="mr-2 w-5 h-5" />
-                Download Pilot Brief (PDF)
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Sign-Up Form */}
       <section id="pilot-form" className="py-12 md:py-24 bg-white dark:bg-[#070707] scroll-mt-32">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Apply for the 90-Day Pilot Program</h2>
-              <p className="text-lg text-[#070707]/70 dark:text-white/70">
+              <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Apply for the 90-Day Pilot Program</h2>
+              <p className="text-base sm:text-lg text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                 Join leading financial institutions in transforming SMB credit experiences
               </p>
             </div>
@@ -508,7 +530,7 @@ function Pilot() {
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           placeholder="John Smith"
-                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white"
                           required
                         />
                       </div>
@@ -520,7 +542,7 @@ function Pilot() {
                           value={formData.title}
                           onChange={(e) => handleInputChange('title', e.target.value)}
                           placeholder="VP of Digital Banking"
-                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white"
                           required
                         />
                       </div>
@@ -533,7 +555,7 @@ function Pilot() {
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
                         placeholder="Your Financial Institution"
-                        className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
+                        className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white"
                         required
                       />
                     </div>
@@ -547,7 +569,7 @@ function Pilot() {
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
                           placeholder="john@bank.com"
-                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white"
                           required
                         />
                       </div>
@@ -560,7 +582,7 @@ function Pilot() {
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
                           placeholder="+1 (555) 000-0000"
-                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]"
+                          className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white"
                         />
                       </div>
                     </div>
@@ -571,7 +593,7 @@ function Pilot() {
                         value={formData.smbCount} 
                         onValueChange={(value) => handleInputChange('smbCount', value)}
                       >
-                        <SelectTrigger className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C]">
+                        <SelectTrigger className="bg-white dark:bg-[#0F0F0F] border-[#E4E7EC] dark:border-[#1C1C1C] text-[#070707] dark:text-white">
                           <SelectValue placeholder="Select range" />
                         </SelectTrigger>
                         <SelectContent>

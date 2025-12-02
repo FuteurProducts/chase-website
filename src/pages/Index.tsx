@@ -66,16 +66,15 @@ function Index() {
               Built on Chase Credit Journey® Principles
             </motion.div>
 
-            <h1 className="text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-6 leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-1.2px] md:tracking-[-2.16px] text-white">
+            <h1 className="text-[32px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-4 sm:mb-6 leading-[40px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
               The Credit Journey For Business
-            
             </h1>
 
-            <p className="text-lg text-white/90 mb-4 max-w-3xl leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">
               Pre-qualify & convert your small-business customers to the right credit product — inside your existing risk controls.
             </p>
 
-            <p className="text-base text-white/70 mb-8 max-w-2xl">
+            <p className="text-sm sm:text-base text-white/70 mb-6 sm:mb-8 max-w-2xl">
               For enterprise banks who want to embed business credit scoring, soft approvals, and real-time offer routing directly into their digital channels.
             </p>
 
@@ -84,19 +83,19 @@ function Index() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-6 mb-10 text-sm"
+              className="flex flex-wrap items-center gap-3 sm:gap-6 mb-6 sm:mb-10 text-xs sm:text-sm"
             >
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                <TrendingUp className="w-4 h-4 text-white" />
-                <span className="text-white font-semibold">+25% conversion lift</span>
+              <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 bg-white/5">
+                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                <span className="text-white font-semibold whitespace-nowrap">+25% conversion lift</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                <BarChart3 className="w-4 h-4 text-white" />
-                <span className="text-white font-semibold">$79.4M incremental interchange</span>
+              <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 bg-white/5">
+                <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                <span className="text-white font-semibold whitespace-nowrap">$79.4M incremental</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                <Shield className="w-4 h-4 text-white" />
-                <span className="text-white font-semibold">100% audit-trail coverage</span>
+              <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 bg-white/5">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                <span className="text-white font-semibold whitespace-nowrap">100% audit-trail</span>
               </div>
             </motion.div>
 
@@ -105,14 +104,14 @@ function Index() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <a href="/#cta">
-                <Button variant="solver" size="lg" className="text-base md:text-lg gap-6">
-                  Book a 20-Minute Pilot Review
-                  <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 text-[#070707]" />
+              <Link to="/pilot#pilot-form">
+                <Button variant="solver" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-6 w-full sm:w-auto">
+                  <span className="whitespace-nowrap">Book a 20-Minute Pilot Review</span>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 p-2 sm:p-2.5 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#070707]" />
                   </div>
                 </Button>
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -132,10 +131,10 @@ function Index() {
               <Shield className="w-4 h-4" />
               Built on the proven success of Chase Credit Journey®
             </div>
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               Now for business credit
             </h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70">
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
               Used by <span className="text-primary font-semibold">22M+ consumers</span>. Built for <span className="text-primary font-semibold">~7M SMBs</span>.
             </p>
           </motion.div>
@@ -156,8 +155,8 @@ function Index() {
                   className="w-full max-w-[280px] md:max-w-[340px] h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
                 />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3 text-[#070707] dark:text-white">Consumer Credit Journey</h3>
-              <p className="text-base text-[#070707]/70 dark:text-white/70 max-w-sm">Free credit-score monitoring, insights, and personalized plans</p>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-[#070707] dark:text-white">Consumer Credit Journey</h3>
+              <p className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70 max-w-sm px-4 sm:px-0">Free credit-score monitoring, insights, and personalized plans</p>
             </motion.div>
 
             {/* Business Side */}
@@ -176,8 +175,8 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl -z-10" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3 text-[#070707] dark:text-white">Business Credit Journey</h3>
-              <p className="text-base text-[#070707]/70 dark:text-white/70 max-w-sm">Owner FICO + Business Intelliscore + FSR with soft approvals</p>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-[#070707] dark:text-white">Business Credit Journey</h3>
+              <p className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70 max-w-sm px-4 sm:px-0">Owner FICO + Business Intelliscore + FSR with soft approvals</p>
             </motion.div>
           </div>
 
@@ -215,7 +214,7 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">
               Proven Blueprint → Business Impact
             </h2>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1146F2] text-[#070707] dark:text-white text-sm font-medium mt-4">
@@ -317,8 +316,8 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">How It Works</h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">How It Works</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Three steps to transform your small-business credit decisioning
             </p>
           </motion.div>
@@ -378,8 +377,8 @@ function Index() {
                   transition={{ duration: 0.6, delay: step.delay }}
                   className="relative mb-16 last:mb-0"
                 >
-                  <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
-                    {/* Step Number & Icon - Left Side on Desktop */}
+                  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+                    {/* Step Number & Icon - Centered on Mobile, Left Side on Desktop */}
                     <div className="relative flex-shrink-0">
                       <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 border-2 border-primary/30 flex items-center justify-center shadow-lg shadow-primary/10">
                         <step.icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary" />
@@ -397,14 +396,14 @@ function Index() {
                     </div>
 
                     {/* Content Card */}
-                    <div className="flex-1">
+                    <div className="flex-1 w-full lg:w-auto">
                       <Card className="bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] hover:border-primary/30 transition-all duration-300 rounded-[20px] shadow-sm hover:shadow-md">
-                        <CardContent className="pt-8 pb-8 px-8">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#070707] dark:text-white">{step.title}</h3>
+                        <CardContent className="pt-8 pb-8 px-6 sm:px-8">
+                          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white text-center lg:text-left">{step.title}</h3>
                           {typeof step.description === 'string' ? (
-                            <p className="text-base md:text-lg text-[#070707]/70 dark:text-white/70 leading-relaxed">{step.description}</p>
+                            <p className="text-base md:text-lg text-[#070707]/70 dark:text-white/70 leading-relaxed text-center lg:text-left">{step.description}</p>
                           ) : (
-                            <div className="text-base md:text-lg text-[#070707]/70 dark:text-white/70 leading-relaxed">{step.description}</div>
+                            <div className="text-base md:text-lg text-[#070707]/70 dark:text-white/70 leading-relaxed text-center lg:text-left">{step.description}</div>
                           )}
                         </CardContent>
                       </Card>
@@ -427,8 +426,8 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">For Product & Risk Leaders</h2>
-            <p className="text-lg text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">Built for decision-makers who drive portfolio growth and manage risk</p>
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">For Product & Risk Leaders</h2>
+            <p className="text-base sm:text-lg text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">Built for decision-makers who drive portfolio growth and manage risk</p>
           </motion.div>
 
           <div className="grid gap-10 xl:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] xl:items-center">
@@ -522,8 +521,8 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[32px] md:text-[48px] font-bold mb-4 text-[#070707] dark:text-white leading-[41.6px] md:leading-[56px]">Security, Compliance & Integration</h2>
-            <p className="text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Security, Compliance & Integration</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Bank-grade security, regulatory compliance, and flexible deployment options
             </p>
           </motion.div>
@@ -660,20 +659,21 @@ function Index() {
             transition={{ duration: 0.8 }}
             className="w-full text-center"
           >
-            <h2 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold mb-6 text-white leading-[41.6px] md:leading-[56px] lg:leading-[72px]">
+            <h2 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] font-bold mb-4 sm:mb-6 text-white leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[72px] px-4 sm:px-0">
               Start a 6-Week Pilot with Pre-Agreed Success Criteria
             </h2>
-            <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
               Non-disruptive integration. Measurable results. Built on proven principles.
             </p>
-            <a href="/#cta">
-              <Button variant="solverSecondary" size="lg" className="text-base md:text-lg gap-6">
-                Book a 20-minute pilot review — see conversion lift & model audit in action
-                <div className="w-10 h-10 p-2.5 rounded-full bg-[#070707] flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 text-white" />
+            <Link to="/pilot#pilot-form" className="w-full sm:w-auto flex justify-center px-4 sm:px-0">
+              <Button variant="solverSecondary" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-4 w-full sm:w-auto px-6 sm:px-8 py-6 sm:py-7 font-semibold">
+                <span className="block sm:hidden text-center">Book a 20-Minute Pilot Review</span>
+                <span className="hidden sm:block">Book a 20-minute pilot review — see conversion lift & model audit in action</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 p-2 sm:p-2.5 rounded-full bg-[#070707] flex items-center justify-center flex-shrink-0">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
               </Button>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

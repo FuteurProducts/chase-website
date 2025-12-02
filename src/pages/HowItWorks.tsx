@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { PageLayout } from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,11 +65,11 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-10">
               <div className="max-w-5xl">
                 <Badge className="bg-white/10 text-white border-white/20 mb-4">How It Works</Badge>
-                <h1 className="text-[40px] md:text-[56px] font-bold mb-6 text-white leading-tight">
+                <h1 className="text-[28px] sm:text-[40px] md:text-[56px] font-bold mb-4 sm:mb-6 text-white leading-tight">
                 Real-time business credit intelligence inside your digital banking experience.
               </h1>
-                <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-4xl">
-                Lumiq AI powers real-time business-credit intelligence inside your existing digital banking experience. 
+                <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-4xl">
+                Futeur powers real-time business-credit intelligence inside your existing digital banking experience. 
                 Show small-business customers (SMBs) their Experian Intelliscore, FSR, and personalized card eligibility in-app — while your teams get portfolio-level visibility, risk controls, and audit-ready decisioning. No new login. No disruption to your existing underwriting stack.
               </p>
               </div>
@@ -151,7 +152,7 @@ export default function HowItWorks() {
                     <CardContent className="p-8 space-y-6">
                       {[
                         { label: "Chase App", subtitle: "Customer experience", icon: TrendingUp },
-                        { label: "LUMIQ API", subtitle: "Intelligence layer", icon: BarChart3 },
+                        { label: "Futeur API", subtitle: "Intelligence layer", icon: BarChart3 },
                         { label: "Portfolio Dashboard", subtitle: "Chase analytics", icon: Database }
                       ].map((node) => (
                         <div key={node.label} className="flex items-center gap-4">
@@ -180,13 +181,13 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-12">
               <div className="text-center max-w-4xl mx-auto space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Customer Experience</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
                   Built to feel native inside Chase Business
               </h2>
-                <p className="text-[#070707]/70 dark:text-white/70">
+                <p className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                   Small-business customers see their business and personal credit intelligence inside the Chase Business app—no new login or portal.
                 </p>
-                <p className="text-sm text-[#070707]/60 dark:text-white/60 italic">
+                <p className="text-xs sm:text-sm text-[#070707]/60 dark:text-white/60 italic px-4 sm:px-0">
                   Modeled after Chase Credit Journey, engineered for SMB credit signals.
                 </p>
               </div>
@@ -231,10 +232,10 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-12">
               <div className="text-center max-w-4xl mx-auto space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Portfolio Intelligence</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
                   Dashboards for risk, product, and analytics teams
               </h2>
-                <p className="text-[#070707]/70 dark:text-white/70">
+                <p className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                   Real-time visibility, audit-ready logs, and export-ready segments built on the same journey rails.
                 </p>
               </div>
@@ -320,10 +321,10 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-12">
               <div className="text-center max-w-4xl mx-auto space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Customer Journey</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707] dark:text-white">
                   Simple 3-step journey
                 </h2>
-                <p className="text-[#070707]/70 dark:text-white/70">
+                <p className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                   A seamless experience from login to credit offers—all within the Chase Business app.
                 </p>
               </div>
@@ -331,7 +332,7 @@ export default function HowItWorks() {
               <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
                 {[
                   { step: "1", title: "Sign in to Chase Business", desc: "No new credentials or portal required", image: "/seehowitworks/ChaseLogin.png" },
-                  { step: "2", title: "Open Lumiq AI Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)", image: "/seehowitworks/see scores.png" },
+                  { step: "2", title: "Open Futeur Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)", image: "/seehowitworks/see scores.png" },
                   { step: "3", title: "View eligible business card offers", desc: "Based on AI-assisted, policy-aligned decisioning", image: "/seehowitworks/creditoffers.png" }
                 ].map((item, index) => (
                   <motion.div
@@ -393,8 +394,8 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-10">
               <div className="text-center space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Pilot</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707]">90-Day Pilot Framework</h2>
-                <p className="text-[#070707]/70 max-w-3xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">90-Day Pilot Framework</h2>
+                <p className="text-sm sm:text-base text-[#070707]/70 max-w-3xl mx-auto px-4 sm:px-0">
                   Controlled rollout. Measured outcomes. No code changes to your existing decision platform required.
                 </p>
               </div>
@@ -406,7 +407,7 @@ export default function HowItWorks() {
                       {[
                         { week: "Weeks 1–2", title: "Data hookups + score sync", desc: "Connect APIs, validate Experian + internal data." },
                         { week: "Weeks 3–4", title: "Policy alignment", desc: "Mirror underwriting rules, overrides, guardrails." },
-                        { week: "Weeks 5–8", title: "Live A/B routing", desc: "Test Lumiq vs. control within your channels." },
+                        { week: "Weeks 5–8", title: "Live A/B routing", desc: "Test Futeur vs. control within your channels." },
                         { week: "Weeks 9–12", title: "Review + scale plan", desc: "Measure lift, risk deltas, agree on Stage 2." }
                       ].map((phase, idx) => (
                         <div key={phase.week} className="flex gap-4">
@@ -460,7 +461,7 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-8">
               <div className="text-center space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Who It Helps</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707]">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">
                   Built for product, risk, and digital leaders
               </h2>
               </div>
@@ -510,8 +511,8 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-12">
               <div className="text-center space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Decision Flow</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707]">How Lumiq AI makes decisions</h2>
-                <p className="text-[#070707]/70 max-w-3xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">How Futeur makes decisions</h2>
+                <p className="text-sm sm:text-base text-[#070707]/70 max-w-3xl mx-auto px-4 sm:px-0">
                   AI-assisted, policy-aligned decisioning — explainable at every step.
                 </p>
               </div>
@@ -568,8 +569,8 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-8">
               <div className="text-center space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Integration</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#070707]">Integration & Deployment</h2>
-                <p className="text-[#070707]/70 max-w-3xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">Integration & Deployment</h2>
+                <p className="text-sm sm:text-base text-[#070707]/70 max-w-3xl mx-auto px-4 sm:px-0">
                   No disruption to your existing underwriting workflow.
                 </p>
               </div>
@@ -630,7 +631,7 @@ export default function HowItWorks() {
                     ))}
                   </div>
                   <p className="text-sm text-[#070707]/70">
-                      Risk ownership remains fully with the bank; Lumiq AI Business Credit Journey never overrides Chase's approval authority.
+                      Risk ownership remains fully with the bank; Futeur Business Credit Journey never overrides Chase's approval authority.
                     </p>
                   </div>
               </div>
@@ -660,20 +661,21 @@ export default function HowItWorks() {
               transition={{ duration: 0.8 }}
               className="w-full text-center"
             >
-              <h2 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold mb-6 text-white leading-[41.6px] md:leading-[56px] lg:leading-[72px]">
+              <h2 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] font-bold mb-4 sm:mb-6 text-white leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[72px] px-4 sm:px-0">
                 Start a 6-Week Pilot with Pre-Agreed Success Criteria
               </h2>
-              <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
                 Non-disruptive integration. Measurable results. Built on proven principles.
               </p>
-              <a href="/#cta">
-                <Button variant="solverSecondary" size="lg" className="text-base md:text-lg gap-6">
-                  Book a 20-minute pilot review — see conversion lift & model audit in action
-                  <div className="w-10 h-10 p-2.5 rounded-full bg-[#070707] flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 text-white" />
+              <Link to="/pilot#pilot-form" className="w-full sm:w-auto flex justify-center px-4 sm:px-0">
+                <Button variant="solverSecondary" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-4 w-full sm:w-auto px-6 sm:px-8 py-6 sm:py-7 font-semibold">
+                  <span className="block sm:hidden text-center">Book a 20-Minute Pilot Review</span>
+                  <span className="hidden sm:block">Book a 20-minute pilot review — see conversion lift & model audit in action</span>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 p-2 sm:p-2.5 rounded-full bg-[#070707] flex items-center justify-center flex-shrink-0">
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                 </Button>
-              </a>
+              </Link>
             </motion.div>
           </div>
         </section>
@@ -681,3 +683,4 @@ export default function HowItWorks() {
     </PageLayout>
   );
 }
+

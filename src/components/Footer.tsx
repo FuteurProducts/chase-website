@@ -17,9 +17,9 @@ const resourceLinks = [
 ];
 
 const policyLinks = [
-  { label: "Privacy", href: "/privacy" },
-  { label: "Security", href: "/security" },
-  { label: "Terms", href: "/terms" },
+  { label: "Privacy", href: "/#security" }, // Links to security section until privacy page is created
+  { label: "Security", href: "/#security" },
+  { label: "Terms", href: "/#security" }, // Links to security section until terms page is created
 ];
 
 export function Footer() {
@@ -31,10 +31,10 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row gap-12 border-b border-white/10 pb-12">
           <div className="flex-1 space-y-5">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60">LUMIQ AI FOR CHASE</p>
-            <p className="text-3xl md:text-4xl font-bold leading-tight max-w-xl">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-xl">
               Business-credit journeys grounded in proven consumer-scale outcomes.
             </p>
-            <p className="text-white/70 max-w-lg">
+            <p className="text-sm sm:text-base text-white/70 max-w-lg">
               Deploy enterprise-grade underwriting workflows, explainable decisions, and measured uptake across cards,
               LOC, and term lending — without leaving your existing controls.
             </p>
@@ -96,12 +96,12 @@ export function Footer() {
             <p className="text-lg font-semibold">Start a 6-week pilot with pre-agreed success metrics.</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <a href="/#cta">
+            <Link to="/pilot#pilot-form">
               <Button variant="solverSecondary" className="gap-3">
                 Book Pilot Review
                 <ArrowRight className="w-4 h-4" />
               </Button>
-            </a>
+            </Link>
             <Link to="/demo">
               <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
                 Watch Demo

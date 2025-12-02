@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { PageLayout } from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,17 +59,17 @@ export default function CaseStudy() {
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-xs uppercase tracking-[0.3em] text-white/80 mb-6">
                     Case Study · Q4 2024
                   </div>
-                  <h1 className="text-[42px] md:text-[56px] lg:text-[64px] font-bold leading-tight text-white mb-6">
+                  <h1 className="text-[28px] sm:text-[42px] md:text-[56px] lg:text-[64px] font-bold leading-tight text-white mb-4 sm:mb-6">
                     The Missing $100M+ Line Item for 7M Chase SMB Clients
                   </h1>
-                  <p className="text-lg md:text-xl text-white/80 mb-4">
+                  <p className="text-base sm:text-lg md:text-xl text-white/80 mb-3 sm:mb-4">
                     Credit Journey proved that score + education + offers scales for 22M consumers.<sup className="text-white">1,2</sup>
                   </p>
-                  <p className="text-lg md:text-xl text-white/80 mb-4">
+                  <p className="text-base sm:text-lg md:text-xl text-white/80 mb-3 sm:mb-4">
                     LUMIQ AI applies the same mechanics to small-business credit decisions while fintechs capture 40% of new banking relationships.<sup className="text-white">3</sup>
                   </p>
-                  <p className="text-xl font-semibold text-white mb-8">
-                    Built for Chase’s controls; modeled to unlock ~$100M+ annual uplift from Ink cards alone before extending to lending.
+                  <p className="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8">
+                    Built for Chase's controls; modeled to unlock ~$100M+ annual uplift from Ink cards alone before extending to lending.
                   </p>
                   <div className="flex flex-wrap gap-4 mb-10">
                     <Button 
@@ -138,8 +139,8 @@ export default function CaseStudy() {
         <section className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16">
-              <h2 className="font-display text-4xl font-bold mb-4">The Consumer Blueprint</h2>
-              <p className="text-xl text-muted-foreground">What Credit Journey already proved at 80M+ consumer scale</p>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">The Consumer Blueprint</h2>
+              <p className="text-base sm:text-xl text-muted-foreground px-4 sm:px-0">What Credit Journey already proved at 80M+ consumer scale</p>
             </motion.div>
 
             {/* Pull Quote */}
@@ -223,8 +224,8 @@ export default function CaseStudy() {
         <section className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16">
-              <h2 className="font-display text-4xl font-bold mb-4">The SMB Gap & Fintech Pressure</h2>
-              <p className="text-xl text-muted-foreground">SMBs are quietly training their credit behavior elsewhere</p>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">The SMB Gap & Fintech Pressure</h2>
+              <p className="text-base sm:text-xl text-muted-foreground px-4 sm:px-0">SMBs are quietly training their credit behavior elsewhere</p>
             </motion.div>
 
             <motion.div
@@ -381,7 +382,7 @@ export default function CaseStudy() {
         <section className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16 text-center">
-              <h2 className="font-display text-4xl font-bold mb-4">What LUMIQ AI – Business Credit Journey Does</h2>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">What LUMIQ AI – Business Credit Journey Does</h2>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -443,8 +444,8 @@ export default function CaseStudy() {
         <section id="impact" className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-12">
-              <h2 className="font-display text-4xl font-bold mb-4">Modeled Impact – Stage 1 & Stage 2</h2>
-              <p className="text-xl text-muted-foreground mb-6">Modeled, not forecast; calibrated to Chase scale and public benchmarks</p>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Modeled Impact – Stage 1 & Stage 2</h2>
+              <p className="text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 px-4 sm:px-0">Modeled, not forecast; calibrated to Chase scale and public benchmarks</p>
               <Card className={`${neutralCard} bg-white dark:bg-[#0F0F0F]`}>
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-4">Methodology & Assumptions</h3>
@@ -595,8 +596,8 @@ export default function CaseStudy() {
         <section className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16 text-center">
-              <h2 className="font-display text-4xl font-bold mb-4 text-[#070707] dark:text-white">Governance & Fit</h2>
-              <p className="text-xl text-[#070707]/70 dark:text-white/70">Bank-friendly by design</p>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">Governance & Fit</h2>
+              <p className="text-base sm:text-xl text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">Bank-friendly by design</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -672,7 +673,7 @@ export default function CaseStudy() {
         <section id="pilot" className="py-16 md:py-24 bg-white dark:bg-[#070707]">
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16 text-center">
-              <h2 className="font-display text-4xl font-bold mb-4">How We'd Prove It in 90 Days</h2>
+              <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">How We'd Prove It in 90 Days</h2>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -893,10 +894,12 @@ export default function CaseStudy() {
               </Card>
 
               <div className="mt-12 text-center">
-                <Button size="lg" className="group" onClick={() => scrollToSection('hero')}>
-                  Start a 90-Day Pilot Review
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/pilot#pilot-form">
+                  <Button size="lg" className="group">
+                    Start a 90-Day Pilot Review
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>

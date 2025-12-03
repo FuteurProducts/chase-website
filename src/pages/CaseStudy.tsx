@@ -243,10 +243,10 @@ export default function CaseStudy() {
               ))}
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="w-full">
               <motion.div {...fadeInUp} className="w-full">
                 <Card className={`${neutralCard} hover:border-primary/30`}>
-                  <CardContent className="p-6 md:p-8 space-y-6 md:space-y-8 flex flex-col">
+                  <CardContent className="p-6 md:p-8 lg:p-10 space-y-6 md:space-y-8 flex flex-col">
                     <div className="space-y-4">
                       <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
                         <div>

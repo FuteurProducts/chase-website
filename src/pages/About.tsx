@@ -35,9 +35,19 @@ function About() {
           <h1 className="text-[32px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-2 sm:mb-3 leading-[40px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
             About Lumiq AI
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-white/70 mb-4 sm:mb-6">
-            (Powered by Futeurcredx)
-          </p>
+          <div className="flex items-center gap-2 mb-4 sm:mb-6">
+            <p className="text-sm sm:text-base md:text-lg text-white/70">
+              (Powered by Futeurcredx)
+            </p>
+            <a 
+              href="https://institutions.futeurcredx.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg text-white/90 hover:text-white underline underline-offset-2 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
 
           <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">
             Building the future of credit intelligence—enterprise-grade AI that empowers financial institutions and consumers to make better credit decisions.

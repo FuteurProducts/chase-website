@@ -262,9 +262,6 @@ function Security() {
                   <p className="text-[#070707]/80 dark:text-white/70">
                     Email: <a href="mailto:support@futeurcredx.com" className="text-primary hover:underline font-medium">support@futeurcredx.com</a>
                   </p>
-                  <p className="text-[#070707]/80 dark:text-white/70">
-                    Phone: <a href="tel:+12129374610" className="text-primary hover:underline font-medium">212-937-4610</a> (24/7 Security Hotline)
-                  </p>
                   <p className="text-xs text-[#070707]/80 dark:text-white/70 mt-4">
                     We appreciate responsible disclosure and will work with security researchers to address reported vulnerabilities promptly.
                   </p>

@@ -221,9 +221,6 @@ function Privacy() {
                   <p className="text-[#070707]/80 dark:text-white/70">
                     Email: <a href="mailto:support@futeurcredx.com" className="text-primary hover:underline">support@futeurcredx.com</a>
                   </p>
-                  <p className="text-[#070707]/80 dark:text-white/70">
-                    Phone: <a href="tel:+12129374610" className="text-primary hover:underline">212-937-4610</a>
-                  </p>
                 </div>
               </CardContent>
             </Card>

@@ -167,7 +167,7 @@ function Terms() {
                 <div>
                   <h3 className="font-semibold text-[#070707] dark:text-white mb-2">Technical Support</h3>
                   <p className="text-sm text-[#070707]/80 dark:text-white/70">
-                    Support is available Monday-Friday, 9 AM - 6 PM EST via email (support@futeurcredx.com) or phone (212-937-4610). Production deployments include 24/7 critical incident support.
+                    Support is available Monday-Friday, 9 AM - 6 PM EST via email (support@futeurcredx.com). Production deployments include 24/7 critical incident support.
                   </p>
                 </div>
               </CardContent>
@@ -288,9 +288,6 @@ function Terms() {
                   <p className="text-[#070707]/80 dark:text-white/70">New York, NY 10004</p>
                   <p className="text-[#070707]/80 dark:text-white/70">
                     Email: <a href="mailto:support@futeurcredx.com" className="text-primary hover:underline">support@futeurcredx.com</a>
-                  </p>
-                  <p className="text-[#070707]/80 dark:text-white/70">
-                    Phone: <a href="tel:+12129374610" className="text-primary hover:underline">212-937-4610</a>
                   </p>
                 </div>
               </CardContent>

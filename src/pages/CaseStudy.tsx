@@ -362,6 +362,13 @@ export default function CaseStudy() {
               <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all hover:shadow-lg`}>
                   <CardContent className="p-8">
+                    <div className="mb-6">
+                      <img 
+                        src="/businessmockup2.png" 
+                        alt="In-app SMB Credit Visibility" 
+                        className="w-full h-auto rounded-xl object-contain"
+                      />
+                    </div>
                     <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                       <Smartphone className="h-7 w-7 text-primary" />
                     </div>
@@ -379,6 +386,13 @@ export default function CaseStudy() {
               <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all hover:shadow-lg`}>
                   <CardContent className="p-8">
+                    <div className="mb-6">
+                      <img 
+                        src="/mockups/businessmockup10.png" 
+                        alt="Policy-Aligned Soft Pre-Qualification" 
+                        className="w-full h-auto rounded-xl object-contain"
+                      />
+                    </div>
                     <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                       <Brain className="h-7 w-7 text-primary" />
                     </div>
@@ -396,6 +410,13 @@ export default function CaseStudy() {
               <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all hover:shadow-lg`}>
                   <CardContent className="p-8">
+                    <div className="mb-6">
+                      <img 
+                        src="/mockups/businessmockup9.png" 
+                        alt="One-Tap Applications & Internal Control Tower" 
+                        className="w-full h-auto rounded-xl object-contain"
+                      />
+                    </div>
                     <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                       <PieChart className="h-7 w-7 text-primary" />
                     </div>

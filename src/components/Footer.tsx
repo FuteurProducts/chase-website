@@ -18,9 +18,9 @@ const resourceLinks = [
 ];
 
 const policyLinks = [
-  { label: "Privacy", href: "/#security" }, // Links to security section until privacy page is created
-  { label: "Security", href: "/#security" },
-  { label: "Terms", href: "/#security" }, // Links to security section until terms page is created
+  { label: "Privacy", href: "/privacy" },
+  { label: "Security", href: "/security" },
+  { label: "Terms", href: "/terms" },
 ];
 
 export function Footer() {

@@ -56,48 +56,6 @@ const demoScreens = [
     description: "Detailed credit score breakdown and analysis for business customers.",
     caption: "Visual representation of credit metrics and trends.",
     image: "/Credit Score Analysis.png"
-  },
-  {
-    title: "Customer Portfolio View",
-    description: "Individual customer portfolio insights and credit journey tracking.",
-    caption: "Track customer credit health and eligibility in real-time.",
-    image: "/dashboard/users.png"
-  },
-  {
-    title: "Risk Assessment Dashboard",
-    description: "Comprehensive risk assessment and scoring interface.",
-    caption: "AI-powered risk analysis with policy-aligned decisioning.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.20.47.png"
-  },
-  {
-    title: "Approval Workflow",
-    description: "Streamlined approval process with automated decision routing.",
-    caption: "Reduce manual review load by 20% with intelligent automation.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.20.53.png"
-  },
-  {
-    title: "Product Eligibility Matrix",
-    description: "Real-time product eligibility and recommendation engine.",
-    caption: "Match customers to the right products based on credit profile.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.21.01.png"
-  },
-  {
-    title: "Performance Metrics",
-    description: "Key performance indicators and conversion tracking.",
-    caption: "Measure lift, approval rates, and portfolio performance.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.21.07.png"
-  },
-  {
-    title: "Audit Trail & Compliance",
-    description: "Complete audit trail for all credit decisions and model governance.",
-    caption: "100% transparency for risk teams and regulators.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.21.16.png"
-  },
-  {
-    title: "Advanced Analytics View",
-    description: "Deep dive into portfolio analytics and trend analysis.",
-    caption: "Advanced reporting and insights for strategic decision making.",
-    image: "/dashboard/Screenshot 2025-11-18 at 18.21.31.png"
   }
 ];
 

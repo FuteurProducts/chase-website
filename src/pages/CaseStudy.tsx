@@ -16,7 +16,8 @@ import {
   Brain,
   Smartphone,
   PieChart,
-  Lock
+  Lock,
+  FileText
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -90,17 +91,17 @@ export default function CaseStudy() {
                       </Button>
                     </Link>
                   </div>
-                  <div className="flex flex-wrap gap-4 text-sm text-white/80">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                      <TrendingUp className="w-4 h-4 text-white" />
+                  <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 text-sm text-white/80">
+                    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/5 whitespace-nowrap">
+                      <TrendingUp className="w-4 h-4 text-white flex-shrink-0" />
                       <span>+15–25% app-to-booked lift</span>
                     </div>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                      <Shield className="w-4 h-4 text-white" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/5 whitespace-nowrap">
+                      <Shield className="w-4 h-4 text-white flex-shrink-0" />
                       <span>Built for ECOA / FCRA controls</span>
                     </div>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                      <Users className="w-4 h-4 text-white" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/5 whitespace-nowrap">
+                      <Users className="w-4 h-4 text-white flex-shrink-0" />
                       <span>Targeting 7M SMB relationships</span>
                     </div>
                   </div>
@@ -108,7 +109,7 @@ export default function CaseStudy() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="flex flex-wrap gap-4 w-full"
+                    className="flex flex-wrap gap-4 sm:gap-6 w-full mt-4"
                   >
                     {[
                       { value: "22M+", label: "Credit Journey users", icon: Users },
@@ -117,14 +118,14 @@ export default function CaseStudy() {
                     ].map((metric) => (
                       <div
                         key={metric.label}
-                        className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-white/15 bg-white/5 text-white backdrop-blur-md"
+                        className="flex items-center gap-3 px-5 py-4 sm:px-6 sm:py-5 rounded-2xl border border-white/15 bg-white/5 text-white backdrop-blur-md min-w-[200px] sm:min-w-[240px] flex-1 sm:flex-initial"
                       >
-                        <div className="h-10 w-10 rounded-2xl bg-white/10 flex items-center justify-center">
-                          <metric.icon className="h-5 w-5" />
+                        <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                          <metric.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
-                        <div>
-                          <div className="text-xl font-semibold leading-tight">{metric.value}</div>
-                          <p className="text-xs text-white/70">{metric.label}</p>
+                        <div className="min-w-0">
+                          <div className="text-xl sm:text-2xl font-semibold leading-tight">{metric.value}</div>
+                          <p className="text-xs sm:text-sm text-white/70 mt-1">{metric.label}</p>
                         </div>
                       </div>
                     ))}
@@ -179,39 +180,39 @@ export default function CaseStudy() {
             <motion.div {...fadeInUp}>
               <Card className="rounded-[32px] bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/30">
                 <CardContent className="p-8">
-                  <h3 className="font-display text-2xl font-bold mb-6">Operational Lessons for Chase: What Credit Journey Proved</h3>
+                  <h3 className="font-display text-2xl font-bold mb-6 text-white">Operational Lessons for Chase: What Credit Journey Proved</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Mass adoption when free and frictionless:</span>
-                        <span className="text-[#070707]/80 dark:text-white/70"> 69% of digital banking users now use credit-monitoring tools like Credit Journey, up 8 percentage points YoY.<sup className="text-primary">4</sup></span>
+                        <span className="font-semibold text-white">Mass adoption when free and frictionless:</span>
+                        <span className="text-white/90"> 69% of digital banking users now use credit-monitoring tools like Credit Journey, up 8 percentage points YoY.<sup className="text-primary">4</sup></span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Measurable financial health impact:</span>
-                        <span className="text-[#070707]/80 dark:text-white/70"> Users completing Score Planner improved credit scores 30+ points on average.<sup className="text-primary">2</sup></span>
+                        <span className="font-semibold text-white">Measurable financial health impact:</span>
+                        <span className="text-white/90"> Users completing Score Planner improved credit scores 30+ points on average.<sup className="text-primary">2</sup></span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Native channel for pre-approved products:</span>
-                        <span className="text-[#070707]/80 dark:text-white/70"> Creates in-app moments to present offers when customers are engaged with their credit data.</span>
+                        <span className="font-semibold text-white">Native channel for pre-approved products:</span>
+                        <span className="text-white/90"> Creates in-app moments to present offers when customers are engaged with their credit data.</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Operational efficiency gains:</span>
-                        <span className="text-[#070707]/80 dark:text-white/70"> Internal materials position Credit Journey as part of experiences that drove record NPS, lower variable cost per household, and reduced teller transactions.<sup className="text-primary">5</sup></span>
+                        <span className="font-semibold text-white">Operational efficiency gains:</span>
+                        <span className="text-white/90"> Internal materials position Credit Journey as part of experiences that drove record NPS, lower variable cost per household, and reduced teller transactions.<sup className="text-primary">5</sup></span>
                       </div>
                     </li>
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-sm font-semibold text-foreground">
+                  <div className="mt-6 pt-6 border-t border-white/20">
+                    <p className="text-sm font-semibold text-white">
                       LUMIQ AI thesis: Take the same proven mechanics and point them at the 7M small-business portfolio where Chase has no dedicated "business credit journey."
                     </p>
                   </div>
@@ -450,14 +451,14 @@ export default function CaseStudy() {
 
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
               <motion.div {...fadeInUp} className="w-full">
-                <Card className="h-full rounded-[32px] bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/30">
+                <Card className={`h-full ${neutralCard} border-primary/20`}>
                   <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
                         <BarChart3 className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl font-bold">Stage 1</h3>
+                        <h3 className="font-display text-2xl font-bold text-[#070707] dark:text-white">Stage 1</h3>
                         <p className="text-[#070707]/80 dark:text-white/70">Ink Business Cards</p>
                       </div>
                     </div>
@@ -465,38 +466,38 @@ export default function CaseStudy() {
                     <div className="space-y-6">
                       <div>
                         <div className="text-sm text-[#070707]/80 dark:text-white/70 mb-1">Pilot cohort</div>
-                        <div className="text-lg font-semibold">Digitally-active SMBs</div>
+                        <div className="text-lg font-semibold text-[#070707] dark:text-white">Digitally-active SMBs</div>
                       </div>
 
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-background/50 rounded-lg p-4">
+                        <div className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-lg p-4">
                           <div className="text-3xl font-bold text-primary mb-1">+15–25%</div>
                           <div className="text-sm text-[#070707]/80 dark:text-white/70">App-to-booked lift in owned channel</div>
                         </div>
-                        <div className="bg-background/50 rounded-lg p-4">
+                        <div className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-lg p-4">
                           <div className="text-3xl font-bold text-primary mb-1">~55K</div>
                           <div className="text-sm text-[#070707]/80 dark:text-white/70">Incremental booked Ink cards</div>
                         </div>
                       </div>
 
-                      <div className="space-y-3 pt-4 border-t border-border">
+                      <div className="space-y-3 pt-4 border-t border-[#E4E7EC] dark:border-[#1D1D1D]">
                         <div className="flex justify-between items-center">
                           <span className="text-[#070707]/80 dark:text-white/70">Gross interchange / year</span>
-                          <span className="text-xl font-bold">~$79.4M</span>
+                          <span className="text-xl font-bold text-[#070707] dark:text-white">~$79.4M</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[#070707]/80 dark:text-white/70">CAC savings / year</span>
-                          <span className="text-xl font-bold">~$9.2M</span>
+                          <span className="text-xl font-bold text-[#070707] dark:text-white">~$9.2M</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[#070707]/80 dark:text-white/70">Additional fee & interest income</span>
-                          <span className="text-xl font-bold">~$14M+</span>
+                          <span className="text-xl font-bold text-[#070707] dark:text-white">~$14M+</span>
                         </div>
                       </div>
 
-                      <div className="mt-6 pt-6 border-t-2 border-primary/30 bg-primary/5 rounded-lg p-4">
+                      <div className="mt-6 pt-6 border-t-2 border-primary/30 bg-primary/5 dark:bg-primary/10 rounded-lg p-4">
                         <div className="flex justify-between items-center">
-                          <span className="font-bold text-lg">Stage 1 Total Uplift</span>
+                          <span className="font-bold text-lg text-[#070707] dark:text-white">Stage 1 Total Uplift</span>
                           <span className="text-3xl font-bold text-primary">~$100M+</span>
                         </div>
                         <p className="text-xs text-[#070707]/80 dark:text-white/70 mt-2">
@@ -509,46 +510,46 @@ export default function CaseStudy() {
               </motion.div>
 
               <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="w-full">
-                <Card className="h-full rounded-[32px] bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/30">
+                <Card className={`h-full ${neutralCard} border-primary/20`}>
                   <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="h-12 w-12 rounded-lg bg-secondary/20 flex items-center justify-center">
-                        <TrendingUp className="h-6 w-6 text-secondary" />
+                      <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <TrendingUp className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl font-bold">Stage 2</h3>
+                        <h3 className="font-display text-2xl font-bold text-[#070707] dark:text-white">Stage 2</h3>
                         <p className="text-[#070707]/80 dark:text-white/70">Lending Ecosystem</p>
                       </div>
                     </div>
 
                     <div className="space-y-4">
-                      <div className="bg-background/50 rounded-lg p-4">
+                      <div className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
-                          <span className="font-semibold">Business Line of Credit</span>
-                          <span className="text-lg font-bold text-secondary">$50–80M</span>
+                          <span className="font-semibold text-[#070707] dark:text-white">Business Line of Credit</span>
+                          <span className="text-lg font-bold text-primary">$50–80M</span>
                         </div>
                         <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
-                      <div className="bg-background/50 rounded-lg p-4">
+                      <div className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
-                          <span className="font-semibold">Term Loans</span>
-                          <span className="text-lg font-bold text-secondary">$80–120M</span>
+                          <span className="font-semibold text-[#070707] dark:text-white">Term Loans</span>
+                          <span className="text-lg font-bold text-primary">$80–120M</span>
                         </div>
                         <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
-                      <div className="bg-background/50 rounded-lg p-4">
+                      <div className="bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
-                          <span className="font-semibold">Commercial Real Estate</span>
-                          <span className="text-lg font-bold text-secondary">$80–120M</span>
+                          <span className="font-semibold text-[#070707] dark:text-white">Commercial Real Estate</span>
+                          <span className="text-lg font-bold text-primary">$80–120M</span>
                         </div>
                         <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
-                      <div className="bg-primary/10 rounded-lg p-4 border border-primary/20 mt-6">
+                      <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20 mt-6">
                         <div className="flex justify-between items-center">
-                          <span className="font-bold">Total Stage 2 Range</span>
+                          <span className="font-bold text-[#070707] dark:text-white">Total Stage 2 Range</span>
                           <span className="text-2xl font-bold text-primary">$210–320M</span>
                         </div>
                       </div>
@@ -845,23 +846,39 @@ export default function CaseStudy() {
                 </div>
               </div>
 
-              <Card className="bg-accent/50 border-primary/20 mb-8">
-                <CardContent className="p-6 text-[#070707] dark:text-white/80">
-                  <p className="font-semibold mb-3">Methodology Note</p>
-                  <p className="text-sm text-[#070707]/80 dark:text-white/80">
-                    All modeled impact figures are directional estimates calibrated to Chase's publicly disclosed SMB scale (~6–7M clients), Credit Journey consumer success metrics (22M users, measurable engagement and financial health outcomes), and conservative industry benchmarks for card interchange rates, average spend, and conversion lift assumptions. These are not guarantees or forecasts but order-of-magnitude scenarios based on analogous consumer product success within Chase's existing infrastructure.
-                  </p>
+              <Card className={`${neutralCard} mb-8`}>
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="flex-shrink-0">
+                      <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <FileText className="w-5 h-5 text-primary" strokeWidth={2.5} />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-2 text-[#070707] dark:text-white">Methodology Note</h3>
+                      <p className="text-sm text-[#070707]/80 dark:text-white/70 leading-relaxed">
+                        All modeled impact figures are directional estimates calibrated to Chase's publicly disclosed SMB scale (~6–7M clients), Credit Journey consumer success metrics (22M users, measurable engagement and financial health outcomes), and conservative industry benchmarks for card interchange rates, average spend, and conversion lift assumptions. These are not guarantees or forecasts but order-of-magnitude scenarios based on analogous consumer product success within Chase's existing infrastructure.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-background/50 border-border/50">
-                <CardContent className="p-6 space-y-4 text-sm text-[#070707]/80 dark:text-white/70">
-                  <p className="font-medium text-[#070707] dark:text-white">Legal Notice</p>
-                  <p>
-                    LUMIQ AI and Lumiq AI are independent solutions; no affiliation or endorsement by JPMorgan Chase is implied. 
-                    All trademarks belong to their respective owners. This analysis is for informational purposes only and does not 
-                    constitute financial, legal, or business advice.
-                  </p>
+              <Card className={neutralCard}>
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-primary" strokeWidth={2.5} />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-2 text-[#070707] dark:text-white">Legal Notice</h3>
+                      <p className="text-sm text-[#070707]/80 dark:text-white/70 leading-relaxed">
+                        LUMIQ AI and Lumiq AI are independent solutions; no affiliation or endorsement by JPMorgan Chase is implied. All trademarks belong to their respective owners. This analysis is for informational purposes only and does not constitute financial, legal, or business advice.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 

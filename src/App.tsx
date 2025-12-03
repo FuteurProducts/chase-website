@@ -14,6 +14,9 @@ import USS from "./pages/USS";
 import HowItWorks from "./pages/HowItWorks";
 import CaseStudy from "./pages/CaseStudy";
 import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Security from "./pages/Security";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +39,9 @@ const App = () => (
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/case-study" element={<CaseStudy />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/security" element={<Security />} />
+            <Route path="/terms" element={<Terms />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

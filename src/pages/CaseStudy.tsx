@@ -141,7 +141,7 @@ export default function CaseStudy() {
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16">
               <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">The Consumer Blueprint</h2>
-              <p className="text-base sm:text-xl text-muted-foreground px-4 sm:px-0">What Credit Journey already proved at 80M+ consumer scale</p>
+              <p className="text-base sm:text-xl text-[#070707]/80 dark:text-white/70 px-4 sm:px-0">What Credit Journey already proved at 80M+ consumer scale</p>
             </motion.div>
 
             {/* Pull Quote */}
@@ -151,7 +151,7 @@ export default function CaseStudy() {
                   <blockquote className="text-2xl font-semibold italic text-foreground mb-4">
                     "If Credit Journey worked this well for 80M+ consumers, what happens when you give 7M small-business owners the same clarity—plus one-tap access to Ink cards and, later, LOC/term/CRE lending?"
                   </blockquote>
-                  <cite className="text-sm text-muted-foreground">— LUMIQ AI Research Thesis, 2024</cite>
+                  <cite className="text-sm text-[#070707]/80 dark:text-white/70">— LUMIQ AI Research Thesis, 2024</cite>
                 </CardContent>
               </Card>
             </motion.div>
@@ -185,28 +185,28 @@ export default function CaseStudy() {
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold">Mass adoption when free and frictionless:</span>
-                        <span className="text-muted-foreground"> 69% of digital banking users now use credit-monitoring tools like Credit Journey, up 8 percentage points YoY.<sup className="text-primary">4</sup></span>
+                        <span className="text-[#070707]/80 dark:text-white/70"> 69% of digital banking users now use credit-monitoring tools like Credit Journey, up 8 percentage points YoY.<sup className="text-primary">4</sup></span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold">Measurable financial health impact:</span>
-                        <span className="text-muted-foreground"> Users completing Score Planner improved credit scores 30+ points on average.<sup className="text-primary">2</sup></span>
+                        <span className="text-[#070707]/80 dark:text-white/70"> Users completing Score Planner improved credit scores 30+ points on average.<sup className="text-primary">2</sup></span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold">Native channel for pre-approved products:</span>
-                        <span className="text-muted-foreground"> Creates in-app moments to present offers when customers are engaged with their credit data.</span>
+                        <span className="text-[#070707]/80 dark:text-white/70"> Creates in-app moments to present offers when customers are engaged with their credit data.</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold">Operational efficiency gains:</span>
-                        <span className="text-muted-foreground"> Internal materials position Credit Journey as part of experiences that drove record NPS, lower variable cost per household, and reduced teller transactions.<sup className="text-primary">5</sup></span>
+                        <span className="text-[#070707]/80 dark:text-white/70"> Internal materials position Credit Journey as part of experiences that drove record NPS, lower variable cost per household, and reduced teller transactions.<sup className="text-primary">5</sup></span>
                       </div>
                     </li>
                   </ul>
@@ -226,7 +226,7 @@ export default function CaseStudy() {
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-16">
               <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">The SMB Gap & Fintech Pressure</h2>
-              <p className="text-base sm:text-xl text-muted-foreground px-4 sm:px-0">SMBs are quietly training their credit behavior elsewhere</p>
+              <p className="text-base sm:text-xl text-[#070707]/80 dark:text-white/70 px-4 sm:px-0">SMBs are quietly training their credit behavior elsewhere</p>
             </motion.div>
 
             <motion.div
@@ -251,17 +251,17 @@ export default function CaseStudy() {
                       <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
                         <div>
                           <h3 className="font-display text-2xl font-bold text-[#070707] dark:text-white">Chase SMB footprint & gap</h3>
-                          <p className="text-sm text-[#070707]/70 dark:text-white/70">
-                            Massive penetration, but no dedicated “business credit journey” akin to the consumer experience.
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">
+                            Massive penetration, but no dedicated "business credit journey" akin to the consumer experience.
                           </p>
                         </div>
                         <div className="rounded-2xl border border-[#E4E7EC] dark:border-white/10 bg-white dark:bg-[#0F0F0F] px-6 py-4 text-center shadow-sm">
-                          <div className="text-xs uppercase tracking-[0.3em] text-[#070707]/50 dark:text-white/50 mb-1">Scale</div>
+                          <div className="text-xs uppercase tracking-[0.3em] text-[#070707]/70 dark:text-white/50 mb-1">Scale</div>
                           <div className="text-4xl font-bold text-primary">6–7M</div>
-                          <p className="text-xs text-[#070707]/70 dark:text-white/70 mt-1">SMB clients across CCB</p>
+                          <p className="text-xs text-[#070707]/80 dark:text-white/70 mt-1">SMB clients across CCB</p>
                         </div>
                       </div>
-                      <p className="text-sm text-[#070707]/80 dark:text-white/70">
+                      <p className="text-sm text-[#070707]/90 dark:text-white/70">
                         Product pages exist for Ink, LOC, term loans, and CRE, but SMBs never see a Credit Journey-style UI that unifies scores, education, and offers.
                       </p>
                     </div>
@@ -302,7 +302,7 @@ export default function CaseStudy() {
                               <p className="text-sm font-semibold text-[#070707] dark:text-white">{item.heading}</p>
                               {item.cite && <sup className="text-primary font-semibold text-xs">{item.cite}</sup>}
                             </div>
-                            <p className="text-sm text-[#070707]/70 dark:text-white/70">{item.body}</p>
+                            <p className="text-sm text-[#070707]/80 dark:text-white/70">{item.body}</p>
                           </div>
                         ))}
                       </div>
@@ -311,8 +311,8 @@ export default function CaseStudy() {
                     <div className="pt-6 border-t border-border">
                       <div className="rounded-3xl bg-primary/5 dark:bg-white/5 p-4 md:p-6 flex flex-col h-full">
                         <h3 className="font-display text-xl font-bold mb-3 md:mb-4 text-primary">Experience gap</h3>
-                        <p className="text-sm text-muted-foreground mb-3 md:mb-4">
-                          <span className="font-medium text-foreground">McKinsey 2024/2025:</span> "Good online and mobile banking is the #1 reason SMEs choose a primary bank."<sup className="text-primary">9</sup>
+                        <p className="text-sm text-[#070707]/80 dark:text-white/70 mb-3 md:mb-4">
+                          <span className="font-medium text-[#070707] dark:text-white">McKinsey 2024/2025:</span> "Good online and mobile banking is the #1 reason SMEs choose a primary bank."<sup className="text-primary">9</sup>
                         </p>
                         <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                           <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
@@ -324,10 +324,10 @@ export default function CaseStudy() {
                                 className="max-w-[150px] h-auto object-contain"
                               />
                             </div>
-                            <p className="text-sm text-muted-foreground">Credit Journey, Score Planner, education, embedded offers.</p>
+                            <p className="text-sm text-[#070707]/80 dark:text-white/70">Credit Journey, Score Planner, education, embedded offers.</p>
                           </div>
                           <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
-                            <div className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-[0.2em]">Chase SMB</div>
+                            <div className="text-xs font-semibold text-[#070707]/80 dark:text-white/70 mb-3 uppercase tracking-[0.2em]">Chase SMB</div>
                             <div className="flex items-center justify-center mb-3">
                               <img 
                                 src="/mockups/businessmockup1.png" 
@@ -335,7 +335,7 @@ export default function CaseStudy() {
                                 className="max-w-[150px] h-auto object-contain"
                               />
                             </div>
-                            <p className="text-sm text-muted-foreground">Product-centric pages (Ink, LOC, term, CRE) without a unified journey.</p>
+                            <p className="text-sm text-[#070707]/80 dark:text-white/70">Product-centric pages (Ink, LOC, term, CRE) without a unified journey.</p>
                           </div>
                         </div>
                         <p className="text-sm font-semibold text-foreground mt-4">
@@ -360,10 +360,10 @@ export default function CaseStudy() {
                     </div>
                     
                     {/* Axis Labels */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-8 text-sm text-muted-foreground">
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-8 text-sm text-[#070707]/80 dark:text-white/70">
                       Digital Experience →
                     </div>
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-16 text-sm text-muted-foreground -rotate-90">
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-16 text-sm text-[#070707]/80 dark:text-white/70 -rotate-90">
                       Risk & Governance →
                     </div>
 
@@ -384,7 +384,7 @@ export default function CaseStudy() {
                       <div className="bg-primary/20 border-2 border-primary px-3 py-1 rounded text-sm font-bold whitespace-nowrap">
                         LUMIQ AI
                       </div>
-                      <div className="text-xs text-center text-muted-foreground mt-1">High/High</div>
+                      <div className="text-xs text-center text-[#070707]/80 dark:text-white/70 mt-1">High/High</div>
                     </div>
                   </div>
                 </Card>
@@ -408,10 +408,10 @@ export default function CaseStudy() {
                       <Smartphone className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="font-display text-xl font-bold mb-4">In-app SMB Credit Visibility</h3>
-                    <p className="text-muted-foreground mb-3">
+                    <p className="text-[#070707]/80 dark:text-white/70 mb-3">
                       Owner FICO and business-credit signals (e.g., Experian Intelliscore, FSR) shown directly in the Chase Business app UI.
                     </p>
-                    <p className="text-muted-foreground font-medium">
+                    <p className="text-[#070707]/80 dark:text-white/70 font-medium">
                       No extra logins. No external portals.
                     </p>
                   </CardContent>
@@ -425,10 +425,10 @@ export default function CaseStudy() {
                       <Brain className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="font-display text-xl font-bold mb-4">Policy-Aligned Soft Pre-Qualification</h3>
-                    <p className="text-muted-foreground mb-3">
+                    <p className="text-[#070707]/80 dark:text-white/70 mb-3">
                       Applies Chase's risk appetite, underwriting inputs, and guardrails (5/24, 2/30, 1/30, bureau status, exposure).
                     </p>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#070707]/80 dark:text-white/70">
                       Generates likelihood-of-approval and explainable reasons for Ink Business cards (Stage 1) and, later, LOC/term/CRE (Stage 2).
                     </p>
                   </CardContent>
@@ -442,10 +442,10 @@ export default function CaseStudy() {
                       <PieChart className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="font-display text-xl font-bold mb-4">One-Tap Applications & Internal Control Tower</h3>
-                    <p className="text-muted-foreground mb-3">
+                    <p className="text-[#070707]/80 dark:text-white/70 mb-3">
                       One-tap pre-qualified applications from the Chase Business app (card first, then lending).
                     </p>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#070707]/80 dark:text-white/70">
                       Internal dashboard shows eligible SMBs, funnel conversion, approval-rate delta, loss-rate delta, and A/B lift.
                     </p>
                   </CardContent>
@@ -460,14 +460,14 @@ export default function CaseStudy() {
           <div className={containerClass}>
             <motion.div {...fadeInUp} className="mb-12">
               <h2 className="font-display text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Modeled Impact – Stage 1 & Stage 2</h2>
-              <p className="text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 px-4 sm:px-0">Modeled, not forecast; calibrated to Chase scale and public benchmarks</p>
+              <p className="text-base sm:text-xl text-[#070707]/80 dark:text-white/70 mb-4 sm:mb-6 px-4 sm:px-0">Modeled, not forecast; calibrated to Chase scale and public benchmarks</p>
               <Card className={`${neutralCard} bg-white dark:bg-[#0F0F0F]`}>
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-4">Methodology & Assumptions</h3>
                   <div className="grid md:grid-cols-2 gap-6 text-sm">
                     <div>
                       <div className="font-semibold text-foreground mb-2">Stage 1 Pilot Cohort</div>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <ul className="space-y-1 text-[#070707]/80 dark:text-white/70">
                         <li>• Target: 250K–400K digitally active SMBs</li>
                         <li>• Reach rate: 60–70% of target cohort</li>
                         <li>• Engagement rate: 35–45% (interact with journey / see offers)</li>
@@ -476,7 +476,7 @@ export default function CaseStudy() {
                     </div>
                     <div>
                       <div className="font-semibold text-foreground mb-2">Financial Assumptions</div>
-                      <ul className="space-y-1 text-muted-foreground">
+                      <ul className="space-y-1 text-[#070707]/80 dark:text-white/70">
                         <li>• Avg annual spend per new Ink card: $60–80K</li>
                         <li>• Blended interchange rate: ~1.8%</li>
                         <li>• CAC comparison: owned channel vs. paid media</li>
@@ -484,7 +484,7 @@ export default function CaseStudy() {
                       </ul>
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-4 pt-4 border-t border-border">
+                  <p className="text-xs text-[#070707]/80 dark:text-white/70 mt-4 pt-4 border-t border-border">
                     These order-of-magnitude estimates are consistent with what Chase demonstrated with Credit Journey at consumer scale (22M users and material digital ROI).<sup className="text-primary">1,2,5</sup>
                   </p>
                 </CardContent>
@@ -501,38 +501,38 @@ export default function CaseStudy() {
                       </div>
                       <div>
                         <h3 className="font-display text-2xl font-bold">Stage 1</h3>
-                        <p className="text-muted-foreground">Ink Business Cards</p>
+                        <p className="text-[#070707]/80 dark:text-white/70">Ink Business Cards</p>
                       </div>
                     </div>
 
                     <div className="space-y-6">
                       <div>
-                        <div className="text-sm text-muted-foreground mb-1">Pilot cohort</div>
+                        <div className="text-sm text-[#070707]/80 dark:text-white/70 mb-1">Pilot cohort</div>
                         <div className="text-lg font-semibold">Digitally-active SMBs</div>
                       </div>
 
                       <div className="grid grid-cols-2 gap-4">
                         <div className="bg-background/50 rounded-lg p-4">
                           <div className="text-3xl font-bold text-primary mb-1">+15–25%</div>
-                          <div className="text-sm text-muted-foreground">App-to-booked lift in owned channel</div>
+                          <div className="text-sm text-[#070707]/80 dark:text-white/70">App-to-booked lift in owned channel</div>
                         </div>
                         <div className="bg-background/50 rounded-lg p-4">
                           <div className="text-3xl font-bold text-primary mb-1">~55K</div>
-                          <div className="text-sm text-muted-foreground">Incremental booked Ink cards</div>
+                          <div className="text-sm text-[#070707]/80 dark:text-white/70">Incremental booked Ink cards</div>
                         </div>
                       </div>
 
                       <div className="space-y-3 pt-4 border-t border-border">
                         <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">Gross interchange / year</span>
+                          <span className="text-[#070707]/80 dark:text-white/70">Gross interchange / year</span>
                           <span className="text-xl font-bold">~$79.4M</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">CAC savings / year</span>
+                          <span className="text-[#070707]/80 dark:text-white/70">CAC savings / year</span>
                           <span className="text-xl font-bold">~$9.2M</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">Additional fee & interest income</span>
+                          <span className="text-[#070707]/80 dark:text-white/70">Additional fee & interest income</span>
                           <span className="text-xl font-bold">~$14M+</span>
                         </div>
                       </div>
@@ -542,7 +542,7 @@ export default function CaseStudy() {
                           <span className="font-bold text-lg">Stage 1 Total Uplift</span>
                           <span className="text-3xl font-bold text-primary">~$100M+</span>
                         </div>
-                        <p className="text-xs text-muted-foreground mt-2">
+                        <p className="text-xs text-[#070707]/80 dark:text-white/70 mt-2">
                           Per year from cards alone, at Chase scale, with lower unit CAC and policy-aligned risk controls
                         </p>
                       </div>
@@ -560,7 +560,7 @@ export default function CaseStudy() {
                       </div>
                       <div>
                         <h3 className="font-display text-2xl font-bold">Stage 2</h3>
-                        <p className="text-muted-foreground">Lending Ecosystem</p>
+                        <p className="text-[#070707]/80 dark:text-white/70">Lending Ecosystem</p>
                       </div>
                     </div>
 
@@ -570,7 +570,7 @@ export default function CaseStudy() {
                           <span className="font-semibold">Business Line of Credit</span>
                           <span className="text-lg font-bold text-secondary">$50–80M</span>
                         </div>
-                        <div className="text-xs text-muted-foreground">Incremental annual revenue potential</div>
+                        <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
                       <div className="bg-background/50 rounded-lg p-4">
@@ -578,7 +578,7 @@ export default function CaseStudy() {
                           <span className="font-semibold">Term Loans</span>
                           <span className="text-lg font-bold text-secondary">$80–120M</span>
                         </div>
-                        <div className="text-xs text-muted-foreground">Incremental annual revenue potential</div>
+                        <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
                       <div className="bg-background/50 rounded-lg p-4">
@@ -586,7 +586,7 @@ export default function CaseStudy() {
                           <span className="font-semibold">Commercial Real Estate</span>
                           <span className="text-lg font-bold text-secondary">$80–120M</span>
                         </div>
-                        <div className="text-xs text-muted-foreground">Incremental annual revenue potential</div>
+                        <div className="text-xs text-[#070707]/80 dark:text-white/70">Incremental annual revenue potential</div>
                       </div>
 
                       <div className="bg-primary/10 rounded-lg p-4 border border-primary/20 mt-6">
@@ -596,7 +596,7 @@ export default function CaseStudy() {
                         </div>
                       </div>
 
-                      <p className="text-xs text-muted-foreground italic pt-4">
+                      <p className="text-xs text-[#070707]/80 dark:text-white/70 italic pt-4">
                         Stage 2 ranges are directional, based on unmet SME credit demand, Chase SMB scale, and modest uplift assumptions.
                       </p>
                     </div>
@@ -697,7 +697,7 @@ export default function CaseStudy() {
                   <CardContent className="p-8 space-y-4">
                     <div className="text-sm font-semibold text-primary mb-4">WEEKS 0–2</div>
                     <h3 className="font-display text-xl font-bold mb-4">Connect & Simulate</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#070707]/80 dark:text-white/70">
                       Connect scores & sandbox; re-create a small, simulated 'Credit Journey for Business' cohort.
                     </p>
                   </CardContent>
@@ -709,7 +709,7 @@ export default function CaseStudy() {
                   <CardContent className="p-8 space-y-4">
                     <div className="text-sm font-semibold text-primary mb-4">WEEKS 3–8</div>
                     <h3 className="font-display text-xl font-bold mb-4">A/B Test & Measure</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#070707]/80 dark:text-white/70">
                       A/B test vs. current flows—measure lift, approval-rate delta, loss-rate delta, and time-to-decision.
                     </p>
                   </CardContent>
@@ -721,7 +721,7 @@ export default function CaseStudy() {
                   <CardContent className="p-8 space-y-4">
                     <div className="text-sm font-semibold text-primary mb-4">WEEKS 9–12</div>
                     <h3 className="font-display text-xl font-bold mb-4">Scale Decision</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#070707]/80 dark:text-white/70">
                       Scale to a broader SMB segment if KPIs are met.
                     </p>
                   </CardContent>
@@ -737,7 +737,7 @@ export default function CaseStudy() {
             <motion.div {...fadeInUp}>
               <div className="mb-12">
                 <h2 className="font-display text-3xl font-bold mb-6">Citations & References</h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-[#070707]/80 dark:text-white/70 mb-8">
                   This case study draws on public information and industry research from the following sources:
                 </p>
                 
@@ -752,7 +752,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">JPMorgan Chase Investor Day 2020</p>
-                          <p className="text-sm text-muted-foreground">Digital engagement metrics and Credit Journey user base (~22M users)</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Digital engagement metrics and Credit Journey user base (~22M users)</p>
                         </div>
                       </div>
                     </CardContent>
@@ -768,7 +768,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">Chase Credit Journey and Experian Public Communications (2019)</p>
-                          <p className="text-sm text-muted-foreground">Score Planner impact data (30+ point average improvements)</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Score Planner impact data (30+ point average improvements)</p>
                         </div>
                       </div>
                     </CardContent>
@@ -784,7 +784,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">Curinos Banking Consumer Study (2023)</p>
-                          <p className="text-sm text-muted-foreground">Fintech switching patterns and new relationship capture rates</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Fintech switching patterns and new relationship capture rates</p>
                         </div>
                       </div>
                     </CardContent>
@@ -800,7 +800,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">Digital Banking Consumer Survey (2021)</p>
-                          <p className="text-sm text-muted-foreground">Credit monitoring tool adoption rates and year-over-year growth</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Credit monitoring tool adoption rates and year-over-year growth</p>
                         </div>
                       </div>
                     </CardContent>
@@ -816,7 +816,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">JPMorgan Chase Investor Day 2019</p>
-                          <p className="text-sm text-muted-foreground">Internal positioning of Credit Journey within digital banking suite and operational efficiency gains</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Internal positioning of Credit Journey within digital banking suite and operational efficiency gains</p>
                         </div>
                       </div>
                     </CardContent>
@@ -832,7 +832,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">Federal Reserve Small Business Credit Survey (2023)</p>
-                          <p className="text-sm text-muted-foreground">Online lender adoption trends among small businesses</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Online lender adoption trends among small businesses</p>
                         </div>
                       </div>
                     </CardContent>
@@ -848,7 +848,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">World Bank / IFC SME Finance Gap Reports</p>
-                          <p className="text-sm text-muted-foreground">Global unmet credit demand estimates for small and medium enterprises</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Global unmet credit demand estimates for small and medium enterprises</p>
                         </div>
                       </div>
                     </CardContent>
@@ -864,7 +864,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">U.S. Small Business Administration (SBA)</p>
-                          <p className="text-sm text-muted-foreground">Small Business Lending Company (SBLC) program expansion and fintech participation</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">Small Business Lending Company (SBLC) program expansion and fintech participation</p>
                         </div>
                       </div>
                     </CardContent>
@@ -880,7 +880,7 @@ export default function CaseStudy() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-foreground">McKinsey & Company</p>
-                          <p className="text-sm text-muted-foreground">"The Future of MSME Banking" (2024/2025) – Digital experience as primary bank selection factor</p>
+                          <p className="text-sm text-[#070707]/80 dark:text-white/70">"The Future of MSME Banking" (2024/2025) – Digital experience as primary bank selection factor</p>
                         </div>
                       </div>
                     </CardContent>

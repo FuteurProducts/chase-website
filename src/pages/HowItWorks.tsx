@@ -664,7 +664,7 @@ export default function HowItWorks() {
               <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
                 Non-disruptive integration. Measurable results. Built on proven principles.
               </p>
-              <Link to="/pilot#pilot-form" className="w-full sm:w-auto flex justify-center px-4 sm:px-0">
+              <Link to="/model-governance-framework#pilot-form" className="w-full sm:w-auto flex justify-center px-4 sm:px-0">
                 <Button variant="solverSecondary" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-4 w-full sm:w-auto px-6 sm:px-8 py-6 sm:py-7 font-semibold">
                   <span className="block sm:hidden text-center">Book a 20-Minute Pilot Review</span>
                   <span className="hidden sm:block">Book a 20-minute pilot review — see conversion lift & model audit in action</span>

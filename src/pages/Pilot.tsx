@@ -509,7 +509,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Apply for the Model Governance Framework</h2>
+              <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Apply for Pilot Review</h2>
               <p className="text-base sm:text-lg text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                 Join leading financial institutions in transforming SMB credit experiences
               </p>

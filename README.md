@@ -1,8 +1,8 @@
-# Futeur × Chase — Business Credit Journey
+# Lumiq AI × Chase — Business Credit Journey
 
 ## Project info
 
-This is the Futeur Business Credit Journey website for Chase.
+This is the Lumiq AI Business Credit Journey website for Chase.
 
 **Live Website**: [wells-fargo.futeur.futeurcredx.com](https://wells-fargo.futeur.futeurcredx.com)
 

@@ -223,7 +223,7 @@ function Index() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 w-full">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full">
             {/* Chase Credit Journey Card */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -231,62 +231,62 @@ function Index() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="h-full bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] hover:border-primary/30 transition-all duration-300 rounded-[20px]">
-                <CardHeader>
-                  <CardTitle className="text-2xl flex items-center gap-3 text-[#070707] dark:text-white">
-                    <Users className="w-6 h-6 text-secondary" />
-                    Chase Credit Journey (Consumer)
+              <Card className="h-full bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D] hover:border-primary/30 transition-all duration-300 rounded-[16px] sm:rounded-[20px]">
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-lg sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 text-[#070707] dark:text-white">
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-secondary flex-shrink-0" />
+                    <span className="leading-tight">Chase Credit Journey (Consumer)</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">22M+</span>
-                    <span className="text-[#070707]/70 dark:text-white/70">users</span>
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-0">
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">22M+</span>
+                    <span className="text-sm sm:text-base text-[#070707]/70 dark:text-white/70">users</span>
                   </div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-primary">+30</span>
-                    <span className="text-[#070707]/70 dark:text-white/70">point avg score improvement</span>
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">+30</span>
+                    <span className="text-xs sm:text-sm text-[#070707]/70 dark:text-white/70 leading-tight">point avg score improvement</span>
                   </div>
-                  <p className="text-sm text-[#070707]/70 dark:text-white/70 pt-4 border-t border-[#070707]/10 dark:border-white/10">
+                  <p className="text-xs sm:text-sm text-[#070707]/70 dark:text-white/70 pt-3 sm:pt-4 border-t border-[#070707]/10 dark:border-white/10 leading-relaxed">
                     Free credit-score monitoring, insights, and personalized improvement plans.
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* LUMIQ AI Business Credit Journey Card */}
+            {/* Lumiq AI Business Credit Journey Card */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="h-full bg-[#EEE] dark:bg-[#1D1D1D] border border-primary/30 hover:border-primary/50 transition-all duration-300 shadow-[0_0_40px_rgba(51,204,255,0.1)] rounded-[20px]">
-                <CardHeader>
-                  <CardTitle className="text-2xl flex items-center gap-3 text-[#070707] dark:text-white">
-                    <BarChart3 className="w-6 h-6 text-primary" />
-                    LUMIQ AI Business Credit Journey
+              <Card className="h-full bg-[#EEE] dark:bg-[#1D1D1D] border border-primary/30 hover:border-primary/50 transition-all duration-300 shadow-[0_0_40px_rgba(51,204,255,0.1)] rounded-[16px] sm:rounded-[20px]">
+                <CardHeader className="p-4 sm:p-6">
+                  <CardTitle className="text-lg sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 text-[#070707] dark:text-white">
+                    <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                    <span className="leading-tight">Lumiq AI Business Credit Journey</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2 pb-4 border-b border-[#070707]/10 dark:border-white/10">
-                    <div className="flex items-center gap-2 text-[#070707] dark:text-white">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      Owner FICO + Business Intelliscore + FSR
+                <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-0">
+                  <div className="space-y-2 pb-3 sm:pb-4 border-b border-[#070707]/10 dark:border-white/10">
+                    <div className="flex items-start gap-2 text-[#070707] dark:text-white">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm leading-relaxed">Owner FICO + Business Intelliscore + FSR</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[#070707] dark:text-white">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      Soft-approval & product routing
+                    <div className="flex items-start gap-2 text-[#070707] dark:text-white">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm leading-relaxed">Soft-approval & product routing</span>
                     </div>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-baseline">
-                      <span className="text-[#070707]/70 dark:text-white/70">Stage 1 cards:</span>
-                      <span className="text-2xl font-bold text-primary">~$100M+ uplift</span>
+                  <div className="space-y-2 sm:space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-2">
+                      <span className="text-xs sm:text-sm text-[#070707]/70 dark:text-white/70">Stage 1 cards:</span>
+                      <span className="text-xl sm:text-2xl font-bold text-primary">~$100M+ uplift</span>
                     </div>
-                    <div className="flex justify-between items-baseline">
-                      <span className="text-[#070707]/70 dark:text-white/70">Stage 2 lending:</span>
-                      <span className="text-2xl font-bold text-primary">$210-$320M uplift potential</span>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-2">
+                      <span className="text-xs sm:text-sm text-[#070707]/70 dark:text-white/70">Stage 2 lending:</span>
+                      <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary leading-tight">$210-$320M uplift potential</span>
                     </div>
                   </div>
                 </CardContent>

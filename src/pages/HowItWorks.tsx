@@ -69,7 +69,7 @@ export default function HowItWorks() {
                 Real-time business credit intelligence inside your digital banking experience.
               </h1>
                 <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-4xl">
-                Futeur powers real-time business-credit intelligence inside your existing digital banking experience. 
+                Lumiq AI powers real-time business-credit intelligence inside your existing digital banking experience. 
                 Show small-business customers (SMBs) their Experian Intelliscore, FSR, and personalized card eligibility in-app — while your teams get portfolio-level visibility, risk controls, and audit-ready decisioning. No new login. No disruption to your existing underwriting stack.
               </p>
               </div>
@@ -152,7 +152,7 @@ export default function HowItWorks() {
                     <CardContent className="p-8 space-y-6">
                       {[
                         { label: "Chase App", subtitle: "Customer experience", icon: TrendingUp },
-                        { label: "Futeur API", subtitle: "Intelligence layer", icon: BarChart3 },
+                        { label: "Lumiq AI API", subtitle: "Intelligence layer", icon: BarChart3 },
                         { label: "Portfolio Dashboard", subtitle: "Chase analytics", icon: Database }
                       ].map((node) => (
                         <div key={node.label} className="flex items-center gap-4">
@@ -332,7 +332,7 @@ export default function HowItWorks() {
               <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
                 {[
                   { step: "1", title: "Sign in to Chase Business", desc: "No new credentials or portal required", image: "/seehowitworks/ChaseLogin.png" },
-                  { step: "2", title: "Open Futeur Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)", image: "/seehowitworks/see scores.png" },
+                  { step: "2", title: "Open Lumiq AI Business Credit Journey", desc: "See business + personal scores (Intelliscore, FSR, VantageScore)", image: "/seehowitworks/see scores.png" },
                   { step: "3", title: "View eligible business card offers", desc: "Based on AI-assisted, policy-aligned decisioning", image: "/seehowitworks/creditoffers.png" }
                 ].map((item, index) => (
                   <motion.div
@@ -407,7 +407,7 @@ export default function HowItWorks() {
                       {[
                         { week: "Weeks 1–2", title: "Data hookups + score sync", desc: "Connect APIs, validate Experian + internal data." },
                         { week: "Weeks 3–4", title: "Policy alignment", desc: "Mirror underwriting rules, overrides, guardrails." },
-                        { week: "Weeks 5–8", title: "Live A/B routing", desc: "Test Futeur vs. control within your channels." },
+                        { week: "Weeks 5–8", title: "Live A/B routing", desc: "Test Lumiq AI vs. control within your channels." },
                         { week: "Weeks 9–12", title: "Review + scale plan", desc: "Measure lift, risk deltas, agree on Stage 2." }
                       ].map((phase, idx) => (
                         <div key={phase.week} className="flex gap-4">
@@ -450,6 +450,15 @@ export default function HowItWorks() {
                     </div>
                   </div>
                 </div>
+              </div>
+              
+              <div className="text-center mt-8">
+                <Link to="/pilot#pilot-form">
+                  <Button size="lg" variant="solver" className="gap-3">
+                    Discuss a 90-Day Pilot
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -511,7 +520,7 @@ export default function HowItWorks() {
             <motion.div {...fadeInUp} className="w-full space-y-12">
               <div className="text-center space-y-4">
                 <Badge className="bg-primary/10 text-primary border-primary/20">Decision Flow</Badge>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">How Futeur makes decisions</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#070707]">How Lumiq AI makes decisions</h2>
                 <p className="text-sm sm:text-base text-[#070707]/70 max-w-3xl mx-auto px-4 sm:px-0">
                   AI-assisted, policy-aligned decisioning — explainable at every step.
                 </p>
@@ -631,7 +640,7 @@ export default function HowItWorks() {
                     ))}
                   </div>
                   <p className="text-sm text-[#070707]/70">
-                      Risk ownership remains fully with the bank; Futeur Business Credit Journey never overrides Chase's approval authority.
+                      Risk ownership remains fully with the bank; Lumiq AI Business Credit Journey never overrides Chase's approval authority.
                     </p>
                   </div>
               </div>

@@ -198,7 +198,7 @@ export default function Revolution() {
       <section className="py-10">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} FuteurCredX · For internal evaluation by JPMorgan Chase CCB
+            © {new Date().getFullYear()} Lumiq AI · For internal evaluation by JPMorgan Chase CCB
           </p>
         </div>
       </section>

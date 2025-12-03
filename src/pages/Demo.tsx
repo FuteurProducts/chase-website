@@ -126,37 +126,37 @@ const features = [
 
 const faqs = [
   {
-    question: "How does Futeur integrate with existing Chase systems?",
-    answer: "Futeur uses REST APIs and SDKs that plug directly into your existing Chase Business mobile and web applications. No changes to your current underwriting workflow are required. The integration typically takes 2-4 weeks for initial setup, with full deployment achievable in a 90-day pilot."
+    question: "How does Lumiq AI integrate with existing Chase systems?",
+    answer: "Lumiq AI uses REST APIs and SDKs that plug directly into your existing Chase Business mobile and web applications. No changes to your current underwriting workflow are required. The integration typically takes 2-4 weeks for initial setup, with full deployment achievable in a 90-day pilot."
   },
   {
-    question: "What credit data sources does Futeur use?",
-    answer: "Futeur pulls Experian Intelliscore, FSR (Financial Stability Risk), and owner FICO/VantageScore data. We apply your existing policy layers, scorecard rules, and risk overlays to ensure all decisions align with Chase's risk appetite and compliance requirements."
+    question: "What credit data sources does Lumiq AI use?",
+    answer: "Lumiq AI pulls Experian Intelliscore, FSR (Financial Stability Risk), and owner FICO/VantageScore data. We apply your existing policy layers, scorecard rules, and risk overlays to ensure all decisions align with Chase's risk appetite and compliance requirements."
   },
   {
     question: "How is customer data secured and governed?",
-    answer: "All data is encrypted in transit and at rest. Futeur is SOC 2-aligned with ISO 27001-compatible controls. We support configurable data residency, retention policies, and provide full audit trails for compliance teams. Risk ownership remains entirely with Chase — we never override your approval authority."
+    answer: "All data is encrypted in transit and at rest. Lumiq AI is SOC 2-aligned with ISO 27001-compatible controls. We support configurable data residency, retention policies, and provide full audit trails for compliance teams. Risk ownership remains entirely with Chase — we never override your approval authority."
   },
   {
     question: "What results can we expect from a pilot?",
     answer: "Typical pilot outcomes include 8-15% lift in qualified SMB applications, 20-35% reduction in manual review load, and measurable incremental interchange revenue per booked card. The pilot runs A/B testing to measure lift, approval-rate delta, and loss-rate delta against your control group."
   },
   {
-    question: "Can Futeur extend beyond credit cards to lending products?",
+    question: "Can Lumiq AI extend beyond credit cards to lending products?",
     answer: "Yes. The same decision infrastructure can be extended to Business Lines of Credit, Term Loans, and Commercial Real Estate lending in Stage 2. The scoring and governance rails are product-agnostic and designed for multi-product expansion."
   },
   {
     question: "What level of customization is available?",
-    answer: "Futeur is fully customizable to your policy rules, risk thresholds, adverse action logic, and brand guidelines. You maintain complete control over decision rules, score cutoffs, and product eligibility criteria."
+    answer: "Lumiq AI is fully customizable to your policy rules, risk thresholds, adverse action logic, and brand guidelines. You maintain complete control over decision rules, score cutoffs, and product eligibility criteria."
   }
 ];
 
 const walkthrough = [
-  { step: 1, title: "Login", description: "Secure authentication via Chase SSO", image: "/dashboard/Mockups%20Laptop/Login.png" },
+  { step: 1, title: "Login", description: "Secure authentication via Chase SSO", image: "/mockups/login.png" },
   { step: 2, title: "Signup", description: "Quick registration and account setup", image: "/dashboard/Mockups%20Laptop/Signup.png" },
-  { step: 3, title: "Credit Journey Activation", description: "One-tap access to business credit insights", image: "/dashboard/Mockups%20Laptop/dashboard%20hero_.png" },
-  { step: 4, title: "Score Display", description: "Personal FICO + Business FSR & Intelliscore", image: "/dashboard/Mockups%20Laptop/Analytics.png" },
-  { step: 5, title: "Eligible Card Match", description: "AI-recommended products based on policy", image: "/dashboard/Mockups%20Laptop/Products.png" },
+  { step: 3, title: "Lumiq AI Journey Addition", description: "One-tap access to business credit insights", image: "/mockups/creditjounrey activation.png" },
+  { step: 4, title: "Score Display", description: "Personal FICO + Business FSR & Intelliscore", image: "/businessmockup2.png" },
+  { step: 5, title: "Eligible Card Match", description: "AI-recommended products based on policy", image: "/mockups/Eligible Card Match.png" },
   { step: 6, title: "Backend Dashboard", description: "Portfolio-level analytics for Chase teams", image: "/dashboard/Mockups%20Laptop/Users.png" },
   { step: 7, title: "Model Audit View", description: "Full transparency and compliance logging", image: "/dashboard/Mockups%20Laptop/Reports.png" }
 ];
@@ -214,7 +214,7 @@ export default function Demo() {
             {/* Left: Content */}
             <motion.div {...fadeInUp}>
               <h1 className="text-[28px] sm:text-[40px] md:text-[56px] font-bold mb-4 sm:mb-6 leading-tight text-[#070707] dark:text-white">
-                See the Futeur Business Credit Journey{" "}
+                See the Lumiq AI Business Credit Journey{" "}
                 <span className="text-primary">
                   in Action
                 </span>
@@ -278,7 +278,7 @@ export default function Demo() {
               Experience the Platform
             </h2>
             <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
-              Explore key screens and see how Futeur powers business credit decisions at scale.
+              Explore key screens and see how Lumiq AI powers business credit decisions at scale.
             </p>
           </motion.div>
 
@@ -286,12 +286,12 @@ export default function Demo() {
             <CarouselContent>
               {demoScreens.map((screen, index) => (
                 <CarouselItem key={index}>
-                <Card className="p-8 bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-[24px]">
-                  <div className="aspect-video bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#E4E7EC] dark:border-[#1C1C1C] group hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                  <Card className="p-8 bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-[24px]">
+                  <div className="bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#E4E7EC] dark:border-[#1C1C1C] group hover:border-primary/50 transition-all duration-300 cursor-pointer flex items-center justify-center min-h-[300px]">
                       <img
                         src={screen.image}
                         alt={screen.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto max-h-[500px] object-contain"
                       />
                     </div>
                     <h3 className="text-2xl font-bold mb-3 text-[#070707] dark:text-white">{screen.title}</h3>
@@ -386,12 +386,12 @@ export default function Demo() {
             </div>
 
             <Card className="p-8 bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D] rounded-[28px]">
-              <div className="aspect-video bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#E4E7EC] dark:border-[#1C1C1C] relative group">
+              <div className="bg-white dark:bg-[#0F0F0F] rounded-[20px] mb-6 overflow-hidden border border-[#E4E7EC] dark:border-[#1C1C1C] relative group flex items-center justify-center min-h-[400px]">
                 {walkthrough[activeWalkthrough].image ? (
                   <img
                     src={walkthrough[activeWalkthrough].image}
                     alt={walkthrough[activeWalkthrough].title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto max-h-[600px] object-contain"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
@@ -455,7 +455,7 @@ export default function Demo() {
               Frequently Asked Questions
             </h2>
             <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
-              Everything you need to know about the Futeur platform.
+              Everything you need to know about the Lumiq AI platform.
             </p>
           </motion.div>
 
@@ -478,7 +478,7 @@ export default function Demo() {
             className="text-center mb-16"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white">
-              Why Futeur Wins
+              Why Lumiq AI Wins
             </h2>
             <p className="text-sm sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Proven results from pilot implementations with enterprise banking partners.

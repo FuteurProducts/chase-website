@@ -80,14 +80,15 @@ export default function CaseStudy() {
                       View the Business Case
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Button 
-                      size="lg" 
-                      variant="outline"
-                      onClick={() => scrollToSection('pilot')}
-                      className="border-white text-white hover:bg-white/10"
-                    >
-                      Discuss a 90-Day Pilot
-                    </Button>
+                    <Link to="/pilot#pilot-form">
+                      <Button 
+                        size="lg" 
+                        variant="outline"
+                        className="border-white text-white hover:bg-white/10"
+                      >
+                        Discuss a 90-Day Pilot
+                      </Button>
+                    </Link>
                   </div>
                   <div className="flex flex-wrap gap-4 text-sm text-white/80">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5">
@@ -886,7 +887,7 @@ export default function CaseStudy() {
                 <CardContent className="p-6 space-y-4 text-sm text-[#070707]/80 dark:text-white/70">
                   <p className="font-medium text-[#070707] dark:text-white">Legal Notice</p>
                   <p>
-                    LUMIQ AI and FuteurcredX are independent solutions; no affiliation or endorsement by JPMorgan Chase is implied. 
+                    LUMIQ AI and Lumiq AI are independent solutions; no affiliation or endorsement by JPMorgan Chase is implied. 
                     All trademarks belong to their respective owners. This analysis is for informational purposes only and does not 
                     constitute financial, legal, or business advice.
                   </p>

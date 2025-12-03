@@ -614,7 +614,7 @@ export default function Impact() {
       {/* FOOTER */}
       <footer className="py-10 border-t border-border/50">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="text-xs text-muted-foreground text-center">© {new Date().getFullYear()} FuteurCredX · For internal evaluation by JPMorgan Chase CCB.</p>
+          <p className="text-xs text-muted-foreground text-center">© {new Date().getFullYear()} Lumiq AI · For internal evaluation by JPMorgan Chase CCB.</p>
         </div>
       </footer>
     </PageLayout>

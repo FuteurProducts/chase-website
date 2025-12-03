@@ -149,7 +149,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
               </div>
 
               <h1 className="text-[28px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-4 sm:mb-6 leading-[36px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
-                Launch a 90-Day Pilot of Futeur Business Credit Journey™
+                Launch a 90-Day Pilot of Lumiq AI Business Credit Journey™
               </h1>
 
               <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">

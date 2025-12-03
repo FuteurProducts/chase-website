@@ -243,10 +243,10 @@ export default function CaseStudy() {
               ))}
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
               <motion.div {...fadeInUp} className="w-full h-full">
-                <Card className={`${neutralCard} hover:border-primary/30`}>
-                  <CardContent className="p-8 space-y-10 h-full flex flex-col">
+                <Card className={`${neutralCard} hover:border-primary/30 h-full`}>
+                  <CardContent className="p-6 md:p-8 space-y-6 md:space-y-8 h-full flex flex-col">
                     <div className="space-y-4">
                       <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
                         <div>
@@ -268,7 +268,7 @@ export default function CaseStudy() {
 
                     <div className="pt-6 border-t border-border">
                       <h3 className="font-display text-xl font-bold mb-4">Where SMBs are training credit behavior</h3>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                         {[
                           {
                             heading: "Fintech share rising",
@@ -309,18 +309,32 @@ export default function CaseStudy() {
                     </div>
 
                     <div className="pt-6 border-t border-border">
-                      <div className="rounded-3xl bg-primary/5 dark:bg-white/5 p-6 flex flex-col h-full">
-                        <h3 className="font-display text-xl font-bold mb-4 text-primary">Experience gap</h3>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          <span className="font-medium text-foreground">McKinsey 2024/2025:</span> “Good online and mobile banking is the #1 reason SMEs choose a primary bank.”<sup className="text-primary">9</sup>
+                      <div className="rounded-3xl bg-primary/5 dark:bg-white/5 p-4 md:p-6 flex flex-col h-full">
+                        <h3 className="font-display text-xl font-bold mb-3 md:mb-4 text-primary">Experience gap</h3>
+                        <p className="text-sm text-muted-foreground mb-3 md:mb-4">
+                          <span className="font-medium text-foreground">McKinsey 2024/2025:</span> "Good online and mobile banking is the #1 reason SMEs choose a primary bank."<sup className="text-primary">9</sup>
                         </p>
-                        <div className="grid md:grid-cols-2 gap-4">
+                        <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                           <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
-                            <div className="text-xs font-semibold text-primary mb-1 uppercase tracking-[0.2em]">Chase Consumer</div>
+                            <div className="text-xs font-semibold text-primary mb-3 uppercase tracking-[0.2em]">Chase Consumer</div>
+                            <div className="flex items-center justify-center mb-3">
+                              <img 
+                                src="/chase consumer.png" 
+                                alt="Chase Consumer Credit Journey" 
+                                className="max-w-[150px] h-auto object-contain"
+                              />
+                            </div>
                             <p className="text-sm text-muted-foreground">Credit Journey, Score Planner, education, embedded offers.</p>
                           </div>
                           <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
-                            <div className="text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-[0.2em]">Chase SMB</div>
+                            <div className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-[0.2em]">Chase SMB</div>
+                            <div className="flex items-center justify-center mb-3">
+                              <img 
+                                src="/mockups/businessmockup1.png" 
+                                alt="Lumiq AI Business Credit Journey" 
+                                className="max-w-[150px] h-auto object-contain"
+                              />
+                            </div>
                             <p className="text-sm text-muted-foreground">Product-centric pages (Ink, LOC, term, CRE) without a unified journey.</p>
                           </div>
                         </div>
@@ -333,9 +347,9 @@ export default function CaseStudy() {
                 </Card>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-                <Card className="bg-gradient-to-br from-background to-muted/30 border-primary/20 p-8 h-full">
-                  <h3 className="font-display text-xl font-bold mb-8 text-center">Competitive Landscape</h3>
+              <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="w-full h-full">
+                <Card className="bg-gradient-to-br from-background to-muted/30 border-primary/20 p-6 md:p-8 h-full">
+                  <h3 className="font-display text-xl font-bold mb-6 md:mb-8 text-center">Competitive Landscape</h3>
                   <div className="relative aspect-[4/3]">
                     {/* Quadrant Grid */}
                     <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-px bg-border">
@@ -477,10 +491,10 @@ export default function CaseStudy() {
               </Card>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              <motion.div {...fadeInUp}>
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+              <motion.div {...fadeInUp} className="w-full">
                 <Card className="h-full rounded-[32px] bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/30">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center">
                         <BarChart3 className="h-6 w-6 text-primary" />
@@ -537,9 +551,9 @@ export default function CaseStudy() {
                 </Card>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
+              <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="w-full">
                 <Card className="h-full rounded-[32px] bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/30">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="h-12 w-12 rounded-lg bg-secondary/20 flex items-center justify-center">
                         <TrendingUp className="h-6 w-6 text-secondary" />
@@ -601,10 +615,10 @@ export default function CaseStudy() {
               <p className="text-base sm:text-xl text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">Bank-friendly by design</p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="w-full">
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all`}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-5 md:p-6">
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <TrendingUp className="h-6 w-6 text-primary" />
                     </div>
@@ -616,9 +630,9 @@ export default function CaseStudy() {
                 </Card>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
+              <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="w-full">
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all`}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-5 md:p-6">
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
@@ -633,9 +647,9 @@ export default function CaseStudy() {
                 </Card>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
+              <motion.div {...fadeInUp} transition={{ delay: 0.3 }} className="w-full">
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all`}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-5 md:p-6">
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Zap className="h-6 w-6 text-primary" />
                     </div>
@@ -650,9 +664,9 @@ export default function CaseStudy() {
                 </Card>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.4 }}>
+              <motion.div {...fadeInUp} transition={{ delay: 0.4 }} className="w-full">
                 <Card className={`${neutralCard} h-full hover:border-primary/40 transition-all`}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-5 md:p-6">
                     <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                       <Lock className="h-6 w-6 text-primary" />
                     </div>

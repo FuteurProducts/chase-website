@@ -296,12 +296,24 @@ function USS() {
           <div className="max-w-6xl mx-auto mb-8">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="text-center p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-[#E4E7EC] dark:border-[#1D1D1D]">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+                <div className="flex items-center justify-center mb-4">
+                  <img 
+                    src="/chase consumer.png" 
+                    alt="Chase Credit Journey mobile mockup" 
+                    className="max-w-[200px] h-auto object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold mb-2 text-[#070707] dark:text-white">Chase Credit Journey®</h3>
                 <p className="text-[#070707]/70 dark:text-white/70">Consumer Credit Intelligence</p>
               </div>
               <div className="text-center p-6 rounded-xl bg-white dark:bg-[#1D1D1D] border border-primary/30">
-                <Briefcase className="w-12 h-12 text-primary mx-auto mb-4" />
+                <div className="flex items-center justify-center mb-4">
+                  <img 
+                    src="/mockups/businessmockup1.png" 
+                    alt="Lumiq AI Business Credit Journey mobile mockup" 
+                    className="max-w-[200px] h-auto object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold mb-2 text-[#070707] dark:text-white">LUMIQ AI Business Credit Journey</h3>
                 <p className="text-[#070707]/70 dark:text-white/70">Business Credit Intelligence</p>
               </div>

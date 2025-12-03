@@ -28,13 +28,13 @@ export function Header() {
         <Link to="/demo" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
           Demo
         </Link>
-        <Link to="/pilot" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
-          Pilot
+        <Link to="/model-governance-framework" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
+          Model Governance Framework
         </Link>
       </nav>
       <div className="hidden lg:flex justify-between items-center gap-8">
         <ThemeSwitch />
-        <Link to="/pilot#pilot-form">
+        <Link to="/model-governance-framework#pilot-form">
           <Button variant="solver" className="gap-6">
             CONTACT US
             <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
@@ -78,13 +78,13 @@ export function Header() {
                 Demo
               </Link>
               <Link 
-                to="/pilot" 
+                to="/model-governance-framework" 
                 className="text-lg font-medium text-[#070707] dark:text-white hover:text-primary transition-colors py-2"
               >
-                Pilot
+                Model Governance Framework
               </Link>
               <div className="pt-4 border-t border-[#E4E7EC] dark:border-[#1D1D1D]">
-                <Link to="/pilot#pilot-form">
+                <Link to="/model-governance-framework#pilot-form">
                   <Button variant="solver" className="w-full gap-3">
                     CONTACT US
                     <ArrowRight className="w-4 h-4" />

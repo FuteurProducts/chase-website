@@ -55,7 +55,7 @@ const demoScreens = [
     title: "Credit Score Analysis",
     description: "Detailed credit score breakdown and analysis for business customers.",
     caption: "Visual representation of credit metrics and trends.",
-    image: "/dashboard/Screenshot 2025-11-18 at 03.04.01.png"
+    image: "/Credit Score Analysis.png"
   },
   {
     title: "Customer Portfolio View",
@@ -210,16 +210,16 @@ export default function Demo() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white dark:bg-[#070707]">
         <div className="relative z-10 mx-auto w-full px-5 md:px-[5vw] py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-12 items-center">
             {/* Left: Content */}
-            <motion.div {...fadeInUp}>
-              <h1 className="text-[28px] sm:text-[40px] md:text-[56px] font-bold mb-4 sm:mb-6 leading-tight text-[#070707] dark:text-white">
+            <motion.div {...fadeInUp} className="max-w-lg">
+              <h1 className="text-[32px] sm:text-[44px] md:text-[56px] lg:text-[64px] font-bold mb-4 sm:mb-6 leading-tight text-[#070707] dark:text-white">
                 See the Lumiq AI Business Credit Journey{" "}
                 <span className="text-primary">
                   in Action
                 </span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#070707]/70 dark:text-white/70 mb-6 sm:mb-8 leading-relaxed">
                 The missing link in your business banking experience. Pre-qualify SMBs for the right product using real-time Experian Intelliscore + FSR signals — directly inside your app.
               </p>
               
@@ -233,7 +233,7 @@ export default function Demo() {
                   Launch Interactive Demo
                   <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Link to="/pilot#pilot-form">
+                <Link to="/model-governance-framework#pilot-form">
                   <Button 
                     size="lg" 
                     variant="outline"
@@ -256,7 +256,7 @@ export default function Demo() {
               <img
                 src="/dashboard/demo_hero.png"
                 alt="Chase Business Credit Journey hero dashboard"
-                className="w-full max-w-[720px] h-auto object-contain"
+                className="w-full max-w-[900px] h-auto object-contain"
                 loading="eager"
               />
             </motion.div>

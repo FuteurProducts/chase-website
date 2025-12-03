@@ -149,7 +149,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
               </div>
 
               <h1 className="text-[28px] sm:text-[40px] md:text-[52px] lg:text-[72px] font-semibold mb-4 sm:mb-6 leading-[36px] sm:leading-[52px] md:leading-[64px] lg:leading-[85px] tracking-[-0.5px] sm:tracking-[-1.2px] md:tracking-[-2.16px] text-white">
-                Launch a 90-Day Pilot of Lumiq AI Business Credit Journey™
+                Model Governance Framework for Lumiq AI Business Credit Journey™
               </h1>
 
               <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 max-w-3xl leading-relaxed font-normal">
@@ -167,28 +167,25 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
                   className="text-base md:text-lg gap-6"
                   onClick={() => document.getElementById('pilot-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Book Pilot Review
+                  Book Review
                   <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
                     <ArrowRight className="w-5 h-5 text-[#070707]" />
                   </div>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
-                  onClick={() => {
-                // Create a temporary link to download
-                const link = document.createElement('a');
-                link.href = '#';
-                link.download = 'Pilot-Brief.pdf';
-                link.click();
-                // In production, this would link to an actual PDF file
-                console.log('Download Pilot Brief');
-              }}
+                <a
+                  href="/Model Governance Framework LumiqAIxChase.pdf"
+                  download="Model Governance Framework LumiqAIxChase.pdf"
+                  className="inline-block"
                 >
-                  <Download className="mr-2 w-5 h-5" />
-                  Download Pilot Brief
-                </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-white text-white hover:bg-white/10"
+                  >
+                    <Download className="mr-2 w-5 h-5" />
+                    Download Framework Brief
+                  </Button>
+                </a>
               </div>
 
               <div className="flex flex-wrap gap-4 text-sm text-white/80">
@@ -214,7 +211,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
       <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Proven Pilot Results</h2>
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Proven Framework Results</h2>
             <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               Measurable impact from day one, with full alignment to your risk and governance requirements.
             </p>
@@ -267,7 +264,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
       <section className="py-12 md:py-24 bg-white dark:bg-[#070707]">
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Your 90-Day Pilot Journey</h2>
+            <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Your 90-Day Implementation Journey</h2>
             <p className="text-base sm:text-lg md:text-xl text-[#070707]/70 dark:text-white/70 max-w-2xl mx-auto px-4 sm:px-0">
               A structured, measurable approach to validating Business Credit Journey inside your stack.
             </p>
@@ -496,7 +493,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1 text-[#070707] dark:text-white">Parallel A/B Pilot—Non-Disruptive</p>
+                      <p className="font-semibold mb-1 text-[#070707] dark:text-white">Parallel A/B Testing—Non-Disruptive</p>
                       <p className="text-sm text-[#070707]/70 dark:text-white/70">Test safely alongside existing systems with zero downtime</p>
                     </div>
                   </div>
@@ -512,7 +509,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
         <div className={containerClass}>
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Apply for the 90-Day Pilot Program</h2>
+              <h2 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold mb-3 sm:mb-4 text-[#070707] dark:text-white leading-[32px] sm:leading-[41.6px] md:leading-[56px]">Apply for the Model Governance Framework</h2>
               <p className="text-base sm:text-lg text-[#070707]/70 dark:text-white/70 px-4 sm:px-0">
                 Join leading financial institutions in transforming SMB credit experiences
               </p>
@@ -613,7 +610,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
                         onCheckedChange={(checked) => handleInputChange('consent', checked)}
                       />
                       <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer text-[#070707] dark:text-white">
-                        I understand this is a pilot program for evaluation purposes and agree to provide feedback on the integration experience.
+                        I understand this is a model governance framework for evaluation purposes and agree to provide feedback on the integration experience.
                       </Label>
                     </div>
 
@@ -634,7 +631,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
                       className="w-full text-lg py-6"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Submitting..." : "Submit Pilot Application"}
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                       {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5" />}
                     </Button>
                   </form>

@@ -80,7 +80,7 @@ export default function CaseStudy() {
                       View the Business Case
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Link to="/pilot#pilot-form">
+                    <Link to="/model-governance-framework#pilot-form">
                       <Button 
                         size="lg" 
                         variant="outline"

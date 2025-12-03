@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const solutionLinks = [
@@ -12,7 +12,7 @@ const solutionLinks = [
 const resourceLinks = [
   { label: "Case Study", href: "/case-study" },
   { label: "Demo", href: "/demo" },
-  { label: "Pilot", href: "/pilot" },
+  { label: "Model Governance Framework", href: "/model-governance-framework" },
   { label: "USS Framework", href: "/uss" },
 ];
 
@@ -38,27 +38,6 @@ export function Footer() {
               Deploy enterprise-grade underwriting workflows, explainable decisions, and measured uptake across cards,
               LOC, and term lending — without leaving your existing controls.
             </p>
-
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="https://www.linkedin.com/company/lumiqai"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition"
-              >
-                <Linkedin className="w-4 h-4" />
-                Linkedin
-              </a>
-              <a
-                href="https://x.com/lumiq"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition"
-              >
-                <Twitter className="w-4 h-4" />
-                X / Twitter
-              </a>
-            </div>
           </div>
 
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -92,11 +71,11 @@ export function Footer() {
 
         <div className="flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-3">Ready to pilot</p>
-            <p className="text-lg font-semibold">Start a 6-week pilot with pre-agreed success metrics.</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-3">Ready to get started</p>
+            <p className="text-lg font-semibold">Start a 6-week implementation with pre-agreed success metrics.</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link to="/pilot#pilot-form">
+            <Link to="/model-governance-framework#pilot-form">
               <Button variant="solverSecondary" className="gap-3">
                 Book Pilot Review
                 <ArrowRight className="w-4 h-4" />

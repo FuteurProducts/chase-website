@@ -88,7 +88,7 @@ function USS() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
-                <Link to="/pilot#pilot-form">
+                <Link to="/model-governance-framework#pilot-form">
                   <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
                     Start Your Pilot
                     <div className="w-10 h-10 p-2.5 rounded-full bg-white flex items-center justify-center">
@@ -451,7 +451,7 @@ function USS() {
                   Start a 6-week pilot with pre-agreed success criteria and see the same conversion lift you achieved with consumer credit.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/pilot#pilot-form">
+                  <Link to="/model-governance-framework#pilot-form">
                     <Button size="lg" variant="solver" className="text-base md:text-lg gap-6">
                       Book a 20-Minute Pilot Review
                       <div className="w-10 h-10 p-2.5 rounded-full bg-[#070707] dark:bg-white flex items-center justify-center">

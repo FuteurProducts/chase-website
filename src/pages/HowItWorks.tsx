@@ -91,24 +91,6 @@ export default function HowItWorks() {
                 ))}
               </div>
               
-              {/* Comparison Banner */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card className="bg-[#EEE] border-[#EEE] rounded-[24px]">
-                  <CardContent className="p-6 space-y-2">
-                    <h3 className="text-sm font-semibold text-primary uppercase tracking-[0.25em]">Consumer baseline</h3>
-                    <p className="text-xl font-semibold text-[#070707]">How consumers see credit</p>
-                    <p className="text-sm text-[#070707]/70">Chase Credit Journey (VantageScore 3.0, score history, alerts)</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-[#EEE] border-[#EEE] rounded-[24px]">
-                  <CardContent className="p-6 space-y-2">
-                    <h3 className="text-sm font-semibold text-primary uppercase tracking-[0.25em]">Business future</h3>
-                    <p className="text-xl font-semibold text-[#070707]">How businesses should see credit</p>
-                    <p className="text-sm text-[#070707]/70">Intelliscore + FSR + real product eligibility + bank-aligned policy engine</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
               {/* ROI Metrics Strip */}
               <div className="grid md:grid-cols-3 gap-4">
                 {[
@@ -195,31 +177,37 @@ export default function HowItWorks() {
               <div className="grid lg:grid-cols-2 gap-10">
                 {[
                   {
-                    title: "Today — consumer journey",
-                    gradient: "from-[#0B1F4B] to-[#050910]",
-                    label: "Mobile mockup placeholder (consumer)",
-                    image: "/mockups/chaseconsumer.png"
+                    title: "Consumer baseline",
+                    heading: "How consumers see credit",
+                    description: "Chase Credit Journey (VantageScore 3.0, score history, alerts)",
+                    image: "/mockups/cosumer see credit.png"
                   },
                   {
-                    title: "Business journey",
-                    gradient: "from-[#1146F2] via-[#7D4DFF] to-[#0B1F4B]",
-                    label: "Mobile mockup placeholder (business)",
-                    image: "/mockups/businessmockup1.png"
+                    title: "Business future",
+                    heading: "How businesses should see credit",
+                    description: "Intelliscore + FSR + real product eligibility + bank-aligned policy engine",
+                    image: "/mockups/BusinessShouldSee.png"
                   }
                 ].map((device) => (
                   <div key={device.title} className="space-y-4">
-                    <p className="text-sm text-primary font-semibold tracking-[0.2em] uppercase">{device.title}</p>
+                    <Card className="bg-[#EEE] dark:bg-[#1D1D1D] border-[#EEE] dark:border-[#1D1D1D] rounded-[24px]">
+                      <CardContent className="p-6 space-y-2">
+                        <h3 className="text-sm font-semibold text-primary uppercase tracking-[0.25em]">{device.title}</h3>
+                        <p className="text-xl font-semibold text-[#070707] dark:text-white">{device.heading}</p>
+                        <p className="text-sm text-[#070707]/70 dark:text-white/70">{device.description}</p>
+                      </CardContent>
+                    </Card>
                     <div className="relative flex items-center justify-center">
                       <div className="absolute inset-0 blur-[120px] bg-primary/20 rounded-[40px]" />
                       <div className="relative max-w-sm w-full flex items-center justify-center">
                         <img
                           src={device.image}
-                          alt={device.label}
+                          alt={device.heading}
                           className="w-full h-auto drop-shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
                         />
                       </div>
-                </div>
-                </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </motion.div>
@@ -453,7 +441,7 @@ export default function HowItWorks() {
               </div>
               
               <div className="text-center mt-8">
-                <Link to="/pilot#pilot-form">
+                <Link to="/model-governance-framework#pilot-form">
                   <Button size="lg" variant="solver" className="gap-3">
                     Discuss a 90-Day Pilot
                     <ArrowRight className="w-5 h-5" />

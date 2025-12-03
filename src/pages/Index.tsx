@@ -104,7 +104,7 @@ function Index() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link to="/pilot#pilot-form">
+              <Link to="/model-governance-framework#pilot-form">
                 <Button variant="solver" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-6 w-full sm:w-auto">
                   <span className="whitespace-nowrap">Book a 20-Minute Pilot Review</span>
                   <div className="w-8 h-8 sm:w-10 sm:h-10 p-2 sm:p-2.5 rounded-full bg-white flex items-center justify-center flex-shrink-0">

@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { motion, useScroll } from "framer-motion";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Disclaimer } from "./Disclaimer";
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -27,6 +28,7 @@ export function PageLayout({ children }: PageLayoutProps) {
         {children}
       </main>
 
+      <Disclaimer />
       <Footer />
     </div>
   );

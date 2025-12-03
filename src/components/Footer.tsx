@@ -14,6 +14,7 @@ const resourceLinks = [
   { label: "Demo", href: "/demo" },
   { label: "Model Governance Framework", href: "/model-governance-framework" },
   { label: "USS Framework", href: "/uss" },
+  { label: "About", href: "/about" },
 ];
 
 const policyLinks = [

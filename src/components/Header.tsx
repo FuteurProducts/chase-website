@@ -15,10 +15,13 @@ export function Header() {
     <header className="fixed top-0 z-20 left-0 w-full h-[10dvh] px-5 md:px-[72px] md:py-8 flex justify-between items-center transition-all duration-300 bg-[#070707]/80 dark:bg-[#070707]/80 backdrop-blur-xl">
       <Link to="/" className="w-auto cursor-pointer">
         <div className="font-display text-lg sm:text-2xl md:text-[28px] font-black uppercase tracking-[0.08em] leading-none text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.35)]">
-          LUMIQ AI FOR CHASE
+          LUMIQ AI X CHASE
         </div>
       </Link>
       <nav className="hidden lg:flex items-center gap-8">
+        <Link to="/about" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
+          About
+        </Link>
         <Link to="/how-it-works" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
           How It Works
         </Link>
@@ -59,6 +62,12 @@ export function Header() {
               </SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-4 mt-8">
+              <Link 
+                to="/about" 
+                className="text-lg font-medium text-[#070707] dark:text-white hover:text-primary transition-colors py-2"
+              >
+                About
+              </Link>
               <Link 
                 to="/how-it-works" 
                 className="text-lg font-medium text-[#070707] dark:text-white hover:text-primary transition-colors py-2"

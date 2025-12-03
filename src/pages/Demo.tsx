@@ -510,7 +510,7 @@ export default function Demo() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/pilot#pilot-form">
+            <Link to="/model-governance-framework#pilot-form">
               <Button 
                 size="lg"
                 variant="solver"
@@ -519,22 +519,19 @@ export default function Demo() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
-              onClick={() => {
-                // Create a temporary link to download
-                const link = document.createElement('a');
-                link.href = '#';
-                link.download = 'Model-Governance-Framework.pdf';
-                link.click();
-                // In production, this would link to an actual PDF file
-                console.log('Download Model Governance Framework');
-              }}
+            <a
+              href="/Model Governance Framework LumiqAIxChase.pdf"
+              download="Model Governance Framework LumiqAIxChase.pdf"
+              className="inline-block"
             >
-              Download Model Governance Framework
-            </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-[#070707] dark:border-white text-[#070707] dark:text-white hover:bg-primary/10 hover:border-primary/50"
+              >
+                Download Model Governance Framework
+              </Button>
+            </a>
           </div>
         </div>
       </section>

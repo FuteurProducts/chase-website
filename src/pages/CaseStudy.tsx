@@ -243,10 +243,10 @@ export default function CaseStudy() {
               ))}
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-              <motion.div {...fadeInUp} className="w-full h-full">
-                <Card className={`${neutralCard} hover:border-primary/30 h-full`}>
-                  <CardContent className="p-6 md:p-8 space-y-6 md:space-y-8 h-full flex flex-col">
+            <div className="max-w-4xl mx-auto">
+              <motion.div {...fadeInUp} className="w-full">
+                <Card className={`${neutralCard} hover:border-primary/30`}>
+                  <CardContent className="p-6 md:p-8 space-y-6 md:space-y-8 flex flex-col">
                     <div className="space-y-4">
                       <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
                         <div>
@@ -330,8 +330,8 @@ export default function CaseStudy() {
                             <div className="text-xs font-semibold text-[#070707]/80 dark:text-white/70 mb-3 uppercase tracking-[0.2em]">Chase SMB</div>
                             <div className="flex items-center justify-center mb-3">
                               <img 
-                                src="/mockups/businessmockup1.png" 
-                                alt="Lumiq AI Business Credit Journey" 
+                                src="/mockups/Chase SMB (1).png" 
+                                alt="Chase SMB" 
                                 className="max-w-[150px] h-auto object-contain"
                               />
                             </div>
@@ -344,49 +344,6 @@ export default function CaseStudy() {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="w-full h-full">
-                <Card className="bg-gradient-to-br from-background to-muted/30 border-primary/20 p-6 md:p-8 h-full">
-                  <h3 className="font-display text-xl font-bold mb-6 md:mb-8 text-center">Competitive Landscape</h3>
-                  <div className="relative aspect-[4/3]">
-                    {/* Quadrant Grid */}
-                    <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-px bg-border">
-                      <div className="bg-background/50 p-4" />
-                      <div className="bg-primary/5 p-4" />
-                      <div className="bg-background/50 p-4" />
-                      <div className="bg-primary/10 p-4" />
-                    </div>
-                    
-                    {/* Axis Labels */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-8 text-sm text-[#070707]/80 dark:text-white/70">
-                      Digital Experience →
-                    </div>
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-16 text-sm text-[#070707]/80 dark:text-white/70 -rotate-90">
-                      Risk & Governance →
-                    </div>
-
-                    {/* Data Points */}
-                    <div className="absolute left-1/3 bottom-1/3 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="bg-muted border-2 border-border px-3 py-1 rounded text-sm font-medium whitespace-nowrap">
-                        Chase Today
-                      </div>
-                    </div>
-
-                    <div className="absolute right-1/4 bottom-1/4 transform translate-x-1/2 -translate-y-1/2">
-                      <div className="bg-muted border-2 border-border px-3 py-1 rounded text-sm font-medium whitespace-nowrap">
-                        Fintech Cards
-                      </div>
-                    </div>
-
-                    <div className="absolute right-1/4 top-1/4 transform translate-x-1/2 translate-y-1/2">
-                      <div className="bg-primary/20 border-2 border-primary px-3 py-1 rounded text-sm font-bold whitespace-nowrap">
-                        LUMIQ AI
-                      </div>
-                      <div className="text-xs text-center text-[#070707]/80 dark:text-white/70 mt-1">High/High</div>
-                    </div>
-                  </div>
                 </Card>
               </motion.div>
             </div>

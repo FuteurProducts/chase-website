@@ -32,7 +32,7 @@ export function Header() {
           Demo
         </Link>
         <Link to="/model-governance-framework" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
-          Model Governance Framework
+          Pilot
         </Link>
       </nav>
       <div className="hidden lg:flex justify-between items-center gap-8">
@@ -90,7 +90,7 @@ export function Header() {
                 to="/model-governance-framework" 
                 className="text-lg font-medium text-[#070707] dark:text-white hover:text-primary transition-colors py-2"
               >
-                Model Governance Framework
+                Pilot
               </Link>
               <div className="pt-4 border-t border-[#E4E7EC] dark:border-[#1D1D1D]">
                 <Link to="/model-governance-framework#pilot-form">

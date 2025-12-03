@@ -705,7 +705,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">1</sup>
+                            <span className="text-primary font-bold text-base leading-none">1</span>
                           </div>
                         </div>
                         <div>
@@ -721,7 +721,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">2</sup>
+                            <span className="text-primary font-bold text-base leading-none">2</span>
                           </div>
                         </div>
                         <div>
@@ -737,7 +737,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">3</sup>
+                            <span className="text-primary font-bold text-base leading-none">3</span>
                           </div>
                         </div>
                         <div>
@@ -753,7 +753,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">4</sup>
+                            <span className="text-primary font-bold text-base leading-none">4</span>
                           </div>
                         </div>
                         <div>
@@ -769,7 +769,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">5</sup>
+                            <span className="text-primary font-bold text-base leading-none">5</span>
                           </div>
                         </div>
                         <div>
@@ -785,7 +785,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">6</sup>
+                            <span className="text-primary font-bold text-base leading-none">6</span>
                           </div>
                         </div>
                         <div>
@@ -801,7 +801,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">7</sup>
+                            <span className="text-primary font-bold text-base leading-none">7</span>
                           </div>
                         </div>
                         <div>
@@ -817,7 +817,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">8</sup>
+                            <span className="text-primary font-bold text-base leading-none">8</span>
                           </div>
                         </div>
                         <div>
@@ -833,7 +833,7 @@ export default function CaseStudy() {
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
                           <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                            <sup className="text-primary font-bold text-base">9</sup>
+                            <span className="text-primary font-bold text-base leading-none">9</span>
                           </div>
                         </div>
                         <div>

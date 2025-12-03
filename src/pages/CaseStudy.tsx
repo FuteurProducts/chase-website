@@ -314,31 +314,31 @@ export default function CaseStudy() {
                         <p className="text-sm text-[#070707]/80 dark:text-white/70 mb-3 md:mb-4">
                           <span className="font-medium text-[#070707] dark:text-white">McKinsey 2024/2025:</span> "Good online and mobile banking is the #1 reason SMEs choose a primary bank."<sup className="text-primary">9</sup>
                         </p>
-                        <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-                          <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
-                            <div className="text-xs font-semibold text-primary mb-3 uppercase tracking-[0.2em]">Chase Consumer</div>
-                            <div className="flex items-center justify-center mb-3">
+                        <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                          <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4 md:p-6">
+                            <div className="text-xs font-semibold text-primary mb-4 uppercase tracking-[0.2em]">Chase Consumer</div>
+                            <div className="flex items-center justify-center mb-4">
                               <img 
                                 src="/chase consumer.png" 
                                 alt="Chase Consumer Credit Journey" 
-                                className="max-w-[150px] h-auto object-contain"
+                                className="max-w-[220px] md:max-w-[280px] lg:max-w-[320px] h-auto object-contain"
                               />
                             </div>
                             <p className="text-sm text-[#070707]/80 dark:text-white/70">Credit Journey, Score Planner, education, embedded offers.</p>
                           </div>
-                          <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4">
-                            <div className="text-xs font-semibold text-[#070707]/80 dark:text-white/70 mb-3 uppercase tracking-[0.2em]">Chase SMB</div>
-                            <div className="flex items-center justify-center mb-3">
+                          <div className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-white/10 p-4 md:p-6">
+                            <div className="text-xs font-semibold text-[#070707]/80 dark:text-white/70 mb-4 uppercase tracking-[0.2em]">Chase SMB</div>
+                            <div className="flex items-center justify-center mb-4">
                               <img 
                                 src="/mockups/Chase SMB (1).png" 
                                 alt="Chase SMB" 
-                                className="max-w-[150px] h-auto object-contain"
+                                className="max-w-[220px] md:max-w-[280px] lg:max-w-[320px] h-auto object-contain"
                               />
                             </div>
                             <p className="text-sm text-[#070707]/80 dark:text-white/70">Product-centric pages (Ink, LOC, term, CRE) without a unified journey.</p>
                           </div>
                         </div>
-                        <p className="text-sm font-semibold text-foreground mt-4">
+                        <p className="text-sm font-semibold text-[#070707] dark:text-white mt-4">
                           Result: SMBs who bank with Chase are getting coaching—and offers—from fintechs instead.
                         </p>
                       </div>
@@ -866,7 +866,7 @@ export default function CaseStudy() {
               </Card>
 
               <div className="mt-12 text-center">
-                <Link to="/pilot#pilot-form">
+                <Link to="/model-governance-framework#pilot-form">
                   <Button size="lg" className="group">
                     Start a 90-Day Pilot Review
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

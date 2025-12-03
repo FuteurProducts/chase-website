@@ -46,9 +46,9 @@ const demoScreens = [
     image: "/dashboard/dashboard.png"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Comprehensive analytics and insights for portfolio performance tracking.",
-    caption: "Real-time metrics and visualizations for data-driven decision making.",
+    title: "User Dashboard",
+    description: "Total number of users and comprehensive user insights.",
+    caption: "Real-time user metrics and visualizations for data-driven decision making.",
     image: "/mockups/analytics.png"
   },
   {
@@ -230,7 +230,7 @@ export default function Demo() {
                   className="group"
                   onClick={() => document.getElementById('interactive-gallery')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Launch Interactive Demo
+                  How it works
                   <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Link to="/model-governance-framework#pilot-form">

@@ -103,6 +103,7 @@ function Index() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
               <Link to="/model-governance-framework#pilot-form">
                 <Button variant="solver" size="lg" className="text-sm sm:text-base md:text-lg gap-3 sm:gap-6 w-full sm:w-auto">
@@ -112,6 +113,16 @@ function Index() {
                   </div>
                 </Button>
               </Link>
+              <a
+                href="https://sandbox.futeurcredx.com/demo/chase"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg" className="text-sm sm:text-base md:text-lg gap-2 sm:gap-3 w-full sm:w-auto border-white/40 text-white hover:bg-white/10 hover:text-white">
+                  <span className="whitespace-nowrap">Try Live Demo</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>

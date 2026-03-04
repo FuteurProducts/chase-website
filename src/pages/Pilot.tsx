@@ -63,46 +63,36 @@ function Pilot() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
-      // Validate form data
       pilotFormSchema.parse(formData);
       setIsSubmitting(true);
-      
-      // Prepare template parameters with all form data
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        title: formData.title,
-        company: formData.company,
-        phone: formData.phone || "Not provided",
-        smb_count: formData.smbCount || "Not provided",
-        consent: formData.consent ? "Yes" : "No",
-        // Additional fields for better email formatting
-        message: `New Pilot Application Request:
-        
-Name: ${formData.name}
-Title: ${formData.title}
-Company: ${formData.company}
-Email: ${formData.email}
-Phone: ${formData.phone || "Not provided"}
-SMB Count: ${formData.smbCount || "Not provided"}
-Consent Given: ${formData.consent ? "Yes" : "No"}`,
-      };
-      
-      // Send email using EmailJS
-      await emailjs.send(
-        "service_cd0rzso",  // Service ID
-        "template_bv3e1to",  // Template ID
-        templateParams,
-        "87TCMetRwFj4WAaCQ"  // Public Key
-      );
-      
-      setIsSubmitted(true);
-      toast({
-        title: "Application Submitted",
-        description: "We'll contact you within 24 hours to schedule your pilot review.",
+
+      const response = await fetch('https://api.sandbox.futeurcredx.com/api/v1/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '',
+          company: formData.company,
+          message: `Pilot Application\nTitle: ${formData.title}\nSMB Count: ${formData.smbCount || 'Not provided'}\nConsent: ${formData.consent ? 'Yes' : 'No'}`,
+          source_site: 'chase.futeurcredx.com',
+          source_form: 'request_pilot',
+        }),
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        toast({
+          title: "Application Submitted",
+          description: "We'll contact you within 24 hours to schedule your pilot review.",
+        });
+      } else {
+        throw new Error(result.message);
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
@@ -111,8 +101,7 @@ Consent Given: ${formData.consent ? "Yes" : "No"}`,
           variant: "destructive",
         });
       } else {
-        // Handle EmailJS errors
-        console.error("EmailJS Error:", error);
+        console.error("Form submission error:", error);
         toast({
           title: "Submission Error",
           description: "There was an error submitting your application. Please try again or contact us directly.",
